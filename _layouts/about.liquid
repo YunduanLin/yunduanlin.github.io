@@ -15,10 +15,21 @@ layout: default
   </header>
 
   <article>
-    {% if page.profile and page.profile_layout == 'sidebar' %}
-      <div class="home-profile-layout">
-        <div class="home-profile-main">{{ content }}</div>
-        <aside class="profile home-profile-sidebar">
+    {% if page.profile and page.profile_layout == 'hero' %}
+      <div class="home-profile-hero">
+        <div class="home-profile-intro">
+          {% if page.home_intro %}
+            <div class="home-intro-text">{{ page.home_intro | markdownify }}</div>
+          {% endif %}
+          {% if page.home_contact %}
+            <div class="home-contact">
+              {% for item in page.home_contact %}
+                <div class="home-contact-line">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+        <aside class="profile home-profile-photo">
           {% if page.profile.image %}
             {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
             {% if page.profile.image_circular %}
@@ -26,17 +37,15 @@ layout: default
             {% else %}
               {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
             {% endif %}
-            {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.31}}px, (min-width: 576px) 31vw, 95vw{% endcapture %}
+            {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.34}}px, (min-width: 576px) 34vw, 95vw{% endcapture %}
             {%
               include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
               cache_bust=true
             %}
           {% endif %}
-          {% if page.profile.more_info %}
-            <div class="more-info">{{ page.profile.more_info }}</div>
-          {% endif %}
         </aside>
       </div>
+      <div class="home-profile-content">{{ content }}</div>
     {% else %}
       {% if page.profile %}
         <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">

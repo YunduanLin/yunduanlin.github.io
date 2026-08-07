@@ -5,31 +5,35 @@ permalink: /
 subtitle: Good morning, and in case I don't see you, good afternoon, good evening, and good night!
 
 profile:
-  align: right
   image: headshot.jpeg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p style="font-size:12px; color:grey">she/her/hers</p>
-    <p style="font-size:12px; color:grey">Assistant Professor</p>
-    <p style="font-size:12px; color:grey">Department of Decisions, Operations and Technology</p>
-    <p style="font-size:12px; color:grey">CUHK Business School</p>
-    <p style="font-size:12px; color:grey">Hong Kong</p>
-    <p style="font-size:12px; color:grey">yunduanlin[at]cuhk[dot]edu[dot]hk</p>
-profile_layout: sidebar
+profile_layout: hero
+home_intro: >
+  I am an Assistant Professor in the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk). My research studies societal operations management in connected systems, with a focus on social network analytics, platform operations, and AI-enabled operational decision-making.
+home_contact:
+  - Department of Decisions, Operations and Technology
+  - CUHK Business School, Hong Kong SAR
+  - yunduanlin[at]cuhk[dot]edu[dot]hk
 
 news: false # includes a list of news items
 latest_posts: false # includes a list of the newest posts
 social: true # includes social icons at the bottom of the page
 ---
 
-I am an Assistant Professor in the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk).
-
 #### Research Interests
 
 My research is in societal operations management, where I study how connected decision makers, digital platforms, and AI-enabled systems shape operational performance and social outcomes. I am especially interested in two related directions:
 
-- **Social network analytics and platform operations.** I study network diffusion, peer influence, adoption, engagement, and platform interventions in online marketplaces, content-sharing platforms, and other connected service systems.
-- **AI for operational decision-making.** I study how AI, machine learning, and data-driven optimization can support better decisions in complex operational systems, with attention to deployable policies, incentives, and human behavior.
+<div class="home-research-themes">
+  <section class="home-research-theme">
+    <h5>Social network analytics and platform operations</h5>
+    <p>I study network diffusion, peer influence, adoption, engagement, and platform interventions in online marketplaces, content-sharing platforms, and other connected service systems.</p>
+  </section>
+  <section class="home-research-theme">
+    <h5>AI for operational decision-making</h5>
+    <p>I study how AI, machine learning, and data-driven optimization can support better decisions in complex operational systems, with attention to deployable policies, incentives, and human behavior.</p>
+  </section>
+</div>
 
 Across these streams, I use optimization, network and graph models, stochastic simulation, and empirical analytics to build decision tools for platforms, supply chains, healthcare systems, transportation, and other societal operations settings.
 
