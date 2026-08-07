@@ -41,50 +41,62 @@ Please see my [research]({{ '/research/' | relative_url }}) for more information
 
 #### Employment
 
-<div class="mb-3">
-  <div class="d-flex justify-content-between flex-wrap">
-    <strong>The Chinese University of Hong Kong, CUHK Business School</strong>
-    <span>Hong Kong SAR</span>
-  </div>
-  <div class="d-flex justify-content-between flex-wrap">
-    <span>Assistant Professor, Department of Decisions, Operations, and Technology</span>
-    <em>2024 - current</em>
-  </div>
+<div class="home-timeline">
+  <article class="home-timeline-entry">
+    <div class="home-timeline-head">
+      <div>
+        <strong>The Chinese University of Hong Kong, CUHK Business School</strong>
+        <span>Assistant Professor, Department of Decisions, Operations, and Technology</span>
+      </div>
+      <div class="home-timeline-meta">
+        <span>Hong Kong SAR</span>
+        <em>2024 - current</em>
+      </div>
+    </div>
+  </article>
 </div>
 
 #### Education
 
-<div class="mb-3">
-  <div class="d-flex justify-content-between flex-wrap">
-    <strong>University of California, Berkeley</strong>
-    <span>Berkeley, CA</span>
-  </div>
-  <div class="d-flex justify-content-between flex-wrap">
-    <span>Ph.D. in Systems Engineering, Civil and Environmental Engineering</span>
-    <em>2019 - 2024</em>
-  </div>
-  <div>Minor in Operations Research and Computer Science</div>
-  <div>Advisor: Zuo-Jun Max Shen</div>
-</div>
+<div class="home-timeline">
+  <article class="home-timeline-entry">
+    <div class="home-timeline-head">
+      <div>
+        <strong>University of California, Berkeley</strong>
+        <span>Ph.D. in Systems Engineering, Civil and Environmental Engineering</span>
+      </div>
+      <div class="home-timeline-meta">
+        <span>Berkeley, CA</span>
+        <em>2019 - 2024</em>
+      </div>
+    </div>
+    <div class="home-timeline-detail">Minor in Operations Research and Computer Science</div>
+    <div class="home-timeline-detail">Advisor: Zuo-Jun Max Shen</div>
+  </article>
 
-<div class="mb-3">
-  <div class="d-flex justify-content-between flex-wrap">
-    <strong>University of California, Berkeley</strong>
-    <span>Berkeley, CA</span>
-  </div>
-  <div class="d-flex justify-content-between flex-wrap">
-    <span>M.S. in Systems Engineering, Civil and Environmental Engineering</span>
-    <em>2018 - 2019</em>
-  </div>
-</div>
+  <article class="home-timeline-entry">
+    <div class="home-timeline-head">
+      <div>
+        <strong>University of California, Berkeley</strong>
+        <span>M.S. in Systems Engineering, Civil and Environmental Engineering</span>
+      </div>
+      <div class="home-timeline-meta">
+        <span>Berkeley, CA</span>
+        <em>2018 - 2019</em>
+      </div>
+    </div>
+  </article>
 
-<div class="mb-3">
-  <div class="d-flex justify-content-between flex-wrap">
-    <strong>Tsinghua University</strong>
-    <span>Beijing, China</span>
-  </div>
-  <div class="d-flex justify-content-between flex-wrap">
-    <span>B.Eng. in Civil Engineering</span>
-    <em>2014 - 2018</em>
-  </div>
+  <article class="home-timeline-entry">
+    <div class="home-timeline-head">
+      <div>
+        <strong>Tsinghua University</strong>
+        <span>B.Eng. in Civil Engineering</span>
+      </div>
+      <div class="home-timeline-meta">
+        <span>Beijing, China</span>
+        <em>2014 - 2018</em>
+      </div>
+    </div>
+  </article>
 </div>
