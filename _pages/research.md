@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: Research
-description: Research themes in societal operations management, social networks, platform operations, optimization, and analytics.
+description: Research themes and publications in societal operations management, social networks, platform operations, optimization, and analytics.
 nav: true
 nav_order: 1
 ---
@@ -25,4 +25,10 @@ My methodological toolkit includes optimization, approximation algorithms, netwo
 
 Beyond online platforms, I am interested in operational problems in supply chains, healthcare, transportation, and other societal systems where connectivity changes how decisions propagate.
 
-See the [publications page]({{ '/publications/' | relative_url }}) for papers, abstracts, posters, code, and links.
+#### Publications
+
+<div class="publications">
+
+{% bibliography %}
+
+</div>
