@@ -40,10 +40,8 @@ function Assert-NoFiles {
 $requiredPages = @(
   "_pages/about.md",
   "_pages/research.md",
-  "_pages/publications.md",
   "_pages/teaching.md",
-  "_pages/service.md",
-  "_pages/cv.md"
+  "_pages/service.md"
 )
 
 foreach ($page in $requiredPages) {
@@ -57,24 +55,35 @@ Assert-Contains "_pages/about.md" "Assistant Professor" "Homepage should use the
 Assert-Contains "_pages/about.md" "CUHK Business School" "Homepage should identify CUHK Business School."
 Assert-Contains "_pages/about.md" "Department of Decisions, Operations and Technology" "Homepage should identify the current department."
 Assert-NotContains "_pages/about.md" "will be joining|fifth-year Ph\.D\. candidate" "Homepage still contains stale career-stage language."
+Assert-Contains "_pages/about.md" "news:\s*false" "Homepage should not render the news section."
+Assert-NotContains "_pages/about.md" "/publications/|/cv/|CV\.pdf" "Homepage should not link to removed publications or CV pages."
+Assert-NotContains "_layouts/about.liquid" "/news/" "About layout should not contain a dormant news section link."
+Assert-NotContains "_config.yml" "permalink:\s*/news/:path/|announcements:" "Config should not publish or configure news."
 
 Assert-Contains "_pages/research.md" "Platform Operations" "Research page should describe platform operations."
 Assert-Contains "_pages/research.md" "Network Diffusion" "Research page should describe network diffusion."
-Assert-NotContains "_pages/research.md" "\{\%\s*bibliography" "Research page should be an overview, not the full publication list."
+Assert-Contains "_pages/research.md" "\{\%\s*bibliography\s*\%\}" "Research page should render the full publication list."
 
-Assert-Contains "_pages/publications.md" "nav:\s*true" "Publications page should be visible in navigation."
-Assert-Contains "_pages/publications.md" "\{\%\s*bibliography\s*\%\}" "Publications page should render the bibliography."
+$removedPages = @(
+  "_pages/publications.md",
+  "_pages/cv.md",
+  "_pages/news.md"
+)
 
-Assert-Contains "_pages/cv.md" "title:\s*CV" "CV page should use a polished title."
-Assert-Contains "_pages/cv.md" "nav:\s*true" "CV page should be visible in navigation."
-Assert-Contains "_pages/cv.md" "CV\.pdf" "CV page should link to the real CV PDF."
+foreach ($page in $removedPages) {
+  if (Test-Path $page) {
+    throw "Removed page should not exist: $page"
+  }
+}
 
 Assert-NotContains "_data/cv.yml" "Albert Einstein|Nobel Prize|Theoretical Physics" "CV data still contains al-folio placeholder content."
 Assert-NotContains "assets/json/resume.json" "Albert Einstein|Theoretical Physics|Quantum" "JSON resume still contains al-folio placeholder content."
 Assert-NotContains "README.md" "^#\s+al-folio" "README still starts with upstream al-folio content."
+Assert-NotContains "README.md" "publications, teaching, service, and CV" "README should describe the current page structure."
 
 Assert-NoFiles "_posts" "Demo blog posts should be removed."
 Assert-NoFiles "_projects" "Demo project pages should be removed."
+Assert-NoFiles "_news" "News items should be removed."
 
 $demoPaths = @(
   "assets/img/readme_preview",
