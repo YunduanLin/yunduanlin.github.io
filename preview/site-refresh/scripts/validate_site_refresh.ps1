@@ -72,6 +72,7 @@ Assert-Contains "_layouts/about.liquid" "home-profile-hero" "About layout should
 Assert-Contains "_sass/_base.scss" "\.home-profile-hero" "Styles should define the homepage profile hero."
 Assert-Contains "_sass/_base.scss" "\.home-page\s+\{" "Styles should define homepage-specific typography and spacing."
 Assert-Contains "_sass/_base.scss" "border-left:\s*3px solid var\(--global-theme-color\)" "Homepage should use restrained accent lines."
+Assert-Contains "_sass/_base.scss" "row-gap:\s*1\.4rem" "Mobile homepage hero should keep spacing between intro and portrait."
 Assert-Contains "_config.yml" "footer_fixed:\s*false" "Footer should not overlay homepage content."
 Assert-NotContains "_config.yml" "permalink:\s*/news/:path/|announcements:" "Config should not publish or configure news."
 Assert-Contains "_pages/about.md" "####\s*Research Interests" "Homepage should have an organized research interests section."
@@ -135,6 +136,7 @@ if ($unexpectedWorkflows.Count -gt 0) {
 }
 
 Assert-Contains ".github/workflows/preview.yml" "branches:\s*\r?\n\s*-\s*codex/site-refresh" "Preview workflow should run only from codex/site-refresh."
+Assert-Contains ".github/workflows/preview.yml" "\*\*/\*\.scss|_sass/\*\*" "Preview workflow should rebuild after style-only changes."
 Assert-Contains ".github/workflows/preview.yml" "--baseurl /preview/site-refresh" "Preview workflow should build with the preview baseurl."
 Assert-Contains ".github/workflows/preview.yml" "target-folder:\s*preview/site-refresh" "Preview workflow should deploy into the gh-pages preview folder."
 Assert-Contains ".github/workflows/preview.yml" "clean:\s*false" "Preview workflow should not clean the live gh-pages root."
