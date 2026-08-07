@@ -12,17 +12,6 @@ on:
       - "**/*.bib"
       - "**/*.md"
       - "**.yml"
-  pull_request:
-    branches:
-      - master
-    paths:
-      - "assets/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.bib"
-      - "**/*.md"
-      - "**.yml"
   workflow_dispatch:
 
 permissions:
