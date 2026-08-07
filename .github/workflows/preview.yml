@@ -1,0 +1,48 @@
+name: Preview site refresh
+
+on:
+  push:
+    branches:
+      - codex/site-refresh
+    paths:
+      - "assets/**"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.bib"
+      - "**/*.md"
+      - "**.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: preview-site-refresh
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.2"
+          bundler-cache: true
+
+      - name: Build preview
+        run: bundle exec jekyll build --lsi --baseurl /preview/site-refresh --destination _site_preview
+        env:
+          JEKYLL_ENV: production
+
+      - name: Deploy preview
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site_preview
+          branch: gh-pages
+          target-folder: preview/site-refresh
+          clean: false

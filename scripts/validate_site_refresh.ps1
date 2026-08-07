@@ -94,9 +94,15 @@ foreach ($path in $demoPaths) {
 }
 
 $workflowFiles = Get-ChildItem ".github/workflows" -File | Select-Object -ExpandProperty Name
-$unexpectedWorkflows = $workflowFiles | Where-Object { $_ -ne "deploy.yml" }
+$expectedWorkflows = @("deploy.yml", "preview.yml")
+$unexpectedWorkflows = $workflowFiles | Where-Object { $expectedWorkflows -notcontains $_ }
 if ($unexpectedWorkflows.Count -gt 0) {
   throw "Unexpected upstream workflows remain: $($unexpectedWorkflows -join ', ')"
 }
+
+Assert-Contains ".github/workflows/preview.yml" "branches:\s*\r?\n\s*-\s*codex/site-refresh" "Preview workflow should run only from codex/site-refresh."
+Assert-Contains ".github/workflows/preview.yml" "--baseurl /preview/site-refresh" "Preview workflow should build with the preview baseurl."
+Assert-Contains ".github/workflows/preview.yml" "target-folder:\s*preview/site-refresh" "Preview workflow should deploy into the gh-pages preview folder."
+Assert-Contains ".github/workflows/preview.yml" "clean:\s*false" "Preview workflow should not clean the live gh-pages root."
 
 Write-Host "Site refresh validation passed."

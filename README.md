@@ -14,3 +14,9 @@ bundle exec jekyll serve
 ## Deployment
 
 Pushing to `master` runs the GitHub Actions workflow in `.github/workflows/deploy.yml`, builds the Jekyll site, and deploys the generated `_site` output to the `gh-pages` branch.
+
+## Preview
+
+Pushing to `codex/site-refresh` runs `.github/workflows/preview.yml`, builds the site with `baseurl: /preview/site-refresh`, and deploys it to:
+
+https://yunduanlin.github.io/preview/site-refresh/
