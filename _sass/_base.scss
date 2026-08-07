@@ -400,6 +400,10 @@ ul.task-list input[type="checkbox"] {
     grid-template-columns: 1fr;
   }
 
+  .home-profile-hero {
+    row-gap: 1.4rem;
+  }
+
   .home-profile-hero .profile.home-profile-photo {
     max-width: 380px;
   }
