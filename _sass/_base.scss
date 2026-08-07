@@ -215,6 +215,32 @@ ul.task-list input[type="checkbox"] {
   margin-right: 1rem;
 }
 
+.home-profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 31%);
+  column-gap: 2.5rem;
+  align-items: start;
+
+  .home-profile-main {
+    min-width: 0;
+  }
+
+  .home-profile-sidebar {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+
+    .more-info {
+      line-height: 1.55;
+
+      p {
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
+
 @media (min-width: 576px) {
   .profile {
     width: 30%;
@@ -223,6 +249,19 @@ ul.task-list input[type="checkbox"] {
       p {
         display: block;
       }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-profile-layout {
+    display: flex;
+    flex-direction: column;
+
+    .home-profile-sidebar {
+      order: -1;
+      max-width: 360px;
+      margin-bottom: 1.5rem;
     }
   }
 }

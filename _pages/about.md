@@ -15,6 +15,7 @@ profile:
     <p style="font-size:12px; color:grey">CUHK Business School</p>
     <p style="font-size:12px; color:grey">Hong Kong</p>
     <p style="font-size:12px; color:grey">yunduanlin[at]cuhk[dot]edu[dot]hk</p>
+profile_layout: sidebar
 
 news: false # includes a list of news items
 latest_posts: false # includes a list of the newest posts
@@ -22,8 +23,6 @@ social: true # includes social icons at the bottom of the page
 ---
 
 I am an Assistant Professor in the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk).
-
-<div class="clearfix"></div>
 
 #### Research Interests
 
