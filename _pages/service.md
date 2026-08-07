@@ -2,12 +2,10 @@
 layout: page
 permalink: /service/
 title: Service
-quote: From moments to milestones---every interaction counts
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
----
 #### Academic Services
 
 Ad-Hoc Reviewer

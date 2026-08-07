@@ -6,10 +6,10 @@ title: Yunduan Lin 林韵端 # the website title (if blank, full name will be us
 first_name: Yunduan
 middle_name:
 last_name: Lin
-email: yunduan_lin@berkeley.edu
-description:
+email: yunduanlin@cuhk.edu.hk
+description: Academic website of Yunduan Lin, Assistant Professor at CUHK Business School.
 footer_text:
-keywords: # jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: operations management, platform operations, social network analytics, optimization, CUHK Business School
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: Y # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -67,7 +67,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: # your GitHub user name
+github_username: YunduanLin # your GitHub user name
 gitlab_username: # your GitLab user name
 x_username: # your X handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
@@ -76,7 +76,7 @@ telegram_username: # your Telegram user name
 scholar_userid: 10Mfi9YAAAAJ # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-orcid_id: # your ORCID ID
+orcid_id: 0000-0001-9155-3652 # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
@@ -314,7 +314,7 @@ enable_publication_badges:
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
-  [abbr, abstract, altmetric, arxiv, bibtex_show, blog, code, html, pdf, poster, preview, selected, slides, supp, video, website, progress, target, award1, award2, awrad3, Conference, ssrn]
+  [abbr, abstract, altmetric, arxiv, award1, award2, award3, bibtex_show, blog, code, conference, doilink, html, label, pdf, poster, prelim, preview, progress, selected, slides, ssrn, supp, target, video, website]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit:  # leave blank to always show all authors

@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-03-13
+date: 2024-08-01
 inline: true
 ---
 
-Our paper __Content Promotion for Online Content Platforms with the Diffusion Effect__ has been accepted by _Manufacturing & Service Operations Management_! Please check our paper [here](https://pubsonline.informs.org/doi/10.1287/msom.2022.0172).
+I joined the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk) as an Assistant Professor.

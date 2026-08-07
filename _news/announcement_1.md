@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-03-21
+date: 2025-12-01
 inline: true
 ---
 
-I have been selected to receive the [2024 Outstanding Graduate Student Instructor Award](https://ieor.berkeley.edu/outstanding-graduate-student-instructor-award/) at UC Berkeley!
+Our paper "Nonprogressive Diffusion on Social Networks: Approximation and Applications" is published in _Management Science_ as an Articles in Advance paper.

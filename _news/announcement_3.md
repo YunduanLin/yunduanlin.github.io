@@ -1,10 +1,7 @@
 ---
 layout: post
-date: 2024-04-04
+date: 2024-05-17
 inline: true
 ---
 
-Our paper "Daily Physical Activity Monitoring--Adaptive Learning from Multi-source Motion Sensor Data" has been accepted to [Conference on
-Health, Inference, and Learning (CHIL 2024)](https://chilconference.org)!
-<br>
-I will be attending CHIL 2024 on June 27 - 28, 2024, at New York City, NY.
+Our paper "Nonprogressive Diffusion on Social Networks: Approximation and Applications" was accepted to [The Twenty-Fifth ACM Conference on Economics and Computation (EC'24)](https://ec24.sigecom.org).
