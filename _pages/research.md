@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: Research
-description: Research themes and publications in societal operations management, social networks, platform operations, optimization, and analytics.
+description: Research themes and publications in societal operations management, social networks, platform operations, AI, and analytics.
 nav: true
 nav_order: 1
 ---
@@ -27,10 +27,10 @@ nav_order: 1
 
 <section class="publication-section publication-section-stream publication-section-aiops" markdown="1">
 
-#### AI, Optimization & Operational Analytics
+#### AI & Operational Analytics
 {: .publication-section-title }
 
-<p class="publication-section-lead">This stream develops AI, machine learning, simulation, and optimization models for deployable decision support in service platforms, transportation, healthcare, and resource allocation systems.</p>
+<p class="publication-section-lead">This stream develops AI, machine learning, simulation, and data-driven analytics for deployable decision support in service platforms, transportation, healthcare, and complex operational systems.</p>
 
 <div class="publications">
 
