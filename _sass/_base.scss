@@ -279,9 +279,9 @@ ul.task-list input[type="checkbox"] {
   .home-contact-card {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr) minmax(0, 0.9fr);
-    gap: 0.35rem 1.25rem;
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.28rem;
+    align-items: start;
     overflow: hidden;
     padding: 1rem 1.1rem 0.95rem;
     border: 1px solid rgba(117, 15, 109, 0.14);
