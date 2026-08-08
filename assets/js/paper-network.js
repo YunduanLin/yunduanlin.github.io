@@ -197,7 +197,13 @@
     }
 
     function drawEdges() {
-      var edgeLayer = createSvgElement("g", { class: "paper-network-edges" });
+      var edgeLayer = viewport.querySelector(".paper-network-edges");
+      if (!edgeLayer) {
+        edgeLayer = createSvgElement("g", { class: "paper-network-edges" });
+        viewport.appendChild(edgeLayer);
+      }
+      edgeLayer.textContent = "";
+
       edges.forEach(function (edge) {
         var source = nodeMap.get(edge.source);
         var target = nodeMap.get(edge.target);
@@ -217,11 +223,16 @@
         line.appendChild(title);
         edgeLayer.appendChild(line);
       });
-      viewport.appendChild(edgeLayer);
     }
 
     function drawNodes() {
-      var nodeLayer = createSvgElement("g", { class: "paper-network-nodes" });
+      var nodeLayer = viewport.querySelector(".paper-network-nodes");
+      if (!nodeLayer) {
+        nodeLayer = createSvgElement("g", { class: "paper-network-nodes" });
+        viewport.appendChild(nodeLayer);
+      }
+      nodeLayer.textContent = "";
+
       nodes.forEach(function (node) {
         var group = createSvgElement("g", {
           class: "paper-network-node",
@@ -277,7 +288,6 @@
 
         nodeLayer.appendChild(group);
       });
-      viewport.appendChild(nodeLayer);
     }
 
     function initializeControls() {

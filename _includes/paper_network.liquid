@@ -1,10 +1,9 @@
 <section class="paper-network-section" aria-labelledby="paper-network-heading">
   <div class="paper-network-header">
     <div>
-      <p class="paper-network-eyebrow">Interactive Map</p>
-      <h2 id="paper-network-heading">Paper Network</h2>
+      <h2 id="paper-network-heading">Publication Constellation</h2>
     </div>
-    <p>A compact view of how my papers connect across social/platform operations and AI-enabled operational analytics.</p>
+    <p>Explore how individual papers connect through shared questions in diffusion, platform design, learning, and AI-enabled operational analytics.</p>
   </div>
 
   <div class="paper-network-shell" data-paper-network>
@@ -32,24 +31,31 @@
           role="img"
           aria-labelledby="paper-network-heading paper-network-caption"
         >
-          <rect class="paper-network-zone paper-network-zone-social" x="35" y="45" width="400" height="420" rx="18"></rect>
-          <rect class="paper-network-zone paper-network-zone-aiops" x="465" y="45" width="400" height="420" rx="18"></rect>
-          <text class="paper-network-zone-label" x="58" y="78">Social Network Analytics &amp; Platform Operations</text>
-          <text class="paper-network-zone-label" x="488" y="78">AI &amp; Operational Analytics</text>
-          <g class="paper-network-viewport"></g>
+          <g class="paper-network-viewport">
+            <g class="paper-network-clusters">
+              <rect class="paper-network-zone paper-network-zone-social" x="35" y="45" width="400" height="420" rx="18"></rect>
+              <rect class="paper-network-zone paper-network-zone-aiops" x="465" y="45" width="400" height="420" rx="18"></rect>
+              <text class="paper-network-zone-label" x="58" y="78">Social Network Analytics &amp; Platform Operations</text>
+              <text class="paper-network-zone-label" x="488" y="78">AI &amp; Operational Analytics</text>
+            </g>
+            <g class="paper-network-edges"></g>
+            <g class="paper-network-nodes"></g>
+          </g>
         </svg>
       </div>
       <p id="paper-network-caption" class="sr-only">Interactive network linking papers by shared research questions, methods, and application settings.</p>
     </div>
 
     <aside class="paper-network-detail" aria-live="polite">
-      <div class="paper-network-detail-label">Selected Paper</div>
-      <h3 class="paper-network-detail-title">Select a paper</h3>
-      <p class="paper-network-detail-meta">Paper details will appear here.</p>
-      <p class="paper-network-detail-authors"></p>
-      <div class="paper-network-detail-topics" aria-label="Selected paper keywords"></div>
-      <div class="paper-network-detail-links">
-        <a class="paper-network-detail-anchor" href="#"></a>
+      <div class="paper-network-detail-main">
+        <div class="paper-network-detail-label">Selected Paper</div>
+        <h3 class="paper-network-detail-title">Select a paper</h3>
+        <p class="paper-network-detail-meta">Paper details will appear here.</p>
+        <p class="paper-network-detail-authors"></p>
+        <div class="paper-network-detail-topics" aria-label="Selected paper keywords"></div>
+        <div class="paper-network-detail-links">
+          <a class="paper-network-detail-anchor" href="#"></a>
+        </div>
       </div>
       <div class="paper-network-related">
         <div class="paper-network-related-title">Related Papers</div>
