@@ -75,6 +75,7 @@ Assert-Contains "_sass/_base.scss" "background-color:\s*#b8892f" "Homepage resea
 Assert-NotContains "_sass/_base.scss" "(?s)\.home-profile-intro\s*\{[^}]*border-left:" "Homepage bio intro should not keep the old left accent after contact panel redesign."
 Assert-Contains "_sass/_base.scss" "row-gap:\s*1\.4rem" "Mobile homepage hero should keep spacing between intro and portrait."
 Assert-Contains "_config.yml" "footer_fixed:\s*false" "Footer should not overlay homepage content."
+Assert-Contains "_plugins/cache-bust.rb" "directory:\s*'_sass'" "CSS cache busting should hash the real Sass source directory."
 Assert-NotContains "_config.yml" "permalink:\s*/news/:path/|announcements:" "Config should not publish or configure news."
 Assert-Contains "_pages/about.md" "####\s*Research Interests" "Homepage should have an organized research interests section."
 Assert-Contains "_pages/about.md" "Social network analytics and platform operations" "Homepage should organize the social network research theme."
@@ -144,9 +145,12 @@ if ($unexpectedWorkflows.Count -gt 0) {
 
 Assert-Contains ".github/workflows/preview.yml" "branches:\s*\r?\n\s*-\s*codex/site-refresh" "Preview workflow should run only from codex/site-refresh."
 Assert-Contains ".github/workflows/preview.yml" "\*\*/\*\.scss|_sass/\*\*" "Preview workflow should rebuild after style-only changes."
+Assert-Contains ".github/workflows/preview.yml" "_plugins/\*\*" "Preview workflow should rebuild after plugin changes."
 Assert-Contains ".github/workflows/preview.yml" "--baseurl /preview/site-refresh" "Preview workflow should build with the preview baseurl."
 Assert-Contains ".github/workflows/preview.yml" "target-folder:\s*preview/site-refresh" "Preview workflow should deploy into the gh-pages preview folder."
 Assert-Contains ".github/workflows/preview.yml" "clean:\s*false" "Preview workflow should not clean the live gh-pages root."
 Assert-NotContains ".github/workflows/deploy.yml" "(?m)^\s*pull_request:" "Deploy workflow should not run on pull requests; preview.yml handles refresh-branch builds."
+Assert-Contains ".github/workflows/deploy.yml" "\*\*/\*\.scss|_sass/\*\*" "Deploy workflow should rebuild after style-only changes."
+Assert-Contains ".github/workflows/deploy.yml" "_plugins/\*\*" "Deploy workflow should rebuild after plugin changes."
 
 Write-Host "Site refresh validation passed."
