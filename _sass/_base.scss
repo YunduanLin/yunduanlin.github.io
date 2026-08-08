@@ -501,16 +501,19 @@ html[data-theme="dark"] {
 .home-visitor-map {
   display: flex;
   justify-content: center;
-  margin: 0.9rem 0 0;
-  padding: 1rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.15rem auto 0;
+  padding: 0.55rem;
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
-  background-color: var(--global-card-bg-color);
+  background-color: rgba(196, 154, 44, 0.08);
 
-  iframe,
-  img,
-  script + a {
+  img {
+    display: block;
+    height: auto;
     max-width: 100%;
+    border-radius: 6px;
   }
 }
 
