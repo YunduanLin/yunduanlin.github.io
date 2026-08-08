@@ -75,6 +75,7 @@ Assert-Contains "_sass/_base.scss" "background-color:\s*#b8892f" "Homepage resea
 Assert-NotContains "_sass/_base.scss" "(?s)\.home-profile-intro\s*\{[^}]*border-left:" "Homepage bio intro should not keep the old left accent after contact panel redesign."
 Assert-Contains "_sass/_base.scss" "row-gap:\s*1\.4rem" "Mobile homepage hero should keep spacing between intro and portrait."
 Assert-Contains "_config.yml" "footer_fixed:\s*false" "Footer should not overlay homepage content."
+Assert-Contains "_plugins/cache-bust.rb" "directory:\s*'_sass'" "CSS cache busting should hash the real Sass source directory."
 Assert-NotContains "_config.yml" "permalink:\s*/news/:path/|announcements:" "Config should not publish or configure news."
 Assert-Contains "_pages/about.md" "####\s*Research Interests" "Homepage should have an organized research interests section."
 Assert-Contains "_pages/about.md" "Social network analytics and platform operations" "Homepage should organize the social network research theme."
