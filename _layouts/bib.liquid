@@ -130,7 +130,8 @@
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.status %}
-      {% capture entry_status %}{{ entry.status }}{% if entry.target %} at <em>{{ entry.target }}</em>{% endif %}{% if entry.year %}, {{ entry.year }}{% endif %}{% endcapture %}
+      {% assign status_year = entry.status_year | default: 'true' %}
+      {% capture entry_status %}{{ entry.status }}{% if entry.target %} at <em>{{ entry.target }}</em>{% endif %}{% if status_year != 'false' and entry.year %}, {{ entry.year }}{% endif %}{% endcapture %}
     {% elsif entry.type == 'article' %}
       {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
       {% if entry.volume %}
@@ -140,7 +141,13 @@
         {% capture entrytype %}{{ entrytype }}, {{ entry.pages }}{% endcapture %}
       {% endif %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{entry.booktitle}}</em> {% endcapture %}
+      {% capture entrytype %}<em>{{entry.booktitle}}</em>{% endcapture %}
+      {% if entry.volume %}
+        {% capture entrytype %}{{ entrytype }}, {{ entry.volume }}{% endcapture %}
+      {% endif %}
+      {% if entry.pages %}
+        {% capture entrytype %}{{ entrytype }}, {{ entry.pages }}{% endcapture %}
+      {% endif %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{entry.school}}</em> {% endcapture %}
     {% else %}
@@ -159,12 +166,18 @@
         {{ entry_status | strip }}
       </div>
     {% else %}
-      <div class="periodical">
-        {{ periodical | strip }}
-      </div>
-      <div class="periodical">
-        {{ entry.note | strip }}
-      </div>
+      {% assign periodical_text = periodical | strip %}
+      {% assign note_text = entry.note | strip %}
+      {% if periodical_text != "" %}
+        <div class="periodical">
+          {{ periodical_text }}
+        </div>
+      {% endif %}
+      {% if note_text != "" %}
+        <div class="periodical">
+          {{ note_text }}
+        </div>
+      {% endif %}
 
       {%- if entry.progress -%}
       <div class="progresstarget">{{entry.progress}} <em>{{entry.target}}</em></div>
