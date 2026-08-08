@@ -25,13 +25,23 @@ social: true # includes social icons at the bottom of the page
 My research is in societal operations management, where I study how connected decision makers, digital platforms, and AI-enabled systems shape operational performance and social outcomes. I am especially interested in two related directions:
 
 <div class="home-research-themes">
-  <section class="home-research-theme">
+  <section class="home-research-theme" data-index="01">
     <h5>Social network analytics and platform operations</h5>
     <p>I study network diffusion, peer influence, adoption, engagement, and platform interventions in online marketplaces, content-sharing platforms, and other connected service systems.</p>
+    <div class="home-research-tags">
+      <span class="home-research-tag">peer influence</span>
+      <span class="home-research-tag">platforms</span>
+      <span class="home-research-tag">diffusion</span>
+    </div>
   </section>
-  <section class="home-research-theme">
+  <section class="home-research-theme" data-index="02">
     <h5>AI for operational decision-making</h5>
     <p>I study how AI, machine learning, and data-driven optimization can support better decisions in complex operational systems, with attention to deployable policies, incentives, and human behavior.</p>
+    <div class="home-research-tags">
+      <span class="home-research-tag">AI</span>
+      <span class="home-research-tag">optimization</span>
+      <span class="home-research-tag">policy design</span>
+    </div>
   </section>
 </div>
 
