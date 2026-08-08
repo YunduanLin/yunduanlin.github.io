@@ -1,6 +1,10 @@
 ---
 ---
-<div class="row">
+{% assign has_publication_highlights = false %}
+{% if entry.prelim or entry.award1 or entry.award2 or entry.award3 or entry.award4 or entry.award5 or entry.conference %}
+  {% assign has_publication_highlights = true %}
+{% endif %}
+<div class="row publication-card-row{% if has_publication_highlights %} publication-card-has-highlights{% endif %}">
   {% if site.enable_publication_thumbnails %}
     <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
       {% if entry.preview %}
@@ -43,7 +47,7 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{entry.key}}" class="col-sm-11">
+  <div id="{{entry.key}}" class="col-sm-11 publication-card-content">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     {% if entry.keywords %}
@@ -315,29 +319,31 @@
       {% endif %}
     {% endif %}
 
-
-
-    {% if entry.prelim -%}
-        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.prelim }} <br></span>
-    {%- endif -%}
-    {% if entry.award1 -%}
-        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.award1 }} <br></span>
-    {%- endif -%}
-    {% if entry.award2 -%}
-        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.award2 }} <br></span>
-    {%- endif -%}
-    {% if entry.award3 -%}
-        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.award3 }} <br></span>
-    {%- endif -%}
-    {% if entry.award4 -%}
-        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.award4 }} <br></span>
-    {%- endif -%}
-    {% if entry.award5 -%}
-        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.award5 }} <br></span>
-    {%- endif -%}
-    {% if entry.conference -%}
-        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.conference }} <br></span>
-    {%- endif -%}
+    {% if has_publication_highlights %}
+      <div class="publication-highlights" aria-label="Publication highlights">
+        {% if entry.prelim -%}
+          <div class="publication-highlight">{{ entry.prelim }}</div>
+        {%- endif -%}
+        {% if entry.award1 -%}
+          <div class="publication-highlight">{{ entry.award1 }}</div>
+        {%- endif -%}
+        {% if entry.award2 -%}
+          <div class="publication-highlight">{{ entry.award2 }}</div>
+        {%- endif -%}
+        {% if entry.award3 -%}
+          <div class="publication-highlight">{{ entry.award3 }}</div>
+        {%- endif -%}
+        {% if entry.award4 -%}
+          <div class="publication-highlight">{{ entry.award4 }}</div>
+        {%- endif -%}
+        {% if entry.award5 -%}
+          <div class="publication-highlight">{{ entry.award5 }}</div>
+        {%- endif -%}
+        {% if entry.conference -%}
+          <div class="publication-highlight">{{ entry.conference }}</div>
+        {%- endif -%}
+      </div>
+    {% endif %}
 
 
     {% if entry.abstract %}
