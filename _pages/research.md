@@ -25,10 +25,10 @@ My methodological toolkit includes optimization, approximation algorithms, netwo
 
 Beyond online platforms, I am interested in operational problems in supply chains, healthcare, transportation, and other societal systems where connectivity changes how decisions propagate.
 
-#### Publications
+#### Journal Publications
 
 <div class="publications">
 
-{% bibliography %}
+{% bibliography --group_by none %}
 
 </div>

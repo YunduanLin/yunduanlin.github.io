@@ -2,6 +2,22 @@
   url: https://www.sciencedirect.com/journal/accident-analysis-and-prevention
   color: "#2f6f6f"
 
+"IJDS":
+  url: https://pubsonline.informs.org/journal/ijds
+  color: "#536d8f"
+
+"POM":
+  url: https://journals.sagepub.com/home/pao
+  color: "#8a6a3f"
+
+"PRE":
+  url: "#"
+  color: "#777777"
+
+"REV":
+  url: "#"
+  color: "#6b6f99"
+
 "CHIL":
   url: https://chilconference.org/
   color: "#5c6f99"
@@ -17,3 +33,7 @@
 "MSOM":
   url: https://pubsonline.informs.org/journal/msom
   color: "#9b6a3a"
+
+"WP":
+  url: "#"
+  color: "#6c757d"

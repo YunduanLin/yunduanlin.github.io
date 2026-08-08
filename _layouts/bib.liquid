@@ -129,8 +129,16 @@
     <!-- Journal/Book title and date -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
-    {% if entry.type == 'article' %}
+    {% if entry.status %}
+      {% capture entry_status %}{{ entry.status }}{% if entry.target %} at <em>{{ entry.target }}</em>{% endif %}{% if entry.year %}, {{ entry.year }}{% endif %}{% endcapture %}
+    {% elsif entry.type == 'article' %}
       {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
+      {% if entry.volume %}
+        {% capture entrytype %}{{ entrytype }}, {{ entry.volume }}{% if entry.number %}({{ entry.number }}){% endif %}{% endcapture %}
+      {% endif %}
+      {% if entry.pages %}
+        {% capture entrytype %}{{ entrytype }}, {{ entry.pages }}{% endcapture %}
+      {% endif %}
     {% elsif proceedings contains entry.type %}
       {% capture entrytype %}<em>In {{entry.booktitle}}</em> {% endcapture %}
     {% elsif thesis contains entry.type %}
@@ -146,17 +154,22 @@
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
-    <div class="periodical">
-      {{ periodical | strip }}
-    </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
-    </div>
+    {% if entry.status %}
+      <div class="periodical">
+        {{ entry_status | strip }}
+      </div>
+    {% else %}
+      <div class="periodical">
+        {{ periodical | strip }}
+      </div>
+      <div class="periodical">
+        {{ entry.note | strip }}
+      </div>
 
-
-    {%- if entry.progress -%}
-    <div class="progresstarget">{{entry.progress}} <em>{{entry.target}}</em></div>
-    {%- endif -%}
+      {%- if entry.progress -%}
+      <div class="progresstarget">{{entry.progress}} <em>{{entry.target}}</em></div>
+      {%- endif -%}
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
@@ -290,6 +303,12 @@
     {%- endif -%}
     {% if entry.award3 -%}
         <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.award3 }} <br></span>
+    {%- endif -%}
+    {% if entry.award4 -%}
+        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.award4 }} <br></span>
+    {%- endif -%}
+    {% if entry.award5 -%}
+        <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.award5 }} <br></span>
     {%- endif -%}
     {% if entry.conference -%}
         <span style="margin-left: 20px; font-family:verdana; font-size:14px; color:#0076df">- {{ entry.conference }} <br></span>

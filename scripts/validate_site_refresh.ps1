@@ -114,7 +114,18 @@ Assert-Contains "_pages/about.md" "Tsinghua University" "Homepage education shou
 
 Assert-Contains "_pages/research.md" "Platform Operations" "Research page should describe platform operations."
 Assert-Contains "_pages/research.md" "Network Diffusion" "Research page should describe network diffusion."
-Assert-Contains "_pages/research.md" "\{\%\s*bibliography\s*\%\}" "Research page should render the full publication list."
+Assert-Contains "_pages/research.md" "####\s*Journal Publications" "Research page should label the publication section as journal publications."
+Assert-Contains "_pages/research.md" "\{\%\s*bibliography\s+--group_by\s+none\s*\%\}" "Research page should render journal publications as one ordered list."
+Assert-Contains "_layouts/bib.liquid" "entry\.status" "Bibliography layout should support manuscript status lines."
+Assert-Contains "_layouts/bib.liquid" "entry\.volume" "Bibliography layout should display volume information for published journal articles."
+Assert-Contains "_layouts/bib.liquid" "entry\.award5" "Bibliography layout should display the full set of publication awards and acceptances."
+Assert-Contains "_bibliography/papers.bib" "A Social-Spatial Network Choice Model with Applications to Pop-Up Store Operations" "Bibliography should include the pop-up store operations manuscript."
+Assert-Contains "_bibliography/papers.bib" "Beyond General Expertise: A Machine Learning Framework for Assessing Task-Level Decision Accuracy" "Bibliography should include the task-level decision accuracy manuscript."
+Assert-Contains "_bibliography/papers.bib" "Technology Adoption under Experience-Based Learning: A Dynamic Market and Policy Analysis" "Bibliography should include the technology adoption manuscript."
+Assert-Contains "_bibliography/papers.bib" "LLM-Augmented Digital Twin for Policy Evaluation in Short-Video Platforms" "Bibliography should include the short-video platforms manuscript."
+Assert-Contains "_bibliography/papers.bib" "LLM Agents in Transportation-enabled Service Platforms" "Bibliography should include the LLM agents service platforms manuscript."
+Assert-Contains "_bibliography/papers.bib" "Accepted to 25th ACM Conference on Economics and Computation, 2024" "Bibliography should include all listed acceptances for the nonprogressive diffusion paper."
+Assert-Contains "_bibliography/papers.bib" "Finalist, INFORMS Minority Issues Forum Paper Competition, 2024" "Bibliography should include the MSOM paper's 2024 finalist award."
 
 $removedPages = @(
   "_pages/publications.md",
