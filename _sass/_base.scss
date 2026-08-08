@@ -297,6 +297,12 @@ ul.task-list input[type="checkbox"] {
   .home-contact-line {
     color: var(--global-text-color-light);
     margin-bottom: 0.2rem;
+    overflow-wrap: anywhere;
+
+    strong {
+      color: var(--global-text-color);
+      font-weight: 600;
+    }
   }
 
   .home-contact-line-primary {
