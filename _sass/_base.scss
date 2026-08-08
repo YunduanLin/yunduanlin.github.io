@@ -267,18 +267,42 @@ ul.task-list input[type="checkbox"] {
   }
 
   .home-contact {
-    margin-top: 1rem;
-    padding: 0.85rem 1rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.035);
-    color: var(--global-text-color-light);
+    margin-top: 1.15rem;
+    max-width: 520px;
     font-size: 0.92rem;
     line-height: 1.55;
   }
 
+  .home-contact-card {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 1.1rem 0.95rem;
+    border: 1px solid rgba(0, 118, 223, 0.14);
+    border-radius: 8px;
+    background-color: var(--global-card-bg-color);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--global-theme-color), #b8892f);
+      opacity: 0.9;
+    }
+  }
+
   .home-contact-line {
-    margin-bottom: 0.15rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.2rem;
+  }
+
+  .home-contact-line-primary {
+    color: var(--global-text-color);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
   }
 
   .profile.home-profile-photo {
@@ -381,8 +405,10 @@ ul.task-list input[type="checkbox"] {
 }
 
 html[data-theme="dark"] {
-  .home-profile-hero .home-contact {
+  .home-profile-hero .home-contact-card {
     background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(102, 204, 255, 0.18);
+    box-shadow: none;
   }
 
   .home-research-theme {

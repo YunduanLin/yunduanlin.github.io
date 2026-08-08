@@ -22,9 +22,11 @@ layout: default
             <div class="home-intro-text">{{ page.home_intro | markdownify }}</div>
           {% endif %}
           {% if page.home_contact %}
-            <div class="home-contact">
+            <div class="home-contact home-contact-card" aria-label="Contact information">
               {% for item in page.home_contact %}
-                <div class="home-contact-line">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+                <div class="home-contact-line{% if forloop.first %} home-contact-line-primary{% endif %}">
+                  {{ item | markdownify | remove: '<p>' | remove: '</p>' }}
+                </div>
               {% endfor %}
             </div>
           {% endif %}

@@ -56,7 +56,7 @@ Please see my [research]({{ '/research/' | relative_url }}) for more information
     <div class="home-timeline-head">
       <div>
         <strong>The Chinese University of Hong Kong</strong>
-        <span>Assistant Professor, DOT</span>
+        <span>Assistant Professor, Department of Decisions, Operations and Technology</span>
       </div>
       <div class="home-timeline-meta">
         <span class="home-timeline-date">2024-current</span>
