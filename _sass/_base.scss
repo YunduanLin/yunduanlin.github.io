@@ -498,6 +498,27 @@ html[data-theme="dark"] {
   line-height: 1.45;
 }
 
+.home-visitor-map {
+  display: flex;
+  justify-content: center;
+  margin: 0.9rem 0 0;
+  padding: 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background-color: var(--global-card-bg-color);
+
+  iframe,
+  img,
+  script + a {
+    max-width: 100%;
+  }
+}
+
+html[data-theme="dark"] .home-visitor-map {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(196, 154, 44, 0.2);
+}
+
 @media (min-width: 576px) {
   .profile {
     width: 30%;

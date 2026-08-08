@@ -123,6 +123,10 @@ Assert-Contains "_pages/about.md" "2024-current" "Homepage employment should inc
 Assert-Contains "_pages/about.md" "####\s*Education" "Homepage should include education."
 Assert-Contains "_pages/about.md" "University of California, Berkeley" "Homepage education should include Berkeley."
 Assert-Contains "_pages/about.md" "Tsinghua University" "Homepage education should include Tsinghua."
+Assert-Contains "_pages/about.md" "id=""clustrmaps""" "Homepage should restore the visitor map widget."
+Assert-Contains "_pages/about.md" "YCvn1gfc-4Zcm16_59Td8Q8TVKH7BBu_xwEpz1zuH8E" "Homepage visitor map should use the original ClustrMaps site token."
+Assert-Contains "_pages/about.md" "home-visitor-map" "Homepage visitor map should be wrapped for styling."
+Assert-Contains "_sass/_base.scss" "\.home-visitor-map" "Homepage visitor map wrapper should be styled."
 
 Assert-NotContains "_pages/research.md" "research-focus-list|research-overview|research-theme-grid|research-theme-card" "Research page should not repeat homepage-style agenda/theme treatments."
 Assert-Contains "_pages/research.md" "####\s*Social Network Analytics & Platform Operations" "Research page should use the social network/platform stream as a primary section."
