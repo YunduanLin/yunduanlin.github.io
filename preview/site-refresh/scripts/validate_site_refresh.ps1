@@ -163,6 +163,7 @@ $requiredCoauthorFirstNames = @(
   "Heng",
   "Renyu",
   "Mengxin",
+  "Shuo",
   "Haoting",
   "Jingxu",
   "Zeyu",
@@ -195,13 +196,15 @@ foreach ($firstname in $requiredCoauthorFirstNames) {
 $intentionallyUnlinkedCoauthorFirstNames = @(
   "Chen",
   "Lingfei",
-  "Shuo",
   "Chenyi"
 )
 
 foreach ($firstname in $intentionallyUnlinkedCoauthorFirstNames) {
   Assert-NotContains "_data/coauthors.yml" "firstname:\s*\[[^\]]*`"$([regex]::Escape($firstname))`"" "$firstname should remain unlinked until a verified website is available."
 }
+
+Assert-Contains "_data/coauthors.yml" "url:\s*https://shuo-ss\.github\.io/" "Shuo Sun should link to the verified personal website."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://scholar\.google\.com/citations\?user=lQ630oAAAAAJ&hl=en" "Haoting Zhang should link to the verified Google Scholar profile."
 
 Assert-Contains "_bibliography/papers.bib" "A Social-Spatial Network Choice Model with Applications to Pop-Up Store Operations" "Bibliography should include the pop-up store operations manuscript."
 Assert-Contains "_bibliography/papers.bib" "Beyond General Expertise: A Machine Learning Framework for Assessing Task-Level Decision Accuracy" "Bibliography should include the task-level decision accuracy manuscript."
