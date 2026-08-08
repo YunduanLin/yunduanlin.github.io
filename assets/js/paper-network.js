@@ -232,8 +232,8 @@
           "data-paper-id": node.id,
         });
 
-        var halo = createSvgElement("circle", { class: "paper-network-node-halo", r: "27" });
-        var circle = createSvgElement("circle", { class: "paper-network-node-dot", r: "20" });
+        var halo = createSvgElement("circle", { class: "paper-network-node-halo", r: "31" });
+        var circle = createSvgElement("circle", { class: "paper-network-node-dot", r: "23" });
         var code = createSvgElement("text", {
           class: "paper-network-node-code",
           x: "0",
@@ -242,7 +242,7 @@
         });
         var title = createSvgElement("text", {
           class: "paper-network-title-label",
-          x: "30",
+          x: "34",
           y: "5",
         });
         var accessibleTitle = createSvgElement("title", {});

@@ -1171,7 +1171,7 @@ footer.sticky-bottom {
 
   .paper-network-zone-label {
     fill: rgba(75, 19, 89, 0.62);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
   }
 
@@ -1218,7 +1218,7 @@ footer.sticky-bottom {
 
   .paper-network-node-code {
     fill: #4b1359;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 800;
     pointer-events: none;
   }
@@ -1228,7 +1228,7 @@ footer.sticky-bottom {
     stroke: #fffdf7;
     stroke-width: 4px;
     paint-order: stroke;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     opacity: 0;
     pointer-events: none;
@@ -1755,10 +1755,6 @@ html[data-theme="dark"] .research-page {
 
     .paper-network-zone-label {
       font-size: 11px;
-    }
-
-    .paper-network-title-label {
-      display: none;
     }
 
     .publication-section-title {
