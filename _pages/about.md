@@ -110,5 +110,17 @@ Please see my [research]({{ '/research/' | relative_url }}) for more information
 </div>
 
 <div class="home-visitor-map" aria-label="Visitor map">
+  <div class="home-visitor-map-fallback" aria-hidden="true">
+    <svg viewBox="0 0 220 150" role="img">
+      <path d="M31 56c13-13 31-20 51-20 15 0 27 4 38 12 11-8 25-12 42-12 13 0 24 3 34 9" />
+      <path d="M24 84c16 10 34 15 55 15 14 0 28-3 41-9 13 6 27 9 42 9 16 0 29-3 41-9" />
+      <path d="M55 44c-7 17-7 40 0 60" />
+      <path d="M165 44c7 17 7 40 0 60" />
+      <circle cx="73" cy="67" r="3.5" />
+      <circle cx="121" cy="58" r="3.5" />
+      <circle cx="149" cy="87" r="3.5" />
+      <circle cx="101" cy="97" r="3.5" />
+    </svg>
+  </div>
   <script type="text/javascript" id="clustrmaps" src="https://cdn.clustrmaps.com/map_v2.js?d=YCvn1gfc-4Zcm16_59Td8Q8TVKH7BBu_xwEpz1zuH8E&cl=ffffff&w=200&h=150"></script>
 </div>

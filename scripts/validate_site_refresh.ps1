@@ -126,11 +126,13 @@ Assert-Contains "_pages/about.md" "Tsinghua University" "Homepage education shou
 Assert-Contains "_pages/about.md" "id=""clustrmaps""" "Homepage should restore the visitor map widget."
 Assert-Contains "_pages/about.md" "YCvn1gfc-4Zcm16_59Td8Q8TVKH7BBu_xwEpz1zuH8E" "Homepage visitor map should use the original ClustrMaps site token."
 Assert-Contains "_pages/about.md" "home-visitor-map" "Homepage visitor map should be wrapped for styling."
+Assert-Contains "_pages/about.md" "home-visitor-map-fallback" "Homepage visitor map should include a built-in visual fallback."
 Assert-Contains "_pages/about.md" "https://cdn\.clustrmaps\.com/map_v2\.js" "Homepage visitor map should use the supported ClustrMaps CDN script."
 Assert-NotContains "_pages/about.md" "map_v2\.png" "Homepage visitor map should not use the broken static ClustrMaps image URL."
 Assert-Contains "_pages/about.md" "Visitor map" "Homepage visitor map should include accessible text."
 Assert-NotContains "_pages/about.md" "####\s*Visitors" "Homepage should not show a separate Visitors heading."
 Assert-Contains "_sass/_base.scss" "\.home-visitor-map" "Homepage visitor map wrapper should be styled."
+Assert-Contains "_sass/_base.scss" "\.home-visitor-map-fallback" "Homepage visitor map fallback should be styled."
 
 Assert-NotContains "_pages/research.md" "research-focus-list|research-overview|research-theme-grid|research-theme-card" "Research page should not repeat homepage-style agenda/theme treatments."
 Assert-Contains "_pages/research.md" "####\s*Social Network Analytics & Platform Operations" "Research page should use the social network/platform stream as a primary section."
