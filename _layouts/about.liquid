@@ -30,11 +30,12 @@ layout: default
             {% else %}
               {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
             {% endif %}
-            {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.34}}px, (min-width: 576px) 34vw, 95vw{% endcapture %}
-            {%
-              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-              cache_bust=true
-            %}
+            <img
+              src="{{ profile_image_path | relative_url | bust_file_cache }}"
+              class="{{ profile_image_class }} home-profile-img"
+              alt="{{ page.profile.image }}"
+              loading="eager"
+            >
           {% endif %}
         </aside>
         {% if page.home_contact %}
