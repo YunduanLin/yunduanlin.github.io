@@ -166,6 +166,7 @@ Assert-Contains "_sass/_base.scss" "(?s)ol\.bibliography li \.abbr abbr\s*\{[^}]
 Assert-Contains "_sass/_base.scss" "(?s)ol\.bibliography li \.abbr abbr\s*\{[^}]*color:\s*#fff" "Publication J/C/W badges should use white text for contrast."
 Assert-Contains "_config.yml" "stream" "Custom publication stream metadata should be filtered out of public BibTeX output."
 Assert-Contains "_config.yml" "keywords" "Custom publication keyword metadata should be filtered out of public BibTeX output."
+Assert-NotContains "_bibliography/papers.bib" "keywords=\{[^}]*\bWIP\b[^}]*\}" "Work-in-progress should be represented by the W label/status, not by a keyword chip."
 
 $requiredCoauthorFirstNames = @(
   "Kashish",
