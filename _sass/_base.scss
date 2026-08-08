@@ -1090,10 +1090,10 @@ footer.sticky-bottom {
       align-items: center;
       min-height: 1.05rem;
       padding: 0.08rem 0.36rem;
-      color: #5b2056;
-      background-color: rgba(117, 15, 109, 0.055);
-      border: 1px solid rgba(117, 15, 109, 0.18);
-      border-left: 2px solid rgba(196, 154, 44, 0.78);
+      color: #6f4a00;
+      background-color: rgba(196, 154, 44, 0.14);
+      border: 1px solid rgba(196, 154, 44, 0.46);
+      border-left: 2px solid #c49a2c;
       border-radius: 4px;
       font-size: 0.66rem;
       font-weight: 600;
@@ -1116,10 +1116,10 @@ html[data-theme="dark"] .research-page {
   }
 
   .publications .publication-keyword {
-    color: #eadff0;
-    background-color: rgba(255, 255, 255, 0.055);
-    border-color: rgba(225, 200, 120, 0.22);
-    border-left-color: rgba(225, 200, 120, 0.78);
+    color: #f0d889;
+    background-color: rgba(196, 154, 44, 0.16);
+    border-color: rgba(225, 200, 120, 0.44);
+    border-left-color: #e1c878;
   }
 }
 
