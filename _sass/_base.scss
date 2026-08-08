@@ -509,11 +509,17 @@ html[data-theme="dark"] {
   border-radius: 8px;
   background-color: rgba(196, 154, 44, 0.08);
 
-  img {
+  iframe,
+  img,
+  script + a {
     display: block;
     height: auto;
     max-width: 100%;
     border-radius: 6px;
+  }
+
+  script + a {
+    line-height: 0;
   }
 }
 
