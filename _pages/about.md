@@ -55,12 +55,11 @@ Please see my [research]({{ '/research/' | relative_url }}) for more information
   <article class="home-timeline-entry">
     <div class="home-timeline-head">
       <div>
-        <strong>The Chinese University of Hong Kong, CUHK Business School</strong>
-        <span>Assistant Professor, Department of Decisions, Operations, and Technology</span>
+        <strong>The Chinese University of Hong Kong</strong>
+        <span>Assistant Professor, DOT</span>
       </div>
       <div class="home-timeline-meta">
-        <span>Hong Kong SAR</span>
-        <em>2024 - current</em>
+        <span class="home-timeline-date">2024-current</span>
       </div>
     </div>
   </article>
@@ -76,8 +75,7 @@ Please see my [research]({{ '/research/' | relative_url }}) for more information
         <span>Ph.D. in Systems Engineering, Civil and Environmental Engineering</span>
       </div>
       <div class="home-timeline-meta">
-        <span>Berkeley, CA</span>
-        <em>2019 - 2024</em>
+        <span class="home-timeline-date">2019-2024</span>
       </div>
     </div>
     <div class="home-timeline-detail">Minor in Operations Research and Computer Science</div>
@@ -91,8 +89,7 @@ Please see my [research]({{ '/research/' | relative_url }}) for more information
         <span>M.S. in Systems Engineering, Civil and Environmental Engineering</span>
       </div>
       <div class="home-timeline-meta">
-        <span>Berkeley, CA</span>
-        <em>2018 - 2019</em>
+        <span class="home-timeline-date">2018-2019</span>
       </div>
     </div>
   </article>
@@ -104,8 +101,7 @@ Please see my [research]({{ '/research/' | relative_url }}) for more information
         <span>B.Eng. in Civil Engineering</span>
       </div>
       <div class="home-timeline-meta">
-        <span>Beijing, China</span>
-        <em>2014 - 2018</em>
+        <span class="home-timeline-date">2014-2018</span>
       </div>
     </div>
   </article>

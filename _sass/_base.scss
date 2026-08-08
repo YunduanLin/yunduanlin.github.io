@@ -396,6 +396,10 @@ html[data-theme="dark"] {
   .home-research-tag {
     background-color: rgba(102, 204, 255, 0.12);
   }
+
+  .home-timeline-date {
+    background-color: rgba(102, 204, 255, 0.12);
+  }
 }
 
 .home-timeline {
@@ -416,11 +420,12 @@ html[data-theme="dark"] {
 
 .home-timeline-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(130px, auto);
+  grid-template-columns: minmax(0, 1fr) minmax(112px, auto);
   gap: 1.25rem;
+  align-items: start;
 
   strong,
-  span {
+  > div:first-child span {
     display: block;
   }
 
@@ -431,8 +436,21 @@ html[data-theme="dark"] {
 }
 
 .home-timeline-meta {
-  color: var(--global-text-color-light);
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home-timeline-date {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.85rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background-color: rgba(0, 118, 223, 0.09);
+  color: var(--global-theme-color);
+  font-size: 0.9rem;
+  font-style: normal;
+  line-height: 1.2;
   white-space: nowrap;
 }
 
@@ -484,8 +502,7 @@ html[data-theme="dark"] {
   }
 
   .home-timeline-meta {
-    text-align: left;
-    white-space: normal;
+    justify-content: flex-start;
   }
 }
 
