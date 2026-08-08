@@ -11,6 +11,7 @@ on:
       - "**.liquid"
       - "**/*.scss"
       - "_sass/**"
+      - "_plugins/**"
       - "**/*.bib"
       - "**/*.md"
       - "**.yml"
