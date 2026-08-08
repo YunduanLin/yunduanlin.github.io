@@ -158,15 +158,11 @@ Assert-Contains "_config.yml" "stream" "Custom publication stream metadata shoul
 Assert-Contains "_config.yml" "keywords" "Custom publication keyword metadata should be filtered out of public BibTeX output."
 
 $requiredCoauthorFirstNames = @(
-  "Chen",
   "Kashish",
-  "Lingfei",
   "Zuo-Jun Max",
   "Heng",
   "Renyu",
   "Mengxin",
-  "Shuo",
-  "Chenyi",
   "Haoting",
   "Jingxu",
   "Zeyu",
@@ -194,6 +190,17 @@ $requiredCoauthorFirstNames = @(
 
 foreach ($firstname in $requiredCoauthorFirstNames) {
   Assert-Contains "_data/coauthors.yml" "firstname:\s*\[[^\]]*`"$([regex]::Escape($firstname))`"" "Coauthor link map should include $firstname."
+}
+
+$intentionallyUnlinkedCoauthorFirstNames = @(
+  "Chen",
+  "Lingfei",
+  "Shuo",
+  "Chenyi"
+)
+
+foreach ($firstname in $intentionallyUnlinkedCoauthorFirstNames) {
+  Assert-NotContains "_data/coauthors.yml" "firstname:\s*\[[^\]]*`"$([regex]::Escape($firstname))`"" "$firstname should remain unlinked until a verified website is available."
 }
 
 Assert-Contains "_bibliography/papers.bib" "A Social-Spatial Network Choice Model with Applications to Pop-Up Store Operations" "Bibliography should include the pop-up store operations manuscript."

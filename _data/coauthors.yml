@@ -2,10 +2,6 @@
   - firstname: ["Kashish"]
     url: https://www.kashisharora.info/index
 
-"Chen":
-  - firstname: ["Chen"]
-    url: https://cc8029.github.io/
-
 "Cheng":
   - firstname: ["Qixiu"]
     url: https://chengtraffic.github.io/
@@ -21,10 +17,6 @@
 "He":
   - firstname: ["Jinghai"]
     url: https://dblp.org/pid/314/9142.html
-
-"Huang":
-  - firstname: ["Chenyi"]
-    url: https://dblp.org/pid/374/3262.html
 
 "Huh":
   - firstname: ["Yoonsuk"]
@@ -57,10 +49,6 @@
 "Su":
   - firstname: ["Qianqian"]
     url: https://dblp.org/pid/176/6455.html
-
-"Sun":
-  - firstname: ["Shuo"]
-    url: https://zj-maxshen.github.io/
 
 "Vetter":
   - firstname: ["Kai"]
@@ -99,10 +87,6 @@
     url: https://dblp.org/pid/275/7679.html
   - firstname: ["Zeyu"]
     url: https://zheng80.github.io/
-
-"Zhong":
-  - firstname: ["Lingfei"]
-    url: https://zj-maxshen.github.io/
 
 "Zhu":
   - firstname: ["Qing"]
