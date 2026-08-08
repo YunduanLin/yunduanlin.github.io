@@ -1171,7 +1171,7 @@ footer.sticky-bottom {
 
   .paper-network-zone-label {
     fill: rgba(75, 19, 89, 0.62);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
   }
 
@@ -1218,15 +1218,18 @@ footer.sticky-bottom {
 
   .paper-network-node-code {
     fill: #4b1359;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 800;
     pointer-events: none;
   }
 
   .paper-network-title-label {
     fill: #4b1359;
-    font-size: 12px;
-    font-weight: 650;
+    stroke: #fffdf7;
+    stroke-width: 4px;
+    paint-order: stroke;
+    font-size: 15px;
+    font-weight: 700;
     opacity: 0;
     pointer-events: none;
     transition: opacity 160ms ease;
@@ -1641,6 +1644,10 @@ html[data-theme="dark"] .research-page {
   .paper-network-zone-label,
   .paper-network-title-label {
     fill: rgba(240, 216, 137, 0.82);
+  }
+
+  .paper-network-title-label {
+    stroke: #1f1724;
   }
 
   .paper-network-edge {
