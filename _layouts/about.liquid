@@ -21,15 +21,6 @@ layout: default
           {% if page.home_intro %}
             <div class="home-intro-text">{{ page.home_intro | markdownify }}</div>
           {% endif %}
-          {% if page.home_contact %}
-            <div class="home-contact home-contact-card" aria-label="Contact information">
-              {% for item in page.home_contact %}
-                <div class="home-contact-line{% if forloop.first %} home-contact-line-primary{% endif %}">
-                  {{ item | markdownify | remove: '<p>' | remove: '</p>' }}
-                </div>
-              {% endfor %}
-            </div>
-          {% endif %}
         </div>
         <aside class="profile home-profile-photo">
           {% if page.profile.image %}
@@ -46,6 +37,15 @@ layout: default
             %}
           {% endif %}
         </aside>
+        {% if page.home_contact %}
+          <div class="home-contact home-contact-card" aria-label="Contact information">
+            {% for item in page.home_contact %}
+              <div class="home-contact-line{% if forloop.first %} home-contact-line-primary{% endif %}">
+                {{ item | markdownify | remove: '<p>' | remove: '</p>' }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
       <div class="home-profile-content">{{ content }}</div>
     {% else %}

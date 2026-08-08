@@ -251,6 +251,7 @@ ul.task-list input[type="checkbox"] {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 34%);
   column-gap: 2.5rem;
+  row-gap: 1.15rem;
   align-items: start;
   margin-bottom: 2.25rem;
   padding-bottom: 2rem;
@@ -267,14 +268,20 @@ ul.task-list input[type="checkbox"] {
   }
 
   .home-contact {
-    margin-top: 1.15rem;
-    max-width: 520px;
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
     font-size: 0.92rem;
     line-height: 1.55;
   }
 
   .home-contact-card {
     position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr) minmax(0, 0.9fr);
+    gap: 0.35rem 1.25rem;
+    align-items: center;
     overflow: hidden;
     padding: 1rem 1.1rem 0.95rem;
     border: 1px solid rgba(117, 15, 109, 0.14);
@@ -296,7 +303,7 @@ ul.task-list input[type="checkbox"] {
 
   .home-contact-line {
     color: var(--global-text-color-light);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0;
     overflow-wrap: anywhere;
 
     strong {
@@ -308,7 +315,6 @@ ul.task-list input[type="checkbox"] {
   .home-contact-line-primary {
     color: var(--global-text-color);
     font-weight: 600;
-    margin-bottom: 0.3rem;
   }
 
   .profile.home-profile-photo {
@@ -526,6 +532,11 @@ html[data-theme="dark"] {
 
   .home-profile-hero .profile.home-profile-photo {
     max-width: 380px;
+  }
+
+  .home-profile-hero .home-contact-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
   }
 
   .home-timeline-head {
