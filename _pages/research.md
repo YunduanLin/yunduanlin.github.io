@@ -9,26 +9,36 @@ nav_order: 1
 
 <div class="research-page" markdown="1">
 
-<div class="research-overview">
-  <div class="research-kicker">Research Agenda</div>
-  <p>My research develops models, algorithms, and empirical tools for operational decisions in connected systems. I am motivated by settings where people, platforms, firms, and infrastructure interact through networks, and where better decision models can improve performance, resilience, and social value.</p>
+<div class="research-focus-list" aria-label="Research focus areas">
+  <span>Networks</span>
+  <span>AI</span>
+  <span>Optimization</span>
+  <span>Analytics</span>
 </div>
 
-<div class="research-theme-grid">
-  <section class="research-theme-card" data-index="01">
-    <h4>Platform Operations and Network Diffusion</h4>
-    <p>I study how online platforms can design promotion, recommendation, and allocation policies when user behavior is shaped by social influence and feedback loops. This work develops approximation and optimization methods for diffusion processes on social networks, including settings where adoption can reverse over time.</p>
-  </section>
+<p class="research-order-note">Research outputs are organized by type and ordered from newest to oldest within each section.</p>
 
-  <section class="research-theme-card" data-index="02">
-    <h4>AI, Optimization, and Applied Operational Systems</h4>
-    <p>My methodological toolkit includes optimization, approximation algorithms, network and graph theory, stochastic simulation, machine learning, and empirical analytics. I use these tools to build deployable decision models for platforms, supply chains, healthcare, transportation, and other societal systems.</p>
-  </section>
+<section class="grant-section" markdown="1">
+
+#### Grants
+{: .publication-section-title }
+
+<div class="grant-list">
+  <div class="grant-item">
+    <div class="grant-title">"Harnessing the Power of Social Network Analytics for Enhanced Business Decision-Making"</div>
+    <div class="grant-meta"><em>CUHK Improvement on Competitiveness in Hiring New Faculties Funding Scheme</em>, PI, <span class="grant-amount">HKD 1,307,270</span>, 2024.</div>
+  </div>
+
+  <div class="grant-item">
+    <div class="grant-title">"Optimal Design of the Referral Program for Two-Sided Platforms"</div>
+    <div class="grant-meta"><em>Hong Kong Research Grants Council, Early Career Scheme</em>, PI, <span class="grant-amount">HKD 454,062</span>, 2026-2028.</div>
+  </div>
 </div>
+</section>
 
 <section class="publication-section publication-section-journal" markdown="1">
 
-#### Journal Publications
+#### Journal Publications & Manuscripts
 {: .publication-section-title }
 
 <div class="publications">
