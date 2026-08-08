@@ -979,30 +979,11 @@ footer.sticky-bottom {
 // Research Page
 
 .research-page {
-  .research-focus-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    margin: 0.2rem 0 0.65rem;
-
-    span {
-      display: inline-flex;
-      align-items: center;
-      min-height: 2rem;
-      padding: 0.35rem 0.8rem;
-      color: #4f174c;
-      background-color: rgba(117, 15, 109, 0.08);
-      border: 1px solid rgba(117, 15, 109, 0.2);
-      border-radius: 999px;
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-  }
-
   .research-order-note {
     margin-bottom: 1.8rem;
     color: var(--global-text-color-light);
     font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .grant-section {
@@ -1066,6 +1047,13 @@ footer.sticky-bottom {
     }
   }
 
+  .publication-section-lead {
+    margin: -0.35rem 0 1.2rem;
+    color: var(--global-text-color-light);
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
   .publications {
     margin-top: 0;
 
@@ -1079,27 +1067,57 @@ footer.sticky-bottom {
     }
 
     ol.bibliography li .abbr abbr {
-      color: #4f174c;
-      background-color: rgba(117, 15, 109, 0.09);
-      border: 1px solid rgba(196, 154, 44, 0.3);
+      color: #fff;
+      background-color: #750f6d;
+      border: 1px solid #c49a2c;
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0;
       text-transform: none;
+      box-shadow: 0 5px 12px rgba(117, 15, 109, 0.16);
+    }
+
+    .publication-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin: 0.35rem 0 0.45rem;
+    }
+
+    .publication-keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.35rem;
+      padding: 0.18rem 0.5rem;
+      color: #4f174c;
+      background-color: rgba(196, 154, 44, 0.18);
+      border: 1px solid rgba(196, 154, 44, 0.52);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1;
+      white-space: nowrap;
     }
   }
 }
 
 html[data-theme="dark"] .research-page {
-  .research-focus-list span,
   .grant-item {
     background-color: rgba(255, 255, 255, 0.04);
   }
 
-  .research-focus-list span,
   .publications ol.bibliography li .abbr abbr {
+    color: #fff;
+    background-color: #750f6d;
+    border-color: #e1c878;
+    box-shadow: none;
+  }
+
+  .publications .publication-keyword {
     color: #e1c878;
+    background-color: rgba(196, 154, 44, 0.12);
+    border-color: rgba(225, 200, 120, 0.42);
   }
 }
 

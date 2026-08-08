@@ -18,21 +18,25 @@
             alt=entry.preview
           %}
         {% endif %}
-      {% elsif entry.abbr %}
-        {% if site.data.venues[entry.abbr] %}
+      {% else %}
+        {% assign publication_badge = entry.label %}
+        {% if publication_badge == nil or publication_badge == '' %}
+          {% assign publication_badge = entry.abbr %}
+        {% endif %}
+        {% if publication_badge and site.data.venues[publication_badge] %}
           {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
+          {% if site.data.venues[publication_badge].color != blank %}
+            {% assign venue_style = site.data.venues[publication_badge].color | prepend: 'style="background-color:' | append: '"' %}
           {% endif %}
           <abbr
             class="badge"
             {% if venue_style %}
               {{ venue_style }}
             {% endif %}
-            ><a href="{{site.data.venues[entry.abbr].url}}">{{ entry.abbr }}</a></abbr
+            ><a href="{{site.data.venues[publication_badge].url}}">{{ publication_badge }}</a></abbr
           >
-        {% else %}
-          <abbr class="badge">{{ entry.abbr }}</abbr>
+        {% elsif publication_badge %}
+          <abbr class="badge">{{ publication_badge }}</abbr>
         {% endif %}
       {% endif %}
     </div>
@@ -42,6 +46,14 @@
   <div id="{{entry.key}}" class="col-sm-11">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
+    {% if entry.keywords %}
+      <div class="publication-keywords" aria-label="Research keywords">
+        {% assign publication_keywords = entry.keywords | split: ';' %}
+        {% for keyword in publication_keywords %}
+          <span class="publication-keyword">{{ keyword | strip }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}

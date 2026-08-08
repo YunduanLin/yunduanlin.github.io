@@ -9,47 +9,32 @@ nav_order: 1
 
 <div class="research-page" markdown="1">
 
-<div class="research-focus-list" aria-label="Research focus areas">
-  <span>Networks</span>
-  <span>AI</span>
-  <span>Optimization</span>
-  <span>Analytics</span>
-</div>
+<p class="research-order-note">Papers are grouped by research stream and ordered from newest to oldest within each section. Labels indicate publication type/order (J=journal/manuscript, C=conference, W=working paper/work in progress); keyword chips mark recurring methods and domains.</p>
 
-<p class="research-order-note">Research outputs are organized by type and ordered from newest to oldest within each section.</p>
+<section class="publication-section publication-section-stream publication-section-social" markdown="1">
 
-<section class="publication-section publication-section-journal" markdown="1">
-
-#### Journal Publications & Manuscripts
+#### Social Network Analytics & Platform Operations
 {: .publication-section-title }
+
+<p class="publication-section-lead">This stream studies how network connections, peer influence, learning, and platform interventions shape adoption, engagement, diffusion, and operational performance in connected markets.</p>
 
 <div class="publications">
 
-{% bibliography --group_by none --query @*[category=journal]* %}
+{% bibliography --group_by none --query @*[stream=social]* %}
 
 </div>
 </section>
 
-<section class="publication-section publication-section-conference" markdown="1">
+<section class="publication-section publication-section-stream publication-section-aiops" markdown="1">
 
-#### Refereed Conference Proceedings
+#### AI, Optimization & Operational Analytics
 {: .publication-section-title }
+
+<p class="publication-section-lead">This stream develops AI, machine learning, simulation, and optimization models for deployable decision support in service platforms, transportation, healthcare, and resource allocation systems.</p>
 
 <div class="publications">
 
-{% bibliography --group_by none --query @*[category=conference]* %}
-
-</div>
-</section>
-
-<section class="publication-section publication-section-progress" markdown="1">
-
-#### Work In Progress
-{: .publication-section-title }
-
-<div class="publications">
-
-{% bibliography --group_by none --query @*[category=progress]* %}
+{% bibliography --group_by none --query @*[stream=aiops]* %}
 
 </div>
 </section>

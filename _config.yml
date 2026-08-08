@@ -304,7 +304,7 @@ enable_publication_badges:
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
-  [abbr, abstract, altmetric, arxiv, award1, award2, award3, award4, award5, bibtex_show, blog, category, code, conference, doilink, html, label, pdf, poster, prelim, preview, progress, selected, slides, ssrn, status, status_year, supp, target, video, website]
+  [abbr, abstract, altmetric, arxiv, award1, award2, award3, award4, award5, bibtex_show, blog, category, code, conference, doilink, html, keywords, label, pdf, poster, prelim, preview, progress, selected, slides, ssrn, status, status_year, stream, supp, target, video, website]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit:  # leave blank to always show all authors
