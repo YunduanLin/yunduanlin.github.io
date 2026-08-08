@@ -1,7 +1,46 @@
+"Arora":
+  - firstname: ["Kashish"]
+    url: https://www.kashisharora.info/index
+
+"Chen":
+  - firstname: ["Chen"]
+    url: https://cc8029.github.io/
+
+"Cheng":
+  - firstname: ["Qixiu"]
+    url: https://chengtraffic.github.io/
+
+"Dong":
+  - firstname: ["Wanxue", "Wendy Wanxue"]
+    url: https://www.bschool.cuhk.edu.hk/staff/dong-wendy-wanxue/
+
+"Guo":
+  - firstname: ["Zhaomiao"]
+    url: https://zhaomiaoguo.github.io/
+
+"He":
+  - firstname: ["Jinghai"]
+    url: https://dblp.org/pid/314/9142.html
+
+"Huang":
+  - firstname: ["Chenyi"]
+    url: https://dblp.org/pid/374/3262.html
+
+"Huh":
+  - firstname: ["Yoonsuk"]
+    url: https://dblp.org/pid/275/7327.html
+
+"Jiang":
+  - firstname: ["Denglin"]
+    url: https://dblp.org/pid/235/6990.html
+  - firstname: ["Hansheng"]
+    url: https://hanshengjiang.github.io/
 
 "Li":
   - firstname: ["Ruimin"]
-    url: https://orcid.org/0000-0002-3405-1143
+    url: https://www.civil.tsinghua.edu.cn/ceen/info/1062/1205.htm
+  - firstname: ["Xiangyu"]
+    url: https://scholar.google.com/scholar?q=%22Xiangyu+Li%22+%22LLM+Agents+in+Transportation-enabled+Service+Platforms%22
 
 "Seo":
   - firstname: ["Youngho"]
@@ -9,18 +48,47 @@
 
 "Shen":
   - firstname: ["Max", "Zuo-Jun (Max)", "Zuo-Jun Max"]
-    url: https://shen.ieor.berkeley.edu
+    url: https://zj-maxshen.github.io/
+
+"Shi":
+  - firstname: ["Linxuan"]
+    url: https://scholar.google.com/scholar?q=%22Linxuan+Shi%22+%22LLM+Agents+in+Transportation-enabled+Service+Platforms%22
+
+"Su":
+  - firstname: ["Qianqian"]
+    url: https://dblp.org/pid/176/6455.html
+
+"Sun":
+  - firstname: ["Shuo"]
+    url: https://zj-maxshen.github.io/
 
 "Vetter":
   - firstname: ["Kai"]
     url: https://nuc.berkeley.edu/people/kai-vetter/
 
 "Wang":
+  - firstname: ["Jiaming"]
+    url: https://dblp.org/pid/125/6600.html
   - firstname: ["Mengxin"]
-    url: https://www.mxwang.site/home
+    url: https://www.mxwang.site/
+  - firstname: ["Weiquan"]
+    url: https://www.bschool.cuhk.edu.hk/staff/wang-weiquan/
 
+"Xu":
+  - firstname: ["Jingxu"]
+    url: https://dblp.org/pid/225/2736.html
+  - firstname: ["Te"]
+    url: https://scholar.google.com/scholar?q=%22Te+Xu%22+%22LLM+Agents+in+Transportation-enabled+Service+Platforms%22
+
+"Zhan":
+  - firstname: ["Donglin"]
+    url: https://dblp.org/pid/235/6846.html
 
 "Zhang":
+  - firstname: ["Dongcheng"]
+    url: https://www.bschool.cuhk.edu.hk/staff/zhang-dongcheng/
+  - firstname: ["Haoting"]
+    url: https://dblp.org/pid/226/4757.html
   - firstname: ["Heng"]
     url: https://sites.google.com/view/heng-zhang/home
   - firstname: ["Renyu", "Renyu Philip"]
@@ -28,9 +96,13 @@
 
 "Zheng":
   - firstname: ["Yifan"]
-    url: https://www.linkedin.com/in/yifan-zheng-b9569362
+    url: https://dblp.org/pid/275/7679.html
   - firstname: ["Zeyu"]
-    url: https://zheng.ieor.berkeley.edu/home
+    url: https://zheng80.github.io/
+
+"Zhong":
+  - firstname: ["Lingfei"]
+    url: https://zj-maxshen.github.io/
 
 "Zhu":
   - firstname: ["Qing"]

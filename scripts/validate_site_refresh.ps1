@@ -153,6 +153,46 @@ Assert-Contains "_sass/_base.scss" "(?s)ol\.bibliography li \.abbr abbr\s*\{[^}]
 Assert-Contains "_sass/_base.scss" "(?s)ol\.bibliography li \.abbr abbr\s*\{[^}]*color:\s*#fff" "Publication J/C/W badges should use white text for contrast."
 Assert-Contains "_config.yml" "stream" "Custom publication stream metadata should be filtered out of public BibTeX output."
 Assert-Contains "_config.yml" "keywords" "Custom publication keyword metadata should be filtered out of public BibTeX output."
+
+$requiredCoauthorFirstNames = @(
+  "Chen",
+  "Kashish",
+  "Lingfei",
+  "Zuo-Jun Max",
+  "Heng",
+  "Renyu",
+  "Mengxin",
+  "Shuo",
+  "Chenyi",
+  "Haoting",
+  "Jingxu",
+  "Zeyu",
+  "Te",
+  "Linxuan",
+  "Hansheng",
+  "Donglin",
+  "Xiangyu",
+  "Zhaomiao",
+  "Qixiu",
+  "Jinghai",
+  "Denglin",
+  "Wanxue",
+  "Dongcheng",
+  "Weiquan",
+  "Yifan",
+  "Yoonsuk",
+  "Qianqian",
+  "Jiaming",
+  "Kai",
+  "Youngho",
+  "Ruimin",
+  "Qing"
+)
+
+foreach ($firstname in $requiredCoauthorFirstNames) {
+  Assert-Contains "_data/coauthors.yml" "firstname:\s*\[[^\]]*`"$([regex]::Escape($firstname))`"" "Coauthor link map should include $firstname."
+}
+
 Assert-Contains "_bibliography/papers.bib" "A Social-Spatial Network Choice Model with Applications to Pop-Up Store Operations" "Bibliography should include the pop-up store operations manuscript."
 Assert-Contains "_bibliography/papers.bib" "Beyond General Expertise: A Machine Learning Framework for Assessing Task-Level Decision Accuracy" "Bibliography should include the task-level decision accuracy manuscript."
 Assert-Contains "_bibliography/papers.bib" "Technology Adoption under Experience-Based Learning: A Dynamic Market and Policy Analysis" "Bibliography should include the technology adoption manuscript."
