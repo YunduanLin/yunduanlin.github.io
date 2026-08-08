@@ -9,7 +9,7 @@ nav_order: 1
 
 <div class="research-page" markdown="1">
 
-<p class="research-order-note">Papers are grouped by research stream and ordered from newest to oldest within each section. Labels indicate publication type/order (J=journal/manuscript, C=conference, W=working paper/work in progress); keyword chips mark recurring methods and domains.</p>
+<p class="research-order-note">Papers are grouped by research stream and ordered from newest to oldest within each section. Labels indicate publication type/order (J=published journal, C=refereed conference, W=working paper/manuscript/work in progress); keyword chips mark recurring methods and domains.</p>
 
 <section class="publication-section publication-section-stream publication-section-social" markdown="1">
 
