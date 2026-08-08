@@ -240,10 +240,12 @@
           y: "5",
           "text-anchor": "middle",
         });
+        var isRightEdgeNode = node.x >= 700;
         var title = createSvgElement("text", {
           class: "paper-network-title-label",
-          x: "34",
+          x: isRightEdgeNode ? "-34" : "34",
           y: "5",
+          "text-anchor": isRightEdgeNode ? "end" : "start",
         });
         var accessibleTitle = createSvgElement("title", {});
 
