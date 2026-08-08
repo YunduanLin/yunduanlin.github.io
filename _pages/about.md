@@ -22,30 +22,32 @@ social: true # includes social icons at the bottom of the page
 
 #### Research Interests
 
-My research is in societal operations management, where I study how connected decision makers, digital platforms, and AI-enabled systems shape operational performance and social outcomes. I am especially interested in two related directions:
+My research is in societal operations management, where I study how connected decision makers, digital platforms, and AI-enabled systems shape operational performance and social outcomes. My work connects operations management, network science, and AI-enabled analytics to understand behavior in large-scale service systems and to design interventions that improve efficiency, resilience, and societal impact.
 
 <div class="home-research-themes">
   <section class="home-research-theme" data-index="01">
     <h5>Social network analytics and platform operations</h5>
-    <p>I study network diffusion, peer influence, adoption, engagement, and platform interventions in online marketplaces, content-sharing platforms, and other connected service systems.</p>
+    <p>I study how social networks and platform design affect diffusion, adoption, engagement, and market outcomes. My projects use network and graph models, empirical analysis, and optimization to understand peer influence, content and product exposure, creator and consumer behavior, and interventions such as seeding, recommendation, pricing, and incentive design.</p>
     <div class="home-research-tags">
       <span class="home-research-tag">peer influence</span>
       <span class="home-research-tag">platforms</span>
       <span class="home-research-tag">diffusion</span>
+      <span class="home-research-tag">incentives</span>
     </div>
   </section>
   <section class="home-research-theme" data-index="02">
     <h5>AI for operational decision-making</h5>
-    <p>I study how AI, machine learning, and data-driven optimization can support better decisions in complex operational systems, with attention to deployable policies, incentives, and human behavior.</p>
+    <p>I study how AI, machine learning, and data-driven optimization can support better decisions in complex operational systems with uncertainty and strategic human behavior. This stream develops deployable decision tools for platforms, supply chains, healthcare, transportation, and public-sector service systems, with attention to incentives, robustness, fairness, and implementation.</p>
     <div class="home-research-tags">
       <span class="home-research-tag">AI</span>
       <span class="home-research-tag">optimization</span>
       <span class="home-research-tag">policy design</span>
+      <span class="home-research-tag">analytics</span>
     </div>
   </section>
 </div>
 
-Across these streams, I use optimization, network and graph models, stochastic simulation, and empirical analytics to build decision tools for platforms, supply chains, healthcare systems, transportation, and other societal operations settings.
+Across these streams, I combine analytical modeling, data-driven methods, and domain knowledge to produce research that is methodologically rigorous and practically useful for platform, public-service, and societal operations settings.
 
 Please see my [research]({{ '/research/' | relative_url }}) for more information about my papers, projects, and current research directions.
 
