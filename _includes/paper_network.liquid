@@ -1,0 +1,60 @@
+<section class="paper-network-section" aria-labelledby="paper-network-heading">
+  <div class="paper-network-header">
+    <div>
+      <p class="paper-network-eyebrow">Interactive Map</p>
+      <h2 id="paper-network-heading">Paper Network</h2>
+    </div>
+    <p>A compact view of how my papers connect across social/platform operations and AI-enabled operational analytics.</p>
+  </div>
+
+  <div class="paper-network-shell" data-paper-network>
+    <script type="application/json" id="paper-network-data">{{ site.data.paper_network | jsonify }}</script>
+
+    <div class="paper-network-graph-card">
+      <div class="paper-network-toolbar">
+        <div class="paper-network-count">
+          <strong>{{ site.data.paper_network.nodes | size }}</strong>
+          <span>papers</span>
+          <strong>{{ site.data.paper_network.edges | size }}</strong>
+          <span>links</span>
+        </div>
+        <div class="paper-network-controls" aria-label="Paper network controls">
+          <button class="paper-network-control" type="button" data-network-zoom="out" title="Zoom out" aria-label="Zoom out">-</button>
+          <button class="paper-network-control" type="button" data-network-zoom="reset" title="Reset view" aria-label="Reset view">100%</button>
+          <button class="paper-network-control" type="button" data-network-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>
+        </div>
+      </div>
+
+      <div class="paper-network-graph-frame">
+        <svg
+          class="paper-network-svg"
+          viewBox="0 0 900 520"
+          role="img"
+          aria-labelledby="paper-network-heading paper-network-caption"
+        >
+          <rect class="paper-network-zone paper-network-zone-social" x="35" y="45" width="400" height="420" rx="18"></rect>
+          <rect class="paper-network-zone paper-network-zone-aiops" x="465" y="45" width="400" height="420" rx="18"></rect>
+          <text class="paper-network-zone-label" x="58" y="78">Social Network Analytics &amp; Platform Operations</text>
+          <text class="paper-network-zone-label" x="488" y="78">AI &amp; Operational Analytics</text>
+          <g class="paper-network-viewport"></g>
+        </svg>
+      </div>
+      <p id="paper-network-caption" class="sr-only">Interactive network linking papers by shared research questions, methods, and application settings.</p>
+    </div>
+
+    <aside class="paper-network-detail" aria-live="polite">
+      <div class="paper-network-detail-label">Selected Paper</div>
+      <h3 class="paper-network-detail-title">Select a paper</h3>
+      <p class="paper-network-detail-meta">Paper details will appear here.</p>
+      <p class="paper-network-detail-authors"></p>
+      <div class="paper-network-detail-topics" aria-label="Selected paper keywords"></div>
+      <div class="paper-network-detail-links">
+        <a class="paper-network-detail-anchor" href="#"></a>
+      </div>
+      <div class="paper-network-related">
+        <div class="paper-network-related-title">Related Papers</div>
+        <ul class="paper-network-related-list"></ul>
+      </div>
+    </aside>
+  </div>
+</section>
