@@ -289,7 +289,7 @@ ul.task-list input[type="checkbox"] {
       right: 0;
       left: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--global-theme-color), #1f5fa8);
+      background: linear-gradient(90deg, var(--global-theme-color), #c49a2c);
       opacity: 0.9;
     }
   }
@@ -354,7 +354,7 @@ ul.task-list input[type="checkbox"] {
       position: absolute;
       top: -1rem;
       right: 0.75rem;
-      color: rgba(31, 95, 168, 0.09);
+      color: rgba(196, 154, 44, 0.12);
       font-size: 4.4rem;
       font-weight: 700;
       line-height: 1;
@@ -377,7 +377,7 @@ ul.task-list input[type="checkbox"] {
         height: 3px;
         margin-top: 0.55rem;
         border-radius: 99px;
-        background-color: #1f5fa8;
+        background-color: #c49a2c;
       }
     }
 
@@ -413,7 +413,7 @@ ul.task-list input[type="checkbox"] {
 html[data-theme="dark"] {
   .home-profile-hero .home-contact-card {
     background-color: rgba(255, 255, 255, 0.06);
-    border-color: rgba(111, 127, 200, 0.2);
+    border-color: rgba(196, 154, 44, 0.22);
     box-shadow: none;
   }
 
@@ -421,16 +421,16 @@ html[data-theme="dark"] {
     box-shadow: none;
 
     &::before {
-      color: rgba(111, 127, 200, 0.14);
+      color: rgba(196, 154, 44, 0.16);
     }
   }
 
   .home-research-tag {
-    background-color: rgba(111, 127, 200, 0.14);
+    background-color: rgba(196, 154, 44, 0.16);
   }
 
   .home-timeline-date {
-    background-color: rgba(111, 127, 200, 0.14);
+    background-color: rgba(196, 154, 44, 0.16);
   }
 }
 
@@ -1008,7 +1008,7 @@ footer.sticky-bottom {
     padding: 0.9rem 1rem;
     background-color: rgba(248, 249, 250, 0.82);
     border: 1px solid var(--global-divider-color);
-    border-left: 4px solid #1f5fa8;
+    border-left: 4px solid #c49a2c;
     border-radius: 8px;
   }
 
@@ -1070,7 +1070,7 @@ footer.sticky-bottom {
     ol.bibliography li .abbr abbr {
       color: #4f174c;
       background-color: rgba(117, 15, 109, 0.09);
-      border: 1px solid rgba(31, 95, 168, 0.24);
+      border: 1px solid rgba(196, 154, 44, 0.3);
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 700;
@@ -1088,7 +1088,7 @@ html[data-theme="dark"] .research-page {
 
   .research-focus-list span,
   .publications ol.bibliography li .abbr abbr {
-    color: #c9c4ff;
+    color: #e1c878;
   }
 }
 
