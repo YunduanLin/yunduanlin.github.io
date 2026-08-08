@@ -1235,7 +1235,7 @@ footer.sticky-bottom {
     transition: opacity 160ms ease;
   }
 
-  .paper-network-is-zoomed .paper-network-title-label,
+  .paper-network-is-zoomed .paper-network-node.is-highlighted .paper-network-title-label,
   .paper-network-node.is-active .paper-network-title-label,
   .paper-network-node:hover .paper-network-title-label,
   .paper-network-node:focus-visible .paper-network-title-label {
