@@ -277,7 +277,7 @@ ul.task-list input[type="checkbox"] {
     position: relative;
     overflow: hidden;
     padding: 1rem 1.1rem 0.95rem;
-    border: 1px solid rgba(0, 118, 223, 0.14);
+    border: 1px solid rgba(117, 15, 109, 0.14);
     border-radius: 8px;
     background-color: var(--global-card-bg-color);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
@@ -289,7 +289,7 @@ ul.task-list input[type="checkbox"] {
       right: 0;
       left: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--global-theme-color), #b8892f);
+      background: linear-gradient(90deg, var(--global-theme-color), #1f5fa8);
       opacity: 0.9;
     }
   }
@@ -354,7 +354,7 @@ ul.task-list input[type="checkbox"] {
       position: absolute;
       top: -1rem;
       right: 0.75rem;
-      color: rgba(0, 118, 223, 0.08);
+      color: rgba(31, 95, 168, 0.09);
       font-size: 4.4rem;
       font-weight: 700;
       line-height: 1;
@@ -377,7 +377,7 @@ ul.task-list input[type="checkbox"] {
         height: 3px;
         margin-top: 0.55rem;
         border-radius: 99px;
-        background-color: #b8892f;
+        background-color: #1f5fa8;
       }
     }
 
@@ -403,7 +403,7 @@ ul.task-list input[type="checkbox"] {
   min-height: 1.45rem;
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
-  background-color: rgba(0, 118, 223, 0.09);
+  background-color: rgba(117, 15, 109, 0.09);
   color: var(--global-theme-color);
   font-size: 0.72rem;
   line-height: 1;
@@ -413,7 +413,7 @@ ul.task-list input[type="checkbox"] {
 html[data-theme="dark"] {
   .home-profile-hero .home-contact-card {
     background-color: rgba(255, 255, 255, 0.06);
-    border-color: rgba(102, 204, 255, 0.18);
+    border-color: rgba(111, 127, 200, 0.2);
     box-shadow: none;
   }
 
@@ -421,16 +421,16 @@ html[data-theme="dark"] {
     box-shadow: none;
 
     &::before {
-      color: rgba(102, 204, 255, 0.1);
+      color: rgba(111, 127, 200, 0.14);
     }
   }
 
   .home-research-tag {
-    background-color: rgba(102, 204, 255, 0.12);
+    background-color: rgba(111, 127, 200, 0.14);
   }
 
   .home-timeline-date {
-    background-color: rgba(102, 204, 255, 0.12);
+    background-color: rgba(111, 127, 200, 0.14);
   }
 }
 
@@ -478,7 +478,7 @@ html[data-theme="dark"] {
   min-height: 1.85rem;
   padding: 0.25rem 0.65rem;
   border-radius: 999px;
-  background-color: rgba(0, 118, 223, 0.09);
+  background-color: rgba(117, 15, 109, 0.09);
   color: var(--global-theme-color);
   font-size: 0.9rem;
   font-style: normal;
@@ -979,9 +979,9 @@ footer.sticky-bottom {
       align-items: center;
       min-height: 2rem;
       padding: 0.35rem 0.8rem;
-      color: #244f4f;
-      background-color: rgba(47, 111, 111, 0.08);
-      border: 1px solid rgba(47, 111, 111, 0.2);
+      color: #4f174c;
+      background-color: rgba(117, 15, 109, 0.08);
+      border: 1px solid rgba(117, 15, 109, 0.2);
       border-radius: 999px;
       font-size: 0.88rem;
       font-weight: 700;
@@ -1008,7 +1008,7 @@ footer.sticky-bottom {
     padding: 0.9rem 1rem;
     background-color: rgba(248, 249, 250, 0.82);
     border: 1px solid var(--global-divider-color);
-    border-left: 4px solid #b8892f;
+    border-left: 4px solid #1f5fa8;
     border-radius: 8px;
   }
 
@@ -1050,7 +1050,7 @@ footer.sticky-bottom {
       display: inline-block;
       width: 0.5rem;
       height: 1.15rem;
-      background-color: #2f6f6f;
+      background-color: #750f6d;
       border-radius: 999px;
     }
   }
@@ -1068,9 +1068,9 @@ footer.sticky-bottom {
     }
 
     ol.bibliography li .abbr abbr {
-      color: #244f4f;
-      background-color: rgba(47, 111, 111, 0.1);
-      border: 1px solid rgba(47, 111, 111, 0.22);
+      color: #4f174c;
+      background-color: rgba(117, 15, 109, 0.09);
+      border: 1px solid rgba(31, 95, 168, 0.24);
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 700;
@@ -1088,7 +1088,7 @@ html[data-theme="dark"] .research-page {
 
   .research-focus-list span,
   .publications ol.bibliography li .abbr abbr {
-    color: #9cc9c9;
+    color: #c9c4ff;
   }
 }
 

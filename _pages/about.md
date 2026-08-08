@@ -12,7 +12,7 @@ home_intro: >
   I am an Assistant Professor in the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk). I study how decisions travel through social networks, digital platforms, and AI-enabled operational systems: how people influence one another, how platforms shape behavior, and how analytics can turn complex systems into better decisions. My work combines optimization, network and graph models, stochastic simulation, and empirical analysis, with applications in platform operations, supply chains, healthcare, transportation, and public-service systems.
 home_contact:
   - CUHK Business School, The Chinese University of Hong Kong
-  - "**Office:** Room 950, 9/F, Cheng Yu Tung Building, 12 Chak Cheung Street, Shatin, N.T., Hong Kong"
+  - "**Office:** 9/F, Cheng Yu Tung Building, 12 Chak Cheung Street, Shatin, N.T., Hong Kong"
   - "**Email:** yunduanlin[at]cuhk[dot]edu[dot]hk"
 
 news: false # includes a list of news items
