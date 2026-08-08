@@ -69,7 +69,7 @@
 
     function applyTransform() {
       viewport.setAttribute("transform", "translate(" + view.x + " " + view.y + ") scale(" + view.scale + ")");
-      root.classList.toggle("paper-network-is-zoomed", view.scale >= 1.35);
+      root.classList.toggle("paper-network-is-zoomed", view.scale >= 1.18);
       var reset = root.querySelector('[data-network-zoom="reset"]');
       if (reset) reset.textContent = Math.round(view.scale * 100) + "%";
     }
@@ -299,6 +299,8 @@
       );
 
       svg.addEventListener("pointerdown", function (event) {
+        if (event.target.closest(".paper-network-node")) return;
+
         drag = {
           pointerId: event.pointerId,
           startX: event.clientX,
