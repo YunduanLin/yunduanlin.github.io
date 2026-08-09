@@ -14,14 +14,21 @@
         <div class="paper-network-count">
           <strong>{{ site.data.paper_network.nodes | size }}</strong>
           <span>papers</span>
-          <strong>{{ site.data.paper_network.edges | size }}</strong>
-          <span>links</span>
+          <strong data-network-link-count>0</strong>
+          <span>similarities</span>
         </div>
         <div class="paper-network-controls" aria-label="Paper network controls">
           <button class="paper-network-control" type="button" data-network-zoom="out" title="Zoom out" aria-label="Zoom out">-</button>
           <button class="paper-network-control" type="button" data-network-zoom="reset" title="Reset view" aria-label="Reset view">100%</button>
           <button class="paper-network-control" type="button" data-network-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>
         </div>
+      </div>
+      <div class="paper-network-legend" aria-label="Similarity edge legend">
+        <span class="paper-network-legend-item paper-network-legend-concepts"><i></i>Concept</span>
+        <span class="paper-network-legend-item paper-network-legend-methods"><i></i>Method</span>
+        <span class="paper-network-legend-item paper-network-legend-domains"><i></i>Domain</span>
+        <span class="paper-network-legend-item paper-network-legend-data"><i></i>Data</span>
+        <span class="paper-network-legend-note">Thicker lines mean more overlap within that type.</span>
       </div>
 
       <div class="paper-network-graph-frame">
@@ -52,7 +59,7 @@
         <h3 class="paper-network-detail-title">Select a paper</h3>
         <p class="paper-network-detail-meta">Paper details will appear here.</p>
         <p class="paper-network-detail-authors"></p>
-        <div class="paper-network-detail-topics" aria-label="Selected paper keywords"></div>
+        <div class="paper-network-detail-features" aria-label="Selected paper features"></div>
         <div class="paper-network-detail-links">
           <a class="paper-network-detail-anchor" href="#"></a>
         </div>

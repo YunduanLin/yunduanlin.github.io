@@ -1097,6 +1097,54 @@ footer.sticky-bottom {
     }
   }
 
+  .paper-network-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.7rem;
+    align-items: center;
+    padding: 0.55rem 0.85rem 0.6rem;
+    background-color: rgba(255, 253, 247, 0.82);
+    border-bottom: 1px solid rgba(196, 154, 44, 0.18);
+    color: var(--global-text-color-light);
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+
+  .paper-network-legend-item {
+    display: inline-flex;
+    gap: 0.35rem;
+    align-items: center;
+    color: var(--global-text-color);
+    font-weight: 650;
+
+    i {
+      display: inline-block;
+      width: 1.2rem;
+      height: 0.18rem;
+      border-radius: 999px;
+    }
+  }
+
+  .paper-network-legend-concepts i {
+    background-color: #750f6d;
+  }
+
+  .paper-network-legend-methods i {
+    background-color: #c49a2c;
+  }
+
+  .paper-network-legend-domains i {
+    background-color: #157a86;
+  }
+
+  .paper-network-legend-data i {
+    background-color: #8a8490;
+  }
+
+  .paper-network-legend-note {
+    color: var(--global-text-color-light);
+  }
+
   .paper-network-controls {
     display: inline-flex;
     gap: 0.32rem;
@@ -1167,21 +1215,41 @@ footer.sticky-bottom {
   }
 
   .paper-network-edge {
-    stroke: rgba(117, 15, 109, 0.24);
-    stroke-width: 2;
+    fill: none;
+    stroke: rgba(117, 15, 109, 0.34);
+    stroke-linecap: round;
+    stroke-opacity: 0.62;
     transition:
       opacity 180ms ease,
       stroke 180ms ease,
-      stroke-width 180ms ease;
+      stroke-opacity 180ms ease,
+      stroke-width 180ms ease,
+      filter 180ms ease;
+  }
+
+  .paper-network-edge-concepts {
+    stroke: #750f6d;
+  }
+
+  .paper-network-edge-methods {
+    stroke: #c49a2c;
+  }
+
+  .paper-network-edge-domains {
+    stroke: #157a86;
+  }
+
+  .paper-network-edge-data {
+    stroke: #8a8490;
   }
 
   .paper-network-edge.is-highlighted {
-    stroke: #c49a2c;
-    stroke-width: 3.3;
+    stroke-opacity: 0.98;
+    filter: drop-shadow(0 2px 3px rgba(75, 19, 89, 0.22));
   }
 
   .paper-network-edge.is-dimmed {
-    opacity: 0.18;
+    opacity: 0.16;
   }
 
   .paper-network-node {
@@ -1291,11 +1359,32 @@ footer.sticky-bottom {
     color: var(--global-text-color);
   }
 
-  .paper-network-detail-topics {
+  .paper-network-detail-features {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0.18rem 0 0.9rem;
+  }
+
+  .paper-network-feature-group {
+    display: grid;
+    grid-template-columns: minmax(5.4rem, auto) minmax(0, 1fr);
+    gap: 0.45rem;
+    align-items: start;
+  }
+
+  .paper-network-feature-label {
+    color: #4b1359;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 1.45;
+    text-transform: uppercase;
+  }
+
+  .paper-network-feature-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.28rem;
-    margin: 0.15rem 0 0.78rem;
   }
 
   .paper-network-topic {
@@ -1309,6 +1398,30 @@ footer.sticky-bottom {
     font-size: 0.66rem;
     font-weight: 650;
     line-height: 1.2;
+  }
+
+  .paper-network-feature-concepts {
+    color: #4b1359;
+    background-color: rgba(117, 15, 109, 0.08);
+    border-color: rgba(117, 15, 109, 0.28);
+  }
+
+  .paper-network-feature-methods {
+    color: #6f4a00;
+    background-color: rgba(196, 154, 44, 0.14);
+    border-color: rgba(196, 154, 44, 0.42);
+  }
+
+  .paper-network-feature-domains {
+    color: #075e68;
+    background-color: rgba(21, 122, 134, 0.1);
+    border-color: rgba(21, 122, 134, 0.28);
+  }
+
+  .paper-network-feature-data {
+    color: #514d58;
+    background-color: rgba(138, 132, 144, 0.11);
+    border-color: rgba(138, 132, 144, 0.28);
   }
 
   .paper-network-detail-links {
@@ -1558,6 +1671,15 @@ html[data-theme="dark"] .research-page {
     color: #e1c878;
   }
 
+  .paper-network-legend {
+    background-color: rgba(255, 255, 255, 0.035);
+    border-bottom-color: rgba(225, 200, 120, 0.16);
+  }
+
+  .paper-network-legend-item {
+    color: rgba(255, 255, 255, 0.88);
+  }
+
   .paper-network-control {
     color: #f0d889;
     background-color: rgba(196, 154, 44, 0.12);
@@ -1597,11 +1719,28 @@ html[data-theme="dark"] .research-page {
   }
 
   .paper-network-edge {
-    stroke: rgba(225, 200, 120, 0.22);
+    stroke-opacity: 0.54;
   }
 
   .paper-network-edge.is-highlighted {
+    stroke-opacity: 1;
+    filter: none;
+  }
+
+  .paper-network-edge-concepts {
+    stroke: #e4a7df;
+  }
+
+  .paper-network-edge-methods {
     stroke: #e1c878;
+  }
+
+  .paper-network-edge-domains {
+    stroke: #80d4dc;
+  }
+
+  .paper-network-edge-data {
+    stroke: #c7bdcc;
   }
 
   .paper-network-node-halo {
@@ -1624,10 +1763,29 @@ html[data-theme="dark"] .research-page {
   }
 
   .paper-network-detail-label,
+  .paper-network-feature-label,
   .paper-network-topic {
     color: #f0d889;
     background-color: rgba(196, 154, 44, 0.16);
     border-color: rgba(225, 200, 120, 0.42);
+  }
+
+  .paper-network-feature-concepts {
+    color: #f3c1ee;
+    background-color: rgba(117, 15, 109, 0.18);
+    border-color: rgba(228, 167, 223, 0.38);
+  }
+
+  .paper-network-feature-domains {
+    color: #9eeaf0;
+    background-color: rgba(21, 122, 134, 0.16);
+    border-color: rgba(128, 212, 220, 0.38);
+  }
+
+  .paper-network-feature-data {
+    color: #ddd4e3;
+    background-color: rgba(138, 132, 144, 0.16);
+    border-color: rgba(199, 189, 204, 0.34);
   }
 
   .paper-network-detail-anchor {

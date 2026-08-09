@@ -10,9 +10,18 @@ nodes:
     bibkey: chen2026socialspatial
     x: 250
     y: 95
-    topics:
-      - Networks
-      - Platforms
+    features:
+      concepts:
+        - social network
+        - spatial network
+        - location choice
+      methods:
+        - network choice model
+      domains:
+        - smart city operations
+        - platform operations
+      data:
+        - SNAP Gowalla
   - id: W1
     title: "Technology Adoption under Experience-Based Learning: A Dynamic Market and Policy Analysis"
     short_title: "Technology adoption"
@@ -24,9 +33,17 @@ nodes:
     bibkey: zhong2026technology
     x: 125
     y: 220
-    topics:
-      - Platforms
-      - Optimization
+    features:
+      concepts:
+        - technology adoption
+        - experience-based learning
+        - market dynamics
+      methods:
+        - dynamic modeling
+        - policy analysis
+      domains:
+        - technology markets
+      data: []
   - id: J3
     title: "Nonprogressive Diffusion on Social Networks: Approximation and Applications"
     short_title: "Nonprogressive diffusion"
@@ -38,9 +55,17 @@ nodes:
     bibkey: lin2025nonprogressive
     x: 300
     y: 255
-    topics:
-      - Networks
-      - Optimization
+    features:
+      concepts:
+        - social network
+        - diffusion
+        - network influence
+      methods:
+        - approximation algorithm
+        - optimization
+      domains:
+        - social network operations
+      data: []
   - id: J2
     title: "Content Promotion for Online Content Platforms with the Diffusion Effect"
     short_title: "Content promotion"
@@ -52,9 +77,17 @@ nodes:
     bibkey: lin2024content
     x: 205
     y: 385
-    topics:
-      - Networks
-      - Platforms
+    features:
+      concepts:
+        - social network
+        - diffusion
+        - content promotion
+      methods:
+        - optimization
+      domains:
+        - content platforms
+        - platform operations
+      data: []
   - id: W6
     title: "Online Stochastic Allocation with Increasing Returns"
     short_title: "Stochastic allocation"
@@ -66,8 +99,17 @@ nodes:
     bibkey: sun2026allocation
     x: 390
     y: 365
-    topics:
-      - Optimization
+    features:
+      concepts:
+        - online allocation
+        - increasing returns
+      methods:
+        - stochastic optimization
+        - optimization
+      domains:
+        - resource allocation
+        - platform operations
+      data: []
   - id: W4
     title: "LLM-Augmented Digital Twin for Policy Evaluation in Short-Video Platforms"
     short_title: "LLM digital twin"
@@ -79,9 +121,19 @@ nodes:
     bibkey: zhang2026digitaltwin
     x: 585
     y: 140
-    topics:
-      - AI
-      - Platforms
+    features:
+      concepts:
+        - policy evaluation
+        - digital twin
+        - content platform governance
+      methods:
+        - LLM simulation
+        - digital twin simulation
+      domains:
+        - content platforms
+        - platform operations
+      data:
+        - short-video platform data
   - id: W5
     title: "LLM Agents in Transportation-enabled Service Platforms: From Behavioral Simulation to Platform Decision Support"
     short_title: "LLM agents"
@@ -93,9 +145,17 @@ nodes:
     bibkey: xu2026llmagents
     x: 730
     y: 110
-    topics:
-      - AI
-      - Platforms
+    features:
+      concepts:
+        - behavioral simulation
+        - platform decision support
+      methods:
+        - LLM simulation
+        - agent-based simulation
+      domains:
+        - transportation-enabled services
+        - platform operations
+      data: []
   - id: C3
     title: "Bilevel Optimization of Agent Skills via Monte Carlo Tree Search"
     short_title: "Agent skills"
@@ -107,9 +167,18 @@ nodes:
     bibkey: huang2026bilevel
     x: 805
     y: 245
-    topics:
-      - AI
-      - Optimization
+    features:
+      concepts:
+        - agent skill design
+        - platform decision support
+      methods:
+        - Monte Carlo tree search
+        - bilevel optimization
+        - agent-based simulation
+      domains:
+        - AI agents
+        - decision support
+      data: []
   - id: W3
     title: "Beyond General Expertise: A Machine Learning Framework for Assessing Task-Level Decision Accuracy"
     short_title: "Decision accuracy"
@@ -121,9 +190,16 @@ nodes:
     bibkey: dong2026expertise
     x: 565
     y: 300
-    topics:
-      - AI
-      - Applied Analytics
+    features:
+      concepts:
+        - task-level decision accuracy
+        - decision expertise
+      methods:
+        - machine learning
+        - predictive modeling
+      domains:
+        - decision analytics
+      data: []
   - id: C2
     title: "Daily Physical Activity Monitoring---Adaptive Learning from Multi-source Motion Sensor Data"
     short_title: "Activity monitoring"
@@ -135,8 +211,18 @@ nodes:
     bibkey: zhang2024activity
     x: 650
     y: 430
-    topics:
-      - Applied Analytics
+    features:
+      concepts:
+        - physical activity monitoring
+        - adaptive learning
+      methods:
+        - machine learning
+        - multisource sensing
+      domains:
+        - healthcare analytics
+        - mobile health
+      data:
+        - motion sensor data
   - id: C1
     title: "Collimatorless Scintigraphy for Imaging Extremely Low Activity Targeted Alpha Therapy (TAT) with Weighted Robust Least Squares (WRLS)"
     short_title: "Medical imaging"
@@ -148,9 +234,17 @@ nodes:
     bibkey: zheng2020collimatorless
     x: 780
     y: 430
-    topics:
-      - Optimization
-      - Applied Analytics
+    features:
+      concepts:
+        - medical imaging
+        - targeted alpha therapy
+      methods:
+        - weighted robust least squares
+      domains:
+        - healthcare analytics
+        - nuclear medicine
+      data:
+        - medical imaging data
   - id: J1
     title: "Real-time Traffic Accidents Post-impact Prediction: Based on Crowdsourcing Data"
     short_title: "Traffic prediction"
@@ -162,49 +256,15 @@ nodes:
     bibkey: lin2020traffic
     x: 500
     y: 430
-    topics:
-      - Applied Analytics
-
-edges:
-  - source: J2
-    target: J3
-    relation: "Diffusion models for online social networks"
-  - source: J2
-    target: W2
-    relation: "Platform intervention and choice modeling"
-  - source: J2
-    target: W6
-    relation: "Platform allocation and content promotion"
-  - source: J2
-    target: W4
-    relation: "Content platforms and policy evaluation"
-  - source: J3
-    target: W2
-    relation: "Network structure and diffusion behavior"
-  - source: J3
-    target: W1
-    relation: "Learning dynamics and adoption"
-  - source: W1
-    target: W2
-    relation: "Adoption decisions in connected markets"
-  - source: W1
-    target: W6
-    relation: "Dynamic stochastic operational decisions"
-  - source: W4
-    target: W5
-    relation: "LLM simulation for platform decisions"
-  - source: W4
-    target: W3
-    relation: "AI-enabled policy and decision analytics"
-  - source: W5
-    target: C3
-    relation: "Agent simulation and agent optimization"
-  - source: W3
-    target: C2
-    relation: "Machine learning for human-level assessment"
-  - source: C2
-    target: C1
-    relation: "Applied sensing and medical analytics"
-  - source: J1
-    target: C2
-    relation: "Prediction from high-dimensional real-world data"
+    features:
+      concepts:
+        - traffic accident prediction
+        - real-time prediction
+      methods:
+        - machine learning
+        - predictive modeling
+      domains:
+        - smart city operations
+        - transportation systems
+      data:
+        - crowdsourcing data

@@ -16,16 +16,28 @@
     var viewport = root.querySelector(".paper-network-viewport");
     if (!dataElement || !svg || !viewport) return;
 
-    var data;
+    var graphData;
     try {
-      data = JSON.parse(dataElement.textContent);
+      graphData = JSON.parse(dataElement.textContent);
     } catch (error) {
       root.classList.add("paper-network-error");
       return;
     }
 
-    var nodes = Array.isArray(data.nodes) ? data.nodes : [];
-    var edges = Array.isArray(data.edges) ? data.edges : [];
+    var nodes = Array.isArray(graphData.nodes) ? graphData.nodes : [];
+    var featureGroups = [
+      { key: "concepts", label: "Concept" },
+      { key: "methods", label: "Method" },
+      { key: "domains", label: "Domain" },
+      { key: "data", label: "Data" },
+    ];
+    var edgeClassNames = {
+      concepts: "paper-network-edge-concepts",
+      methods: "paper-network-edge-methods",
+      domains: "paper-network-edge-domains",
+      data: "paper-network-edge-data",
+    };
+    var edges = deriveSimilarityEdges(nodes);
     var nodeMap = new Map();
     nodes.forEach(function (node) {
       nodeMap.set(node.id, node);
@@ -42,9 +54,12 @@
       title: root.querySelector(".paper-network-detail-title"),
       meta: root.querySelector(".paper-network-detail-meta"),
       authors: root.querySelector(".paper-network-detail-authors"),
-      topics: root.querySelector(".paper-network-detail-topics"),
+      features: root.querySelector(".paper-network-detail-features"),
       anchor: root.querySelector(".paper-network-detail-anchor"),
     };
+
+    var linkCount = root.querySelector("[data-network-link-count]");
+    if (linkCount) linkCount.textContent = edges.length;
 
     function createSvgElement(tagName, attributes) {
       var element = document.createElementNS(svgNamespace, tagName);
@@ -56,6 +71,76 @@
 
     function clamp(value, min, max) {
       return Math.max(min, Math.min(max, value));
+    }
+
+    function normalizeFeature(value) {
+      return String(value || "")
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, " ");
+    }
+
+    function getFeatures(node, groupKey) {
+      if (node.features && Array.isArray(node.features[groupKey])) {
+        return node.features[groupKey].filter(Boolean);
+      }
+
+      if (groupKey === "concepts" && Array.isArray(node.topics)) {
+        return node.topics.filter(Boolean);
+      }
+
+      return [];
+    }
+
+    function sharedFeatures(source, target, groupKey) {
+      var sourceFeatures = getFeatures(source, groupKey);
+      var targetLookup = new Set(getFeatures(target, groupKey).map(normalizeFeature));
+
+      return sourceFeatures.filter(function (feature) {
+        return targetLookup.has(normalizeFeature(feature));
+      });
+    }
+
+    function pairKey(sourceId, targetId) {
+      return sourceId < targetId ? sourceId + "::" + targetId : targetId + "::" + sourceId;
+    }
+
+    function deriveSimilarityEdges(papers) {
+      var derived = [];
+
+      for (var i = 0; i < papers.length; i += 1) {
+        for (var j = i + 1; j < papers.length; j += 1) {
+          featureGroups.forEach(function (group) {
+            var shared = sharedFeatures(papers[i], papers[j], group.key);
+            if (shared.length === 0) return;
+
+            derived.push({
+              source: papers[i].id,
+              target: papers[j].id,
+              type: group.key,
+              label: group.label,
+              shared: shared,
+              relation: "Shared " + group.label.toLowerCase() + ": " + shared.join(", "),
+            });
+          });
+        }
+      }
+
+      var grouped = new Map();
+      derived.forEach(function (edge) {
+        var key = pairKey(edge.source, edge.target);
+        if (!grouped.has(key)) grouped.set(key, []);
+        grouped.get(key).push(edge);
+      });
+
+      grouped.forEach(function (parallelEdges) {
+        parallelEdges.forEach(function (edge, index) {
+          edge.parallelIndex = index;
+          edge.parallelCount = parallelEdges.length;
+        });
+      });
+
+      return derived;
     }
 
     function svgPoint(event) {
@@ -137,14 +222,33 @@
       if (element) element.textContent = value || "";
     }
 
-    function renderTopics(node) {
-      if (!detail.topics) return;
-      detail.topics.textContent = "";
-      (node.topics || []).forEach(function (topic) {
-        var chip = document.createElement("span");
-        chip.className = "paper-network-topic";
-        chip.textContent = topic;
-        detail.topics.appendChild(chip);
+    function renderFeatures(node) {
+      if (!detail.features) return;
+      detail.features.textContent = "";
+
+      featureGroups.forEach(function (group) {
+        var values = getFeatures(node, group.key);
+        if (values.length === 0) return;
+
+        var wrapper = document.createElement("div");
+        wrapper.className = "paper-network-feature-group paper-network-feature-group-" + group.key;
+
+        var label = document.createElement("span");
+        label.className = "paper-network-feature-label";
+        label.textContent = group.label + "s";
+
+        var list = document.createElement("span");
+        list.className = "paper-network-feature-list";
+        values.forEach(function (value) {
+          var chip = document.createElement("span");
+          chip.className = "paper-network-topic paper-network-feature paper-network-feature-" + group.key;
+          chip.textContent = value;
+          list.appendChild(chip);
+        });
+
+        wrapper.appendChild(label);
+        wrapper.appendChild(list);
+        detail.features.appendChild(wrapper);
       });
     }
 
@@ -157,7 +261,7 @@
       setText(detail.title, node.title);
       setText(detail.meta, node.status + ", " + node.year);
       setText(detail.authors, node.authors);
-      renderTopics(node);
+      renderFeatures(node);
 
       if (detail.anchor) {
         detail.anchor.href = "#" + node.bibkey;
@@ -165,6 +269,24 @@
       }
 
       highlight(id);
+    }
+
+    function edgeWidth(edge) {
+      var count = Math.min(edge.shared.length, 3);
+      return String(1.6 + (count - 1) * 1.1);
+    }
+
+    function edgePath(source, target, edge) {
+      var dx = target.x - source.x;
+      var dy = target.y - source.y;
+      var distance = Math.sqrt(dx * dx + dy * dy) || 1;
+      var normalX = -dy / distance;
+      var normalY = dx / distance;
+      var offset = (edge.parallelIndex - (edge.parallelCount - 1) / 2) * 15;
+      var controlX = (source.x + target.x) / 2 + normalX * offset;
+      var controlY = (source.y + target.y) / 2 + normalY * offset;
+
+      return "M " + source.x + " " + source.y + " Q " + controlX + " " + controlY + " " + target.x + " " + target.y;
     }
 
     function drawEdges() {
@@ -180,19 +302,19 @@
         var target = nodeMap.get(edge.target);
         if (!source || !target) return;
 
-        var line = createSvgElement("line", {
-          class: "paper-network-edge",
-          x1: source.x,
-          y1: source.y,
-          x2: target.x,
-          y2: target.y,
+        var path = createSvgElement("path", {
+          class: "paper-network-edge " + edgeClassNames[edge.type],
+          d: edgePath(source, target, edge),
+          "stroke-width": edgeWidth(edge),
           "data-source": edge.source,
           "data-target": edge.target,
+          "data-feature-type": edge.type,
+          "data-shared-count": edge.shared.length,
         });
         var title = createSvgElement("title", {});
-        title.textContent = edge.relation;
-        line.appendChild(title);
-        edgeLayer.appendChild(line);
+        title.textContent = edge.source + " - " + edge.target + ": " + edge.relation;
+        path.appendChild(title);
+        edgeLayer.appendChild(path);
       });
     }
 
