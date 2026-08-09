@@ -24,7 +24,6 @@ nodes:
         - data-driven optimization
       domains:
         - smart city operations
-        - platform operations
         - facility location
         - temporal retail
         - scalable network operations
@@ -70,6 +69,7 @@ nodes:
         - network diffusion
         - network structure
         - network centrality
+        - market dynamics
       methods:
         - approximation algorithm
         - stochastic modeling
@@ -97,13 +97,13 @@ nodes:
       concepts:
         - social network
         - network diffusion
+        - market dynamics
         - content promotion
       methods:
         - data-driven optimization
         - diffusion model
       domains:
         - user-generated content platform
-        - short-video platform
         - social media
         - social network operations
       data:
@@ -286,7 +286,6 @@ nodes:
         - crowdsourcing platform
       methods:
         - machine learning
-        - predictive modeling
       domains:
         - smart city operations
         - transportation systems
