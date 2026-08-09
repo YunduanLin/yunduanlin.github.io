@@ -25,6 +25,12 @@
       <div class="paper-network-map-insights" aria-label="Network centrality summary">
         <div class="paper-network-leaderboard">
           <div class="paper-network-map-label">Leaderboard</div>
+          <div class="paper-network-leaderboard-modes" aria-label="Choose leaderboard metric">
+            <span>Rank by</span>
+            <button class="paper-network-leaderboard-mode is-active" type="button" data-network-leaderboard-metric="degree" aria-pressed="true">Degree</button>
+            <button class="paper-network-leaderboard-mode" type="button" data-network-leaderboard-metric="connectivity" aria-pressed="false">Connectivity</button>
+            <button class="paper-network-leaderboard-mode" type="button" data-network-leaderboard-metric="bridge" aria-pressed="false">Bridge</button>
+          </div>
           <div class="paper-network-leaderboard-list" aria-label="Network role leaderboard"></div>
         </div>
         <div class="paper-network-map-definitions" aria-label="Centrality definitions">

@@ -65,6 +65,10 @@
     var layerToggles = Array.prototype.slice.call(root.querySelectorAll("input[data-network-layer]"));
     var linkCount = root.querySelector("[data-network-link-count]");
     var leaderboardList = root.querySelector(".paper-network-leaderboard-list");
+    var leaderboardMetricControls = Array.prototype.slice.call(
+      root.querySelectorAll("[data-network-leaderboard-metric]")
+    );
+    var leaderboardMetric = "degree";
 
     function createSvgElement(tagName, attributes) {
       var element = document.createElementNS(svgNamespace, tagName);
@@ -451,10 +455,6 @@
       });
     }
 
-    function roleScore(metrics) {
-      return (metrics.degree + metrics.connectivity + metrics.bridge) / 3;
-    }
-
     function renderNetworkLeaderboard() {
       if (!leaderboardList) return;
       leaderboardList.textContent = "";
@@ -474,7 +474,7 @@
           .map(function (metrics, index) {
             return {
               id: nodes[index].id,
-              score: roleScore(metrics),
+              score: metrics[leaderboardMetric],
             };
           })
           .sort(function (left, right) {
@@ -509,6 +509,19 @@
         row.appendChild(entries);
         leaderboardList.appendChild(row);
       });
+    }
+
+    function setLeaderboardMetric(metric) {
+      if (["degree", "connectivity", "bridge"].indexOf(metric) === -1) return;
+      leaderboardMetric = metric;
+
+      leaderboardMetricControls.forEach(function (control) {
+        var isSelected = control.getAttribute("data-network-leaderboard-metric") === metric;
+        control.classList.toggle("is-active", isSelected);
+        control.setAttribute("aria-pressed", isSelected ? "true" : "false");
+      });
+
+      renderNetworkLeaderboard();
     }
 
     function renderCentralityMatrix(node) {
@@ -737,6 +750,12 @@
 
       layerToggles.forEach(function (toggle) {
         toggle.addEventListener("change", updateVisibleEdges);
+      });
+
+      leaderboardMetricControls.forEach(function (control) {
+        control.addEventListener("click", function () {
+          setLeaderboardMetric(control.getAttribute("data-network-leaderboard-metric"));
+        });
       });
 
       svg.addEventListener(

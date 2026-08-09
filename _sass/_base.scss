@@ -1116,6 +1116,50 @@ footer.sticky-bottom {
     text-transform: uppercase;
   }
 
+  .paper-network-leaderboard-modes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.28rem;
+    align-items: center;
+    margin: -0.16rem 0 0.48rem;
+    color: var(--global-text-color-light);
+    font-size: 0.62rem;
+    line-height: 1.2;
+  }
+
+  .paper-network-leaderboard-modes > span {
+    font-weight: 650;
+  }
+
+  .paper-network-leaderboard-mode {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.34rem;
+    padding: 0.1rem 0.42rem;
+    color: #4b1359;
+    background-color: rgba(196, 154, 44, 0.12);
+    border: 1px solid rgba(196, 154, 44, 0.42);
+    border-radius: 999px;
+    font-size: 0.62rem;
+    font-weight: 800;
+    line-height: 1.1;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: #750f6d;
+      background-color: rgba(117, 15, 109, 0.08);
+      border-color: rgba(117, 15, 109, 0.36);
+      outline: none;
+    }
+  }
+
+  .paper-network-leaderboard-mode.is-active {
+    color: #fff;
+    background-color: #750f6d;
+    border-color: #750f6d;
+  }
+
   .paper-network-leaderboard-list {
     display: grid;
     gap: 0.28rem;
@@ -1951,6 +1995,29 @@ html[data-theme="dark"] .research-page {
 
   .paper-network-map-definition-role {
     color: rgba(240, 216, 137, 0.78);
+  }
+
+  .paper-network-leaderboard-modes {
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .paper-network-leaderboard-mode {
+    color: #f0d889;
+    background-color: rgba(225, 200, 120, 0.1);
+    border-color: rgba(225, 200, 120, 0.24);
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      background-color: rgba(117, 15, 109, 0.34);
+      border-color: #e1c878;
+    }
+  }
+
+  .paper-network-leaderboard-mode.is-active {
+    color: #4b1359;
+    background-color: #f0d889;
+    border-color: #f0d889;
   }
 
   .paper-network-leaderboard-entry {
