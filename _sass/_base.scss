@@ -1192,6 +1192,11 @@ footer.sticky-bottom {
     color: rgba(255, 255, 255, 0.78);
   }
 
+  .paper-network-leaderboard-entry.is-active .paper-network-leaderboard-code,
+  .paper-network-leaderboard-entry.is-active .paper-network-leaderboard-score {
+    color: #fff;
+  }
+
   .paper-network-map-definitions {
     display: flex;
     flex-wrap: wrap;
@@ -1934,9 +1939,9 @@ html[data-theme="dark"] .research-page {
   }
 
   .paper-network-leaderboard-entry.is-active {
-    color: #4b1359;
-    background-color: #f0d889;
-    border-color: #f0d889;
+    color: #fff;
+    background-color: #750f6d;
+    border-color: #e1c878;
   }
 
   .paper-network-leaderboard-rank {
@@ -1945,8 +1950,8 @@ html[data-theme="dark"] .research-page {
   }
 
   .paper-network-leaderboard-entry.is-active .paper-network-leaderboard-rank {
-    color: #fff;
-    background-color: #750f6d;
+    color: #4b1359;
+    background-color: #f0d889;
   }
 
   .paper-network-leaderboard-score,
@@ -1955,7 +1960,7 @@ html[data-theme="dark"] .research-page {
   }
 
   .paper-network-leaderboard-entry.is-active .paper-network-leaderboard-score {
-    color: rgba(75, 19, 89, 0.72);
+    color: #fff;
   }
 
   .paper-network-legend {
