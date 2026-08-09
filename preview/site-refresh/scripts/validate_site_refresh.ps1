@@ -243,6 +243,7 @@ Assert-Contains "_sass/_base.scss" "\.paper-network-legend" "Styles should defin
 Assert-Contains "_sass/_base.scss" "\.paper-network-map-insights" "Styles should define the compact map-level insight band."
 Assert-Contains "_sass/_base.scss" "\.paper-network-leaderboard" "Styles should define the map-level network leaderboard."
 Assert-Contains "_sass/_base.scss" "\.paper-network-map-definitions" "Styles should define centrality definitions inside the map card."
+Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-leaderboard-entry\.is-active \.paper-network-leaderboard-code,\s*\r?\n\s*\.paper-network-leaderboard-entry\.is-active \.paper-network-leaderboard-score\s*\{[^}]*color:\s*#fff" "Active leaderboard paper labels and scores should be white on the purple highlight."
 Assert-Contains "_sass/_base.scss" "\.paper-network-edge-concepts" "Styles should color concept similarity edges."
 Assert-Contains "_sass/_base.scss" "\.paper-network-edge-methods" "Styles should color method similarity edges."
 Assert-Contains "_sass/_base.scss" "\.paper-network-edge-domains" "Styles should color domain similarity edges."
