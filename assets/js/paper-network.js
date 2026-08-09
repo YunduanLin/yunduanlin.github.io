@@ -427,6 +427,29 @@
       return (Math.round(value * 100) / 100).toFixed(2);
     }
 
+    function appendCentralityMetrics(container, metrics) {
+      [
+        { label: "Degree", value: metrics.degree },
+        { label: "Connectivity", value: metrics.connectivity },
+        { label: "Bridge", value: metrics.bridge },
+      ].forEach(function (item) {
+        var metric = document.createElement("span");
+        metric.className = "paper-network-centrality-metric";
+
+        var metricLabel = document.createElement("span");
+        metricLabel.className = "paper-network-centrality-metric-label";
+        metricLabel.textContent = item.label;
+
+        var metricValue = document.createElement("span");
+        metricValue.className = "paper-network-centrality-metric-value";
+        metricValue.textContent = formatScore(item.value);
+
+        metric.appendChild(metricLabel);
+        metric.appendChild(metricValue);
+        container.appendChild(metric);
+      });
+    }
+
     function renderCentralityMatrix(node) {
       if (!detail.centrality) return;
       detail.centrality.textContent = "";
@@ -436,39 +459,45 @@
 
       var title = document.createElement("div");
       title.className = "paper-network-centrality-title";
-      title.textContent = "Centrality matrix";
+      title.textContent = "Network Role";
 
-      var table = document.createElement("table");
-      table.className = "paper-network-centrality-table";
+      var summary = document.createElement("div");
+      summary.className = "paper-network-centrality-summary";
 
-      var head = document.createElement("thead");
-      var headRow = document.createElement("tr");
-      ["Layer", "Degree", "Connectivity", "Bridge"].forEach(function (label) {
-        var cell = document.createElement("th");
-        cell.textContent = label;
-        headRow.appendChild(cell);
+      var summaryLabel = document.createElement("div");
+      summaryLabel.className = "paper-network-centrality-summary-label";
+      summaryLabel.textContent = "Overall";
+
+      var summaryMetrics = document.createElement("div");
+      summaryMetrics.className = "paper-network-centrality-metrics";
+      appendCentralityMetrics(summaryMetrics, centralityMatrix.overall[index]);
+
+      summary.appendChild(summaryLabel);
+      summary.appendChild(summaryMetrics);
+
+      var layerList = document.createElement("div");
+      layerList.className = "paper-network-centrality-layer-list";
+
+      featureGroups.forEach(function (layer) {
+        var layerRow = document.createElement("div");
+        layerRow.className = "paper-network-centrality-layer paper-network-centrality-layer-" + layer.key;
+
+        var layerLabel = document.createElement("div");
+        layerLabel.className = "paper-network-centrality-layer-label";
+        layerLabel.textContent = layer.label;
+
+        var layerMetrics = document.createElement("div");
+        layerMetrics.className = "paper-network-centrality-metrics";
+        appendCentralityMetrics(layerMetrics, centralityMatrix[layer.key][index]);
+
+        layerRow.appendChild(layerLabel);
+        layerRow.appendChild(layerMetrics);
+        layerList.appendChild(layerRow);
       });
-      head.appendChild(headRow);
-      table.appendChild(head);
 
-      var body = document.createElement("tbody");
-      centralityLayers.forEach(function (layer) {
-        var metrics = centralityMatrix[layer.key][index];
-        var row = document.createElement("tr");
-        row.className = "paper-network-centrality-row paper-network-centrality-row-" + layer.key;
-
-        [metrics.label, formatScore(metrics.degree), formatScore(metrics.connectivity), formatScore(metrics.bridge)].forEach(function (value) {
-          var cell = document.createElement("td");
-          cell.textContent = value;
-          row.appendChild(cell);
-        });
-
-        body.appendChild(row);
-      });
-
-      table.appendChild(body);
       detail.centrality.appendChild(title);
-      detail.centrality.appendChild(table);
+      detail.centrality.appendChild(summary);
+      detail.centrality.appendChild(layerList);
     }
 
     function renderFeatures(node) {
