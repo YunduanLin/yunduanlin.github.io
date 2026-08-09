@@ -1424,21 +1424,27 @@ footer.sticky-bottom {
     content: "";
   }
 
-  .paper-network-centrality-summary {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem 0.85rem;
+  .paper-network-centrality-summary,
+  .paper-network-centrality-layer {
+    display: grid;
+    grid-template-columns: minmax(4.6rem, 0.35fr) minmax(0, 1fr);
+    gap: 0.7rem;
     align-items: center;
+  }
+
+  .paper-network-centrality-summary {
     padding: 0.36rem 0.52rem;
-    border-left: 3px solid #c49a2c;
+    border-top: 1px solid rgba(196, 154, 44, 0.28);
+    border-bottom: 1px solid rgba(196, 154, 44, 0.28);
+    border-left: 4px solid #750f6d;
     color: #4b1359;
-    background: linear-gradient(90deg, rgba(117, 15, 109, 0.075), rgba(196, 154, 44, 0.055) 58%, transparent);
+    background: linear-gradient(90deg, rgba(117, 15, 109, 0.14), rgba(196, 154, 44, 0.1) 58%, transparent);
   }
 
   .paper-network-centrality-summary-label {
     color: #750f6d;
-    font-size: 0.78rem;
-    font-weight: 850;
+    font-size: 0.82rem;
+    font-weight: 900;
   }
 
   .paper-network-centrality-metrics {
@@ -1475,7 +1481,7 @@ footer.sticky-bottom {
   }
 
   .paper-network-centrality-summary .paper-network-centrality-metric-label {
-    color: rgba(75, 19, 89, 0.68);
+    color: rgba(75, 19, 89, 0.78);
   }
 
   .paper-network-centrality-summary .paper-network-centrality-metric-value {
@@ -1490,10 +1496,6 @@ footer.sticky-bottom {
   .paper-network-centrality-layer {
     --paper-network-role-accent: #750f6d;
 
-    display: grid;
-    grid-template-columns: minmax(4.4rem, 0.35fr) minmax(0, 1fr);
-    gap: 0.7rem;
-    align-items: center;
     padding: 0.34rem 0.05rem;
     border-bottom: 1px solid rgba(117, 15, 109, 0.08);
   }
@@ -1525,6 +1527,66 @@ footer.sticky-bottom {
 
   .paper-network-centrality-layer-domains {
     --paper-network-role-accent: #2d6f8f;
+  }
+
+  .paper-network-detail-features {
+    display: grid;
+    gap: 0.42rem;
+    margin: 0.2rem 0 0.9rem;
+    padding-top: 0.58rem;
+    border-top: 1px solid rgba(117, 15, 109, 0.08);
+  }
+
+  .paper-network-feature-group {
+    display: grid;
+    grid-template-columns: minmax(4.6rem, 0.35fr) minmax(0, 1fr);
+    gap: 0.7rem;
+    align-items: start;
+  }
+
+  .paper-network-feature-label {
+    color: #4b1359;
+    font-size: 0.64rem;
+    font-weight: 800;
+    line-height: 1.45;
+    text-transform: uppercase;
+  }
+
+  .paper-network-feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .paper-network-feature {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.06rem 0.32rem;
+    color: #6f4a00;
+    background-color: rgba(196, 154, 44, 0.12);
+    border: 1px solid rgba(196, 154, 44, 0.36);
+    border-radius: 4px;
+    font-size: 0.63rem;
+    font-weight: 650;
+    line-height: 1.22;
+  }
+
+  .paper-network-feature-concepts {
+    color: #4b1359;
+    background-color: rgba(117, 15, 109, 0.07);
+    border-color: rgba(117, 15, 109, 0.24);
+  }
+
+  .paper-network-feature-methods {
+    color: #6f4a00;
+    background-color: rgba(196, 154, 44, 0.12);
+    border-color: rgba(196, 154, 44, 0.36);
+  }
+
+  .paper-network-feature-domains {
+    color: #075e68;
+    background-color: rgba(21, 122, 134, 0.08);
+    border-color: rgba(21, 122, 134, 0.24);
   }
 
   .paper-network-detail-links {
@@ -1860,8 +1922,10 @@ html[data-theme="dark"] .research-page {
 
   .paper-network-centrality-summary {
     border-left-color: #e1c878;
+    border-top-color: rgba(225, 200, 120, 0.26);
+    border-bottom-color: rgba(225, 200, 120, 0.26);
     color: #fff;
-    background: linear-gradient(90deg, rgba(117, 15, 109, 0.24), rgba(225, 200, 120, 0.08) 58%, transparent);
+    background: linear-gradient(90deg, rgba(117, 15, 109, 0.34), rgba(225, 200, 120, 0.1) 58%, transparent);
   }
 
   .paper-network-centrality-layer {
@@ -1898,6 +1962,32 @@ html[data-theme="dark"] .research-page {
     color: #f0d889;
     background-color: rgba(196, 154, 44, 0.16);
     border-color: rgba(225, 200, 120, 0.42);
+  }
+
+  .paper-network-detail-features {
+    border-top-color: rgba(225, 200, 120, 0.14);
+  }
+
+  .paper-network-feature-label {
+    color: #f0d889;
+  }
+
+  .paper-network-feature {
+    color: #f0d889;
+    background-color: rgba(196, 154, 44, 0.14);
+    border-color: rgba(225, 200, 120, 0.34);
+  }
+
+  .paper-network-feature-concepts {
+    color: #f3c1ee;
+    background-color: rgba(117, 15, 109, 0.18);
+    border-color: rgba(228, 167, 223, 0.34);
+  }
+
+  .paper-network-feature-domains {
+    color: #9eeaf0;
+    background-color: rgba(21, 122, 134, 0.14);
+    border-color: rgba(128, 212, 220, 0.34);
   }
 
   .paper-network-detail-anchor {
@@ -1962,10 +2052,6 @@ html[data-theme="dark"] .research-page {
 
     .paper-network-zone-label {
       font-size: 11px;
-    }
-
-    .paper-network-centrality-layer {
-      grid-template-columns: minmax(0, 1fr);
     }
 
     .publication-section-title {

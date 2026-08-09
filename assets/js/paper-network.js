@@ -59,6 +59,7 @@
       meta: root.querySelector(".paper-network-detail-meta"),
       authors: root.querySelector(".paper-network-detail-authors"),
       centrality: root.querySelector(".paper-network-centrality-matrix"),
+      features: root.querySelector(".paper-network-detail-features"),
       anchor: root.querySelector(".paper-network-detail-anchor"),
     };
     var layerToggles = Array.prototype.slice.call(root.querySelectorAll("input[data-network-layer]"));
@@ -499,6 +500,36 @@
       detail.centrality.appendChild(layerList);
     }
 
+    function renderFeatures(node) {
+      if (!detail.features) return;
+      detail.features.textContent = "";
+
+      featureGroups.forEach(function (group) {
+        var values = getFeatures(node, group.key);
+        if (values.length === 0) return;
+
+        var wrapper = document.createElement("div");
+        wrapper.className = "paper-network-feature-group paper-network-feature-group-" + group.key;
+
+        var label = document.createElement("span");
+        label.className = "paper-network-feature-label";
+        label.textContent = group.plural;
+
+        var list = document.createElement("span");
+        list.className = "paper-network-feature-list";
+        values.forEach(function (value) {
+          var chip = document.createElement("span");
+          chip.className = "paper-network-feature paper-network-feature-" + group.key;
+          chip.textContent = value;
+          list.appendChild(chip);
+        });
+
+        wrapper.appendChild(label);
+        wrapper.appendChild(list);
+        detail.features.appendChild(wrapper);
+      });
+    }
+
     function selectPaper(id) {
       var node = nodeMap.get(id);
       if (!node) return;
@@ -509,6 +540,7 @@
       setText(detail.meta, node.status + ", " + node.year);
       setText(detail.authors, node.authors);
       renderCentralityMatrix(node);
+      renderFeatures(node);
 
       if (detail.anchor) {
         detail.anchor.href = "#" + node.bibkey;
