@@ -1125,6 +1125,38 @@ footer.sticky-bottom {
     }
   }
 
+  .paper-network-layer-toggle {
+    display: inline-flex;
+    gap: 0.28rem;
+    align-items: center;
+    margin: 0;
+    color: var(--global-text-color);
+    font-size: 0.74rem;
+    font-weight: 650;
+    cursor: pointer;
+
+    input {
+      width: 0.9rem;
+      height: 0.9rem;
+      margin: 0;
+      accent-color: #750f6d;
+      cursor: pointer;
+    }
+
+    span {
+      display: inline-flex;
+      gap: 0.35rem;
+      align-items: center;
+    }
+
+    i {
+      display: inline-block;
+      width: 1.2rem;
+      height: 0.18rem;
+      border-radius: 999px;
+    }
+  }
+
   .paper-network-legend-concepts i {
     background-color: #750f6d;
   }
@@ -1137,8 +1169,16 @@ footer.sticky-bottom {
     background-color: #157a86;
   }
 
-  .paper-network-legend-data i {
-    background-color: #8a8490;
+  .paper-network-layer-concepts i {
+    background-color: #750f6d;
+  }
+
+  .paper-network-layer-methods i {
+    background-color: #c49a2c;
+  }
+
+  .paper-network-layer-domains i {
+    background-color: #157a86;
   }
 
   .paper-network-legend-note {
@@ -1239,8 +1279,8 @@ footer.sticky-bottom {
     stroke: #157a86;
   }
 
-  .paper-network-edge-data {
-    stroke: #8a8490;
+  .paper-network-edge.is-hidden {
+    display: none;
   }
 
   .paper-network-edge.is-highlighted {
@@ -1357,6 +1397,65 @@ footer.sticky-bottom {
 
   .paper-network-detail-authors {
     color: var(--global-text-color);
+  }
+
+  .paper-network-centrality-matrix {
+    margin: 0.75rem 0 0.9rem;
+    overflow-x: auto;
+  }
+
+  .paper-network-centrality-title {
+    margin-bottom: 0.38rem;
+    color: #4b1359;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .paper-network-centrality-table {
+    width: 100%;
+    min-width: 26rem;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(117, 15, 109, 0.12);
+    border-radius: 6px;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.76rem;
+
+    th,
+    td {
+      padding: 0.42rem 0.5rem;
+      border-bottom: 1px solid rgba(117, 15, 109, 0.09);
+      line-height: 1.2;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    th {
+      color: #4b1359;
+      background-color: rgba(196, 154, 44, 0.12);
+      font-weight: 800;
+    }
+
+    th:first-child,
+    td:first-child {
+      text-align: left;
+    }
+
+    td:first-child {
+      color: var(--global-text-color);
+      font-weight: 700;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+  }
+
+  .paper-network-centrality-row-overall td:first-child {
+    color: #750f6d;
   }
 
   .paper-network-detail-features {
@@ -1680,6 +1779,14 @@ html[data-theme="dark"] .research-page {
     color: rgba(255, 255, 255, 0.88);
   }
 
+  .paper-network-layer-toggle {
+    color: rgba(255, 255, 255, 0.88);
+
+    input {
+      accent-color: #e1c878;
+    }
+  }
+
   .paper-network-control {
     color: #f0d889;
     background-color: rgba(196, 154, 44, 0.12);
@@ -1739,10 +1846,6 @@ html[data-theme="dark"] .research-page {
     stroke: #80d4dc;
   }
 
-  .paper-network-edge-data {
-    stroke: #c7bdcc;
-  }
-
   .paper-network-node-halo {
     fill: rgba(225, 200, 120, 0.14);
   }
@@ -1760,6 +1863,25 @@ html[data-theme="dark"] .research-page {
   .paper-network-node.is-active .paper-network-node-dot {
     fill: #750f6d;
     stroke: #e1c878;
+  }
+
+  .paper-network-centrality-title,
+  .paper-network-centrality-table th,
+  .paper-network-centrality-row-overall td:first-child {
+    color: #f0d889;
+  }
+
+  .paper-network-centrality-table {
+    border-color: rgba(225, 200, 120, 0.18);
+
+    th {
+      background-color: rgba(196, 154, 44, 0.14);
+    }
+
+    th,
+    td {
+      border-bottom-color: rgba(225, 200, 120, 0.13);
+    }
   }
 
   .paper-network-detail-label,

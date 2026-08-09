@@ -23,12 +23,21 @@
           <button class="paper-network-control" type="button" data-network-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>
         </div>
       </div>
-      <div class="paper-network-legend" aria-label="Similarity edge legend">
-        <span class="paper-network-legend-item paper-network-legend-concepts"><i></i>Concept</span>
-        <span class="paper-network-legend-item paper-network-legend-methods"><i></i>Method</span>
-        <span class="paper-network-legend-item paper-network-legend-domains"><i></i>Domain</span>
-        <span class="paper-network-legend-item paper-network-legend-data"><i></i>Data</span>
-        <span class="paper-network-legend-note">Thicker lines mean more overlap within that type.</span>
+      <div class="paper-network-legend" aria-label="Similarity edge layer controls">
+        <span class="paper-network-legend-note">Edge layers</span>
+        <label class="paper-network-layer-toggle paper-network-layer-concepts">
+          <input type="checkbox" data-network-layer="concepts" checked>
+          <span><i></i>Concept</span>
+        </label>
+        <label class="paper-network-layer-toggle paper-network-layer-methods">
+          <input type="checkbox" data-network-layer="methods" checked>
+          <span><i></i>Method</span>
+        </label>
+        <label class="paper-network-layer-toggle paper-network-layer-domains">
+          <input type="checkbox" data-network-layer="domains" checked>
+          <span><i></i>Domain</span>
+        </label>
+        <span class="paper-network-legend-note">Line thickness shows overlap within the selected layer.</span>
       </div>
 
       <div class="paper-network-graph-frame">
@@ -59,6 +68,7 @@
         <h3 class="paper-network-detail-title">Select a paper</h3>
         <p class="paper-network-detail-meta">Paper details will appear here.</p>
         <p class="paper-network-detail-authors"></p>
+        <div class="paper-network-centrality-matrix" aria-label="Selected paper centrality matrix"></div>
         <div class="paper-network-detail-features" aria-label="Selected paper features"></div>
         <div class="paper-network-detail-links">
           <a class="paper-network-detail-anchor" href="#"></a>
