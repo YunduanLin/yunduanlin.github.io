@@ -15,13 +15,22 @@ nodes:
         - social network
         - spatial network
         - location choice
+        - dual-network
       methods:
-        - network choice model
+        - choice model
+        - network game
+        - equilibrium
+        - network centrality
+        - data-driven optimization
       domains:
         - smart city operations
         - platform operations
+        - facility location
+        - temporal retail
+        - scalable network operations
       data:
-        - SNAP Gowalla
+        - SNAP
+        - Gowalla
   - id: W1
     title: "Technology Adoption under Experience-Based Learning: A Dynamic Market and Policy Analysis"
     short_title: "Technology adoption"
@@ -36,13 +45,13 @@ nodes:
     features:
       concepts:
         - technology adoption
-        - experience-based learning
+        - learning while doing
         - market dynamics
       methods:
-        - dynamic modeling
-        - policy analysis
+        - game theory
       domains:
-        - technology markets
+        - technology adoption
+        - innovation
       data: []
   - id: J3
     title: "Nonprogressive Diffusion on Social Networks: Approximation and Applications"
@@ -69,6 +78,7 @@ nodes:
         - equilibrium
       domains:
         - social network operations
+        - scalable network operations
       data:
         - network repository
         - Facebook network
@@ -202,14 +212,17 @@ nodes:
     y: 300
     features:
       concepts:
-        - task-level decision accuracy
-        - decision expertise
+        - expert decision
+        - decision accuracy assessment
       methods:
         - machine learning
-        - predictive modeling
+        - algorithm design
       domains:
-        - decision analytics
-      data: []
+        - design science
+      data:
+        - Kaggle
+        - adult census income
+        - hospital readmission rates
   - id: C2
     title: "Daily Physical Activity Monitoring---Adaptive Learning from Multi-source Motion Sensor Data"
     short_title: "Activity monitoring"
