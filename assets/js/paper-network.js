@@ -64,6 +64,7 @@
     };
     var layerToggles = Array.prototype.slice.call(root.querySelectorAll("input[data-network-layer]"));
     var linkCount = root.querySelector("[data-network-link-count]");
+    var leaderboardList = root.querySelector(".paper-network-leaderboard-list");
 
     function createSvgElement(tagName, attributes) {
       var element = document.createElementNS(svgNamespace, tagName);
@@ -450,36 +451,64 @@
       });
     }
 
-    function renderCentralityDefinitions() {
-      var definitions = document.createElement("div");
-      definitions.className = "paper-network-centrality-definitions";
+    function roleScore(metrics) {
+      return (metrics.degree + metrics.connectivity + metrics.bridge) / 3;
+    }
 
-      [
-        {
-          term: "Degree centrality",
-          description: "share of other projects directly connected to this project.",
-        },
-        {
-          term: "Connectivity",
-          description: "average weighted similarity from this project to the rest of the network.",
-        },
-        {
-          term: "Bridge",
-          description: "normalized betweenness centrality based on weighted shortest paths.",
-        },
-      ].forEach(function (item) {
-        var definition = document.createElement("p");
-        definition.className = "paper-network-centrality-definition";
+    function renderNetworkLeaderboard() {
+      if (!leaderboardList) return;
+      leaderboardList.textContent = "";
 
-        var term = document.createElement("strong");
-        term.textContent = item.term;
+      centralityLayers.forEach(function (layer) {
+        var row = document.createElement("div");
+        row.className = "paper-network-leaderboard-item paper-network-leaderboard-item-" + layer.key;
 
-        definition.appendChild(term);
-        definition.appendChild(document.createTextNode(": " + item.description));
-        definitions.appendChild(definition);
+        var label = document.createElement("span");
+        label.className = "paper-network-leaderboard-label";
+        label.textContent = layer.label;
+
+        var entries = document.createElement("span");
+        entries.className = "paper-network-leaderboard-entries";
+
+        centralityMatrix[layer.key]
+          .map(function (metrics, index) {
+            return {
+              id: nodes[index].id,
+              score: roleScore(metrics),
+            };
+          })
+          .sort(function (left, right) {
+            if (right.score !== left.score) return right.score - left.score;
+            return left.id.localeCompare(right.id);
+          })
+          .slice(0, 3)
+          .forEach(function (entry, index) {
+            var item = document.createElement("span");
+            item.className = "paper-network-leaderboard-entry";
+            if (entry.id === activeId) item.classList.add("is-active");
+
+            var rank = document.createElement("span");
+            rank.className = "paper-network-leaderboard-rank";
+            rank.textContent = String(index + 1);
+
+            var code = document.createElement("span");
+            code.className = "paper-network-leaderboard-code";
+            code.textContent = entry.id;
+
+            var score = document.createElement("span");
+            score.className = "paper-network-leaderboard-score";
+            score.textContent = formatScore(entry.score);
+
+            item.appendChild(rank);
+            item.appendChild(code);
+            item.appendChild(score);
+            entries.appendChild(item);
+          });
+
+        row.appendChild(label);
+        row.appendChild(entries);
+        leaderboardList.appendChild(row);
       });
-
-      return definitions;
     }
 
     function renderCentralityMatrix(node) {
@@ -530,7 +559,6 @@
       detail.centrality.appendChild(title);
       detail.centrality.appendChild(summary);
       detail.centrality.appendChild(layerList);
-      detail.centrality.appendChild(renderCentralityDefinitions());
     }
 
     function renderFeatures(node) {
@@ -574,6 +602,7 @@
       setText(detail.authors, node.authors);
       renderCentralityMatrix(node);
       renderFeatures(node);
+      renderNetworkLeaderboard();
 
       if (detail.anchor) {
         detail.anchor.href = "#" + node.bibkey;
