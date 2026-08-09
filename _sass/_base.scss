@@ -1496,7 +1496,8 @@ footer.sticky-bottom {
   .paper-network-centrality-layer {
     --paper-network-role-accent: #750f6d;
 
-    padding: 0.34rem 0.05rem;
+    padding: 0.34rem 0.52rem;
+    border-left: 4px solid transparent;
     border-bottom: 1px solid rgba(117, 15, 109, 0.08);
   }
 

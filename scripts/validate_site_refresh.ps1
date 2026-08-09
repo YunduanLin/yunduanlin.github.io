@@ -249,6 +249,7 @@ Assert-NotContains "_sass/_base.scss" "(?s)\.paper-network-centrality-matrix\s*\
 Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-centrality-matrix\s*\{[^}]*border-top:\s*1px solid rgba\(196,\s*154,\s*44,\s*0\.42\)" "Network role panel should use a light divider instead of a card frame."
 Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-centrality-summary,\s*\r?\n\s*\.paper-network-centrality-layer\s*\{[^}]*grid-template-columns:\s*minmax\(4\.6rem,\s*0\.35fr\)\s*minmax\(0,\s*1fr\)" "Overall and layer rows should share the same aligned two-column rhythm."
 Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-centrality-summary\s*\{[^}]*border-left:\s*4px solid #750f6d" "Overall network role row should be visibly emphasized."
+Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-centrality-layer\s*\{[^}]*padding:\s*0\.34rem 0\.52rem[^}]*border-left:\s*4px solid transparent" "Layer role rows should keep the same left gutter as the Overall row for alignment."
 Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-centrality-metric\s*\{[^}]*display:\s*inline-flex" "Centrality metric labels and values should sit on the same line."
 Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-centrality-layer-methods\s*\{[^}]*#c49a2c" "Method layer row should use the gold accent."
 Assert-Contains "_sass/_base.scss" "\.paper-network-feature-group" "Styles should define feature keyword groups inside the selected-paper map card."
