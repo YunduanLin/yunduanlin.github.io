@@ -251,6 +251,7 @@ Assert-Contains "_includes/paper_network.liquid" "share of other projects direct
 Assert-Contains "_includes/paper_network.liquid" "average weighted similarity" "Connectivity definition should explain the weighted-similarity interpretation."
 Assert-Contains "_includes/paper_network.liquid" "shortest paths" "Bridge definition should explain the betweenness interpretation."
 Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-map-definitions\s*\{[^}]*display:\s*grid" "Centrality definitions should stack as rows rather than inline chips."
+Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-map-definition\s*\{[^}]*grid-template-columns:\s*minmax\(5\.1rem,\s*0\.26fr\)\s*minmax\(0,\s*1fr\)" "Centrality definition rows should give the explanation column more width."
 Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-leaderboard-entry\.is-active \.paper-network-leaderboard-code,\s*\r?\n\s*\.paper-network-leaderboard-entry\.is-active \.paper-network-leaderboard-score\s*\{[^}]*color:\s*#fff" "Active leaderboard paper labels and scores should be white on the purple highlight."
 Assert-Contains "_sass/_base.scss" "\.paper-network-edge-concepts" "Styles should color concept similarity edges."
 Assert-Contains "_sass/_base.scss" "\.paper-network-edge-methods" "Styles should color method similarity edges."
