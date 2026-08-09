@@ -232,6 +232,8 @@ Assert-NotContains "_sass/_base.scss" "\.paper-network-edge-data" "Styles should
 Assert-Contains "_sass/_base.scss" "\.paper-network-layer-toggle" "Styles should define the layer checkbox controls."
 Assert-Contains "_sass/_base.scss" "\.paper-network-centrality-matrix" "Styles should define the selected-paper centrality matrix."
 Assert-Contains "_sass/_base.scss" "\.paper-network-centrality-row" "Styles should define centrality matrix rows."
+Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-centrality-table\s*\{[^}]*table-layout:\s*fixed" "Centrality matrix should fit the mobile card without relying on horizontal scrolling."
+Assert-NotContains "_sass/_base.scss" "(?s)\.paper-network-centrality-table\s*\{[^}]*min-width:\s*26rem" "Centrality matrix should not force the rejected mobile horizontal scroll width."
 Assert-Contains "_sass/_base.scss" "\.paper-network-feature-group" "Styles should define grouped feature details in the selected-paper card."
 Assert-Contains "_sass/_base.scss" "(?s)\.paper-network-shell\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)" "Paper network detail card should stack under a full-width graph."
 Assert-NotContains "_sass/_base.scss" "grid-template-columns:\s*minmax\(0,\s*1\.45fr\)\s*minmax\(17rem,\s*0\.78fr\)" "Paper network should not use the rejected side-by-side graph/detail layout."

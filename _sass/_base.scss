@@ -1415,22 +1415,21 @@ footer.sticky-bottom {
 
   .paper-network-centrality-table {
     width: 100%;
-    min-width: 26rem;
     margin: 0;
     overflow: hidden;
     border: 1px solid rgba(117, 15, 109, 0.12);
     border-radius: 6px;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: 0.76rem;
+    table-layout: fixed;
+    font-size: 0.74rem;
 
     th,
     td {
-      padding: 0.42rem 0.5rem;
+      padding: 0.4rem 0.35rem;
       border-bottom: 1px solid rgba(117, 15, 109, 0.09);
       line-height: 1.2;
       text-align: right;
-      white-space: nowrap;
     }
 
     th {
@@ -1442,6 +1441,7 @@ footer.sticky-bottom {
     th:first-child,
     td:first-child {
       text-align: left;
+      width: 34%;
     }
 
     td:first-child {
