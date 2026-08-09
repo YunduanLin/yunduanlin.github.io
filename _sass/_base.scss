@@ -1198,23 +1198,40 @@ footer.sticky-bottom {
   }
 
   .paper-network-map-definitions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.28rem 0.55rem;
+    display: grid;
+    gap: 0.34rem;
     color: var(--global-text-color-light);
-    font-size: 0.66rem;
-    line-height: 1.35;
+    font-size: 0.68rem;
+    line-height: 1.38;
   }
 
-  .paper-network-map-definitions span {
-    display: inline-flex;
-    gap: 0.2rem;
-    align-items: baseline;
+  .paper-network-map-definition {
+    display: grid;
+    grid-template-columns: minmax(5.8rem, 0.36fr) minmax(0, 1fr);
+    gap: 0.42rem;
+    align-items: start;
   }
 
-  .paper-network-map-definitions strong {
+  .paper-network-map-definition-heading {
+    display: grid;
+    gap: 0.04rem;
+  }
+
+  .paper-network-map-definition-term {
     color: #4b1359;
     font-weight: 850;
+  }
+
+  .paper-network-map-definition-role {
+    color: #6f4a00;
+    font-size: 0.62rem;
+    font-weight: 750;
+    line-height: 1.2;
+    text-transform: lowercase;
+  }
+
+  .paper-network-map-definition-description {
+    min-width: 0;
   }
 
   .paper-network-legend {
@@ -1932,6 +1949,10 @@ html[data-theme="dark"] .research-page {
     color: #f0d889;
   }
 
+  .paper-network-map-definition-role {
+    color: rgba(240, 216, 137, 0.78);
+  }
+
   .paper-network-leaderboard-entry {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.08);
@@ -2196,6 +2217,11 @@ html[data-theme="dark"] .research-page {
 
     .paper-network-leaderboard-item {
       grid-template-columns: minmax(4.4rem, 0.26fr) minmax(0, 1fr);
+    }
+
+    .paper-network-map-definition {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.04rem;
     }
 
     .paper-network-graph-frame,

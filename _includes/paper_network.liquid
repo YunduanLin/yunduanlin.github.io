@@ -28,9 +28,27 @@
           <div class="paper-network-leaderboard-list" aria-label="Network role leaderboard"></div>
         </div>
         <div class="paper-network-map-definitions" aria-label="Centrality definitions">
-          <span><strong>Degree</strong> direct links</span>
-          <span><strong>Connectivity</strong> average similarity</span>
-          <span><strong>Bridge</strong> shortest-path role</span>
+          <div class="paper-network-map-definition">
+            <span class="paper-network-map-definition-heading">
+              <strong class="paper-network-map-definition-term">Degree</strong>
+              <span class="paper-network-map-definition-role">direct links</span>
+            </span>
+            <span class="paper-network-map-definition-description">Share of other projects directly connected through at least one selected similarity layer.</span>
+          </div>
+          <div class="paper-network-map-definition">
+            <span class="paper-network-map-definition-heading">
+              <strong class="paper-network-map-definition-term">Connectivity</strong>
+              <span class="paper-network-map-definition-role">average similarity</span>
+            </span>
+            <span class="paper-network-map-definition-description">Average weighted similarity to the rest of the network; higher values indicate broader topical overlap.</span>
+          </div>
+          <div class="paper-network-map-definition">
+            <span class="paper-network-map-definition-heading">
+              <strong class="paper-network-map-definition-term">Bridge</strong>
+              <span class="paper-network-map-definition-role">shortest-path role</span>
+            </span>
+            <span class="paper-network-map-definition-description">Normalized betweenness centrality on weighted shortest paths; higher values indicate a stronger bridging role.</span>
+          </div>
         </div>
       </div>
       <div class="paper-network-legend" aria-label="Similarity edge layer controls">
