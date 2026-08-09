@@ -16,6 +16,8 @@ nodes:
         - spatial network
         - location choice
         - dual-network
+        - network externality
+        - multi-source data
       methods:
         - choice model
         - network game
@@ -70,6 +72,7 @@ nodes:
         - network structure
         - network centrality
         - market dynamics
+        - network externality
       methods:
         - approximation algorithm
         - stochastic modeling
@@ -100,6 +103,7 @@ nodes:
         - network diffusion
         - market dynamics
         - content promotion
+        - network externality
       methods:
         - data-driven optimization
         - diffusion model
@@ -124,12 +128,18 @@ nodes:
       concepts:
         - online allocation
         - increasing returns
+        - market dynamics
+        - sequential decision
+        - learning-while-doing
+        - network externality
       methods:
-        - stochastic optimization
         - optimization
+        - competitive ratio
+        - dynamic programming
       domains:
         - resource allocation
         - platform operations
+        - social network operations
       data: []
   - id: W4
     title: "LLM-Augmented Digital Twin for Policy Evaluation in Short-Video Platforms"
@@ -145,16 +155,21 @@ nodes:
     features:
       concepts:
         - policy evaluation
-        - digital twin
-        - content platform governance
+        - large-scale simulation
+        - multi-source data
       methods:
-        - LLM simulation
-        - digital twin simulation
+        - simulation
+        - digital twin
       domains:
-        - content platforms
-        - platform operations
+        - social media
+        - social network operations
+        - user-generated content platform
+        - AI agent
+        - scalable network operations
       data:
-        - short-video platform data
+        - KuaiRand-Pure random-exposure data
+        - Tsinghua ShortVideo sampled catalogue
+        - VK-LSVD
   - id: W5
     title: "LLM Agents in Transportation-enabled Service Platforms: From Behavioral Simulation to Platform Decision Support"
     short_title: "LLM agents"
@@ -170,12 +185,11 @@ nodes:
       concepts:
         - behavioral simulation
         - platform decision support
-      methods:
         - LLM simulation
-        - agent-based simulation
+      methods:
+        - survey
       domains:
-        - transportation-enabled services
-        - platform operations
+        - transportation system
       data: []
   - id: C3
     title: "Bilevel Optimization of Agent Skills via Monte Carlo Tree Search"
@@ -217,6 +231,7 @@ nodes:
       concepts:
         - expert decision
         - decision accuracy assessment
+        - multi-source data
       methods:
         - machine learning
         - algorithm design
@@ -241,6 +256,7 @@ nodes:
       concepts:
         - physical activity monitoring
         - wearable sensors
+        - multi-source data
       methods:
         - machine learning
         - time series data
