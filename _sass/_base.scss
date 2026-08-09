@@ -1401,12 +1401,8 @@ footer.sticky-bottom {
 
   .paper-network-centrality-matrix {
     margin: 0.75rem 0 0.9rem;
-    padding: 0.64rem;
-    border: 1px solid rgba(117, 15, 109, 0.15);
-    border-top: 3px solid #c49a2c;
-    border-radius: 8px;
-    background: linear-gradient(180deg, rgba(255, 253, 247, 0.98), rgba(255, 255, 255, 0.96));
-    box-shadow: 0 10px 24px rgba(75, 19, 89, 0.06);
+    padding-top: 0.62rem;
+    border-top: 1px solid rgba(196, 154, 44, 0.42);
   }
 
   .paper-network-centrality-title {
@@ -1429,36 +1425,33 @@ footer.sticky-bottom {
   }
 
   .paper-network-centrality-summary {
-    display: grid;
-    grid-template-columns: minmax(5.2rem, 0.55fr) minmax(0, 1.45fr);
-    gap: 0.58rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.85rem;
     align-items: center;
-    padding: 0.68rem 0.72rem;
-    border: 1px solid rgba(196, 154, 44, 0.48);
-    border-radius: 7px;
-    color: #fff;
-    background: linear-gradient(135deg, #750f6d, #4b1359);
-    box-shadow: 0 10px 18px rgba(75, 19, 89, 0.16);
+    padding: 0.36rem 0.52rem;
+    border-left: 3px solid #c49a2c;
+    color: #4b1359;
+    background: linear-gradient(90deg, rgba(117, 15, 109, 0.075), rgba(196, 154, 44, 0.055) 58%, transparent);
   }
 
   .paper-network-centrality-summary-label {
-    color: #f0d889;
-    font-size: 0.9rem;
+    color: #750f6d;
+    font-size: 0.78rem;
     font-weight: 850;
   }
 
   .paper-network-centrality-metrics {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.42rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.28rem 0.72rem;
   }
 
   .paper-network-centrality-metric {
+    display: inline-flex;
+    gap: 0.2rem;
+    align-items: baseline;
     min-width: 0;
-    padding: 0.38rem 0.42rem;
-    border: 1px solid rgba(117, 15, 109, 0.08);
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.72);
     line-height: 1.15;
   }
 
@@ -1476,124 +1469,62 @@ footer.sticky-bottom {
   }
 
   .paper-network-centrality-metric-value {
-    margin-top: 0.1rem;
     color: #4b1359;
-    font-size: 0.86rem;
+    font-size: 0.78rem;
     font-weight: 850;
   }
 
-  .paper-network-centrality-summary .paper-network-centrality-metric {
-    border-color: rgba(240, 216, 137, 0.26);
-    background: rgba(255, 255, 255, 0.12);
-  }
-
   .paper-network-centrality-summary .paper-network-centrality-metric-label {
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(75, 19, 89, 0.68);
   }
 
   .paper-network-centrality-summary .paper-network-centrality-metric-value {
-    color: #fff;
+    color: #750f6d;
   }
 
   .paper-network-centrality-layer-list {
     display: grid;
-    gap: 0.42rem;
-    margin-top: 0.5rem;
+    margin-top: 0.18rem;
   }
 
   .paper-network-centrality-layer {
+    --paper-network-role-accent: #750f6d;
+
     display: grid;
-    grid-template-columns: minmax(4.65rem, 0.48fr) minmax(0, 1.52fr);
-    gap: 0.5rem;
+    grid-template-columns: minmax(4.4rem, 0.35fr) minmax(0, 1fr);
+    gap: 0.7rem;
     align-items: center;
-    padding: 0.48rem 0.55rem;
-    border: 1px solid rgba(117, 15, 109, 0.08);
-    border-left: 3px solid #750f6d;
-    border-radius: 7px;
-    background: rgba(255, 255, 255, 0.78);
+    padding: 0.34rem 0.05rem;
+    border-bottom: 1px solid rgba(117, 15, 109, 0.08);
   }
 
-  .paper-network-centrality-layer-concepts {
-    border-left-color: #750f6d;
-  }
-
-  .paper-network-centrality-layer-methods {
-    border-left-color: #c49a2c;
-  }
-
-  .paper-network-centrality-layer-domains {
-    border-left-color: #2d6f8f;
+  .paper-network-centrality-layer:last-child {
+    border-bottom: 0;
   }
 
   .paper-network-centrality-layer-label {
+    display: inline-flex;
+    gap: 0.3rem;
+    align-items: center;
     color: #4b1359;
     font-size: 0.76rem;
     font-weight: 800;
   }
 
-  .paper-network-detail-features {
-    display: grid;
-    gap: 0.5rem;
-    margin: 0.18rem 0 0.9rem;
+  .paper-network-centrality-layer-label::before {
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 999px;
+    background: var(--paper-network-role-accent);
+    content: "";
   }
 
-  .paper-network-feature-group {
-    display: grid;
-    grid-template-columns: minmax(5.4rem, auto) minmax(0, 1fr);
-    gap: 0.45rem;
-    align-items: start;
+  .paper-network-centrality-layer-methods {
+    --paper-network-role-accent: #c49a2c;
   }
 
-  .paper-network-feature-label {
-    color: #4b1359;
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    line-height: 1.45;
-    text-transform: uppercase;
-  }
-
-  .paper-network-feature-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.28rem;
-  }
-
-  .paper-network-topic {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.08rem 0.36rem;
-    color: #6f4a00;
-    background-color: rgba(196, 154, 44, 0.14);
-    border: 1px solid rgba(196, 154, 44, 0.42);
-    border-radius: 4px;
-    font-size: 0.66rem;
-    font-weight: 650;
-    line-height: 1.2;
-  }
-
-  .paper-network-feature-concepts {
-    color: #4b1359;
-    background-color: rgba(117, 15, 109, 0.08);
-    border-color: rgba(117, 15, 109, 0.28);
-  }
-
-  .paper-network-feature-methods {
-    color: #6f4a00;
-    background-color: rgba(196, 154, 44, 0.14);
-    border-color: rgba(196, 154, 44, 0.42);
-  }
-
-  .paper-network-feature-domains {
-    color: #075e68;
-    background-color: rgba(21, 122, 134, 0.1);
-    border-color: rgba(21, 122, 134, 0.28);
-  }
-
-  .paper-network-feature-data {
-    color: #514d58;
-    background-color: rgba(138, 132, 144, 0.11);
-    border-color: rgba(138, 132, 144, 0.28);
+  .paper-network-centrality-layer-domains {
+    --paper-network-role-accent: #2d6f8f;
   }
 
   .paper-network-detail-links {
@@ -1614,32 +1545,32 @@ footer.sticky-bottom {
 
   .grant-list {
     display: grid;
-    gap: 0.85rem;
-    margin-top: 1rem;
+    gap: 0;
+    margin-top: 0.85rem;
   }
 
   .grant-item {
-    padding: 0.9rem 1rem;
-    background-color: rgba(248, 249, 250, 0.82);
-    border: 1px solid var(--global-divider-color);
-    border-left: 4px solid #c49a2c;
-    border-radius: 8px;
+    padding: 0.82rem 0;
+    border-top: 1px solid rgba(196, 154, 44, 0.32);
   }
 
   .grant-title {
-    margin-bottom: 0.28rem;
-    font-weight: 700;
+    margin: 0 0 0.22rem;
+    color: var(--global-text-color);
+    font-size: 0.96rem;
+    font-weight: 750;
+    line-height: 1.35;
   }
 
   .grant-meta {
     color: var(--global-text-color-light);
-    font-size: 0.95rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
   .grant-amount {
-    color: var(--global-text-color);
-    font-weight: 700;
-    border-bottom: 1px solid currentColor;
+    color: #4b1359;
+    font-weight: 800;
   }
 
   .publication-section {
@@ -1763,29 +1694,6 @@ footer.sticky-bottom {
         font-size: 0.72rem;
         line-height: 1.25;
       }
-    }
-
-    .publication-keywords {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.28rem;
-      margin: 0.25rem 0 0.45rem;
-    }
-
-    .publication-keyword {
-      display: inline-flex;
-      align-items: center;
-      min-height: 1.05rem;
-      padding: 0.08rem 0.36rem;
-      color: #6f4a00;
-      background-color: rgba(196, 154, 44, 0.14);
-      border: 1px solid rgba(196, 154, 44, 0.46);
-      border-left: 2px solid #c49a2c;
-      border-radius: 4px;
-      font-size: 0.66rem;
-      font-weight: 600;
-      line-height: 1.15;
-      white-space: nowrap;
     }
 
     .publication-highlights {
@@ -1939,10 +1847,7 @@ html[data-theme="dark"] .research-page {
   }
 
   .paper-network-centrality-matrix {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
-    border-color: rgba(225, 200, 120, 0.2);
     border-top-color: #e1c878;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
   }
 
   .paper-network-centrality-title {
@@ -1954,26 +1859,25 @@ html[data-theme="dark"] .research-page {
   }
 
   .paper-network-centrality-summary {
-    border-color: rgba(225, 200, 120, 0.52);
-    background: linear-gradient(135deg, #750f6d, #4b1359);
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.28);
+    border-left-color: #e1c878;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(117, 15, 109, 0.24), rgba(225, 200, 120, 0.08) 58%, transparent);
   }
 
   .paper-network-centrality-layer {
-    border-color: rgba(225, 200, 120, 0.14);
-    background: rgba(255, 255, 255, 0.055);
+    border-bottom-color: rgba(225, 200, 120, 0.14);
   }
 
   .paper-network-centrality-layer-concepts {
-    border-left-color: #e4a7df;
+    --paper-network-role-accent: #e4a7df;
   }
 
   .paper-network-centrality-layer-methods {
-    border-left-color: #e1c878;
+    --paper-network-role-accent: #e1c878;
   }
 
   .paper-network-centrality-layer-domains {
-    border-left-color: #80d4dc;
+    --paper-network-role-accent: #80d4dc;
   }
 
   .paper-network-centrality-layer-label,
@@ -1981,39 +1885,19 @@ html[data-theme="dark"] .research-page {
     color: #fff;
   }
 
-  .paper-network-centrality-metric {
-    border-color: rgba(225, 200, 120, 0.12);
-    background: rgba(255, 255, 255, 0.065);
+  .paper-network-centrality-summary-label,
+  .paper-network-centrality-summary .paper-network-centrality-metric-value {
+    color: #f0d889;
   }
 
   .paper-network-centrality-metric-label {
     color: rgba(255, 255, 255, 0.6);
   }
 
-  .paper-network-detail-label,
-  .paper-network-feature-label,
-  .paper-network-topic {
+  .paper-network-detail-label {
     color: #f0d889;
     background-color: rgba(196, 154, 44, 0.16);
     border-color: rgba(225, 200, 120, 0.42);
-  }
-
-  .paper-network-feature-concepts {
-    color: #f3c1ee;
-    background-color: rgba(117, 15, 109, 0.18);
-    border-color: rgba(228, 167, 223, 0.38);
-  }
-
-  .paper-network-feature-domains {
-    color: #9eeaf0;
-    background-color: rgba(21, 122, 134, 0.16);
-    border-color: rgba(128, 212, 220, 0.38);
-  }
-
-  .paper-network-feature-data {
-    color: #ddd4e3;
-    background-color: rgba(138, 132, 144, 0.16);
-    border-color: rgba(199, 189, 204, 0.34);
   }
 
   .paper-network-detail-anchor {
@@ -2021,7 +1905,11 @@ html[data-theme="dark"] .research-page {
   }
 
   .grant-item {
-    background-color: rgba(255, 255, 255, 0.04);
+    border-top-color: rgba(225, 200, 120, 0.22);
+  }
+
+  .grant-amount {
+    color: #f0d889;
   }
 
   .publications ol.bibliography li {
@@ -2035,13 +1923,6 @@ html[data-theme="dark"] .research-page {
     background-color: #750f6d;
     border-color: #e1c878;
     box-shadow: none;
-  }
-
-  .publications .publication-keyword {
-    color: #f0d889;
-    background-color: rgba(196, 154, 44, 0.16);
-    border-color: rgba(225, 200, 120, 0.44);
-    border-left-color: #e1c878;
   }
 
   .publications .publication-highlights {
@@ -2083,7 +1964,6 @@ html[data-theme="dark"] .research-page {
       font-size: 11px;
     }
 
-    .paper-network-centrality-summary,
     .paper-network-centrality-layer {
       grid-template-columns: minmax(0, 1fr);
     }

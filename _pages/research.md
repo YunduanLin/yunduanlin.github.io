@@ -9,7 +9,7 @@ nav_order: 1
 
 <div class="research-page" markdown="1">
 
-<p class="research-order-note">Papers are grouped by research stream and ordered from newest to oldest within each section. Labels indicate publication type/order (J=published journal, C=refereed conference, W=working paper/manuscript/work in progress); keyword chips mark recurring methods and domains.</p>
+<p class="research-order-note">Papers are grouped by research stream and ordered from newest to oldest within each section. Labels indicate publication type/order (J=published journal, C=refereed conference, W=working paper/manuscript/work in progress).</p>
 
 {% include paper_network.liquid %}
 
@@ -51,12 +51,12 @@ nav_order: 1
 
 <div class="grant-list">
   <div class="grant-item">
-    <div class="grant-title">"Harnessing the Power of Social Network Analytics for Enhanced Business Decision-Making"</div>
+    <div class="grant-title">Harnessing the Power of Social Network Analytics for Enhanced Business Decision-Making</div>
     <div class="grant-meta"><em>CUHK Improvement on Competitiveness in Hiring New Faculties Funding Scheme</em>, PI, <span class="grant-amount">HKD 1,307,270</span>, 2024.</div>
   </div>
 
   <div class="grant-item">
-    <div class="grant-title">"Optimal Design of the Referral Program for Two-Sided Platforms"</div>
+    <div class="grant-title">Optimal Design of the Referral Program for Two-Sided Platforms</div>
     <div class="grant-meta"><em>Hong Kong Research Grants Council, Early Career Scheme</em>, PI, <span class="grant-amount">HKD 454,062</span>, 2026-2028.</div>
   </div>
 </div>

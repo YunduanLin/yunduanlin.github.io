@@ -50,14 +50,6 @@
   <div id="{{entry.key}}" class="col-sm-11 publication-card-content">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
-    {% if entry.keywords %}
-      <div class="publication-keywords" aria-label="Research keywords">
-        {% assign publication_keywords = entry.keywords | split: ';' %}
-        {% for keyword in publication_keywords %}
-          <span class="publication-keyword">{{ keyword | strip }}</span>
-        {% endfor %}
-      </div>
-    {% endif %}
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
