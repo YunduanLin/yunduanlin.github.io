@@ -195,7 +195,7 @@ nodes:
       methods:
         - Monte Carlo tree search
         - bilevel optimization
-        - agent-based simulation
+        - simulation optimization
         - LLM-assisted optimization
       domains:
         - AI agents
