@@ -157,6 +157,7 @@ nodes:
         - policy evaluation
         - large-scale simulation
         - multi-source data
+        - LLM-assisted decision-making
       methods:
         - simulation
         - digital twin
@@ -164,7 +165,7 @@ nodes:
         - social media
         - social network operations
         - user-generated content platform
-        - AI agent
+        - AI agents
         - scalable network operations
       data:
         - KuaiRand-Pure random-exposure data
@@ -183,13 +184,15 @@ nodes:
     y: 110
     features:
       concepts:
-        - behavioral simulation
-        - platform decision support
-        - LLM simulation
+        - simulation
+        - LLM-assisted decision-making
       methods:
         - survey
       domains:
-        - transportation system
+        - transportation systems
+        - smart city operations
+        - OR for AI
+        - AI for OR
       data: []
   - id: C3
     title: "Bilevel Optimization of Agent Skills via Monte Carlo Tree Search"
@@ -232,6 +235,7 @@ nodes:
         - expert decision
         - decision accuracy assessment
         - multi-source data
+        - LLM-assisted decision-making
       methods:
         - machine learning
         - algorithm design
