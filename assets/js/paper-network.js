@@ -26,10 +26,10 @@
 
     var nodes = Array.isArray(graphData.nodes) ? graphData.nodes : [];
     var featureGroups = [
-      { key: "concepts", label: "Concept" },
-      { key: "methods", label: "Method" },
-      { key: "domains", label: "Domain" },
-      { key: "data", label: "Data" },
+      { key: "concepts", label: "Concept", plural: "Concepts" },
+      { key: "methods", label: "Method", plural: "Methods" },
+      { key: "domains", label: "Domain", plural: "Domains" },
+      { key: "data", label: "Data", plural: "Data" },
     ];
     var edgeClassNames = {
       concepts: "paper-network-edge-concepts",
@@ -235,7 +235,7 @@
 
         var label = document.createElement("span");
         label.className = "paper-network-feature-label";
-        label.textContent = group.label + "s";
+        label.textContent = group.plural;
 
         var list = document.createElement("span");
         list.className = "paper-network-feature-list";
