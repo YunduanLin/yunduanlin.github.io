@@ -147,7 +147,7 @@ Assert-Contains "_pages/research.md" "HKD 1,307,270" "Research page should inclu
 Assert-Contains "_pages/research.md" "Optimal Design of the Referral Program for Two-Sided Platforms" "Research page should include the Early Career Scheme grant."
 Assert-Contains "_pages/research.md" "HKD 454,062" "Research page should include the Early Career Scheme grant amount."
 Assert-Contains "_pages/research.md" "(?s)Social Network Analytics & Platform Operations.*AI & Operational Analytics.*Grants" "Research page should list grants after the stream-organized paper sections."
-Assert-Contains "_pages/research.md" "(?s)Social Network Analytics & Platform Operations.*AI & Operational Analytics.*\{\%\s*include\s+paper_network\.liquid\s*\%\}.*Grants" "Research page should place the paper network after paper sections and before grants."
+Assert-Contains "_pages/research.md" "(?s)\{\%\s*include\s+paper_network\.liquid\s*\%\}.*Social Network Analytics & Platform Operations.*AI & Operational Analytics.*Grants" "Research page should place the paper network before the stream-organized paper sections."
 Assert-Contains "_pages/research.md" "\{\%\s*bibliography\s+--group_by\s+none\s+--query\s+@\*\[stream=social\]\*\s*\%\}" "Research page should render the social/platform stream from bibliography metadata."
 Assert-Contains "_pages/research.md" "\{\%\s*bibliography\s+--group_by\s+none\s+--query\s+@\*\[stream=aiops\]\*\s*\%\}" "Research page should render the AI/analytics stream from bibliography metadata."
 Assert-Contains "_pages/research.md" "\{\%\s*include\s+paper_network\.liquid\s*\%\}" "Research page should include the interactive paper network module."

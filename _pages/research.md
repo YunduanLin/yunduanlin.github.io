@@ -11,6 +11,11 @@ nav_order: 1
 
 <p class="research-order-note">Papers are grouped by research stream and ordered from newest to oldest within each section. Labels indicate publication type/order (J=published journal, C=refereed conference, W=working paper/manuscript/work in progress); keyword chips mark recurring methods and domains.</p>
 
+{% include paper_network.liquid %}
+
+{% assign paper_network_js = '/assets/js/paper-network.js' | relative_url | bust_file_cache %}
+<script defer src="{{ paper_network_js }}&v=feature-similarity-20260809"></script>
+
 <section class="publication-section publication-section-stream publication-section-social" markdown="1">
 
 #### Social Network Analytics & Platform Operations
@@ -38,11 +43,6 @@ nav_order: 1
 
 </div>
 </section>
-
-{% include paper_network.liquid %}
-
-{% assign paper_network_js = '/assets/js/paper-network.js' | relative_url | bust_file_cache %}
-<script defer src="{{ paper_network_js }}&v=feature-similarity-20260809"></script>
 
 <section class="grant-section" markdown="1">
 
