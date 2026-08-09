@@ -450,6 +450,38 @@
       });
     }
 
+    function renderCentralityDefinitions() {
+      var definitions = document.createElement("div");
+      definitions.className = "paper-network-centrality-definitions";
+
+      [
+        {
+          term: "Degree centrality",
+          description: "share of other projects directly connected to this project.",
+        },
+        {
+          term: "Connectivity",
+          description: "average weighted similarity from this project to the rest of the network.",
+        },
+        {
+          term: "Bridge",
+          description: "normalized betweenness centrality based on weighted shortest paths.",
+        },
+      ].forEach(function (item) {
+        var definition = document.createElement("p");
+        definition.className = "paper-network-centrality-definition";
+
+        var term = document.createElement("strong");
+        term.textContent = item.term;
+
+        definition.appendChild(term);
+        definition.appendChild(document.createTextNode(": " + item.description));
+        definitions.appendChild(definition);
+      });
+
+      return definitions;
+    }
+
     function renderCentralityMatrix(node) {
       if (!detail.centrality) return;
       detail.centrality.textContent = "";
@@ -498,6 +530,7 @@
       detail.centrality.appendChild(title);
       detail.centrality.appendChild(summary);
       detail.centrality.appendChild(layerList);
+      detail.centrality.appendChild(renderCentralityDefinitions());
     }
 
     function renderFeatures(node) {
