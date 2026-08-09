@@ -76,6 +76,7 @@ nodes:
         - fixed-point iteration
         - network game
         - equilibrium
+        - agent-based simulation
       domains:
         - social network operations
         - scalable network operations
@@ -189,15 +190,17 @@ nodes:
     y: 245
     features:
       concepts:
-        - agent skill design
-        - platform decision support
+        - agent skill
+        - skill optimization
       methods:
         - Monte Carlo tree search
         - bilevel optimization
         - agent-based simulation
+        - LLM-assisted optimization
       domains:
         - AI agents
-        - decision support
+        - skill evolvement
+        - OR for AI
       data: []
   - id: W3
     title: "Beyond General Expertise: A Machine Learning Framework for Assessing Task-Level Decision Accuracy"
@@ -237,15 +240,17 @@ nodes:
     features:
       concepts:
         - physical activity monitoring
-        - adaptive learning
+        - wearable sensors
       methods:
         - machine learning
-        - multisource sensing
+        - time series data
+        - transfer learning
       domains:
         - healthcare analytics
         - mobile health
       data:
-        - motion sensor data
+        - UCI
+        - daily and sports activity dataset
   - id: C1
     title: "Collimatorless Scintigraphy for Imaging Extremely Low Activity Targeted Alpha Therapy (TAT) with Weighted Robust Least Squares (WRLS)"
     short_title: "Medical imaging"
