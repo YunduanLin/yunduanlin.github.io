@@ -58,14 +58,20 @@ nodes:
     features:
       concepts:
         - social network
-        - diffusion
-        - network influence
+        - network diffusion
+        - network structure
+        - network centrality
       methods:
         - approximation algorithm
-        - optimization
+        - stochastic modeling
+        - fixed-point iteration
+        - network game
+        - equilibrium
       domains:
         - social network operations
-      data: []
+      data:
+        - network repository
+        - Facebook network
   - id: J2
     title: "Content Promotion for Online Content Platforms with the Diffusion Effect"
     short_title: "Content promotion"
@@ -80,14 +86,18 @@ nodes:
     features:
       concepts:
         - social network
-        - diffusion
+        - network diffusion
         - content promotion
       methods:
-        - optimization
+        - data-driven optimization
+        - diffusion model
       domains:
-        - content platforms
-        - platform operations
-      data: []
+        - user-generated content platform
+        - short-video platform
+        - social media
+        - social network operations
+      data:
+        - proprietary data from a short-video platform
   - id: W6
     title: "Online Stochastic Allocation with Increasing Returns"
     short_title: "Stochastic allocation"
@@ -259,7 +269,8 @@ nodes:
     features:
       concepts:
         - traffic accident prediction
-        - real-time prediction
+        - real-time traffic
+        - crowdsourcing platform
       methods:
         - machine learning
         - predictive modeling
@@ -267,4 +278,4 @@ nodes:
         - smart city operations
         - transportation systems
       data:
-        - crowdsourcing data
+        - proprietary data from a mapping and navigation service
