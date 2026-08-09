@@ -41,7 +41,8 @@ nav_order: 1
 
 {% include paper_network.liquid %}
 
-<script defer src="{{ '/assets/js/paper-network.js' | relative_url | bust_file_cache }}"></script>
+{% assign paper_network_js = '/assets/js/paper-network.js' | relative_url | bust_file_cache %}
+<script defer src="{{ paper_network_js }}&v=feature-similarity-20260809"></script>
 
 <section class="grant-section" markdown="1">
 
