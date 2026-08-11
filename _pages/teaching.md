@@ -13,12 +13,12 @@ nav_order: 3
   <section class="teaching-institution-group">
     <h5 class="teaching-institution">The Chinese University of Hong Kong</h5>
     <div class="teaching-courses">
-      <div class="teaching-course" aria-label="DOTE 2011: Statistical Analysis for Business Decisions">
-        <div class="teaching-course-name"><span class="teaching-course-code">DOTE 2011:</span> Statistical Analysis for Business Decisions</div>
-        <div class="teaching-term">Fall 2024, Fall 2025</div>
+      <div class="teaching-course" aria-label="DOTE 2011: Statistical Analysis for Business Decisions (Undergraduate core)">
+        <div class="teaching-course-name"><span class="teaching-course-code">DOTE 2011:</span> Statistical Analysis for Business Decisions <span class="teaching-course-type">(Undergraduate core)</span></div>
+        <div class="teaching-term">Fall 2024, Fall 2025, Fall 2026</div>
       </div>
-      <div class="teaching-course" aria-label="DOTE 6654BA: Business Process Analytics and Simulation">
-        <div class="teaching-course-name"><span class="teaching-course-code">DOTE 6654BA:</span> Business Process Analytics and Simulation</div>
+      <div class="teaching-course" aria-label="DOTE 6654BA: Business Process Analytics and Simulation (MSc BA elective)">
+        <div class="teaching-course-name"><span class="teaching-course-code">DOTE 6654BA:</span> Business Process Analytics and Simulation <span class="teaching-course-type">(MSc BA elective)</span></div>
         <div class="teaching-term">Spring 2026</div>
       </div>
     </div>

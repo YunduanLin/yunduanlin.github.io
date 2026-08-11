@@ -640,6 +640,11 @@ html[data-theme="dark"] .home-visitor-map {
   font-weight: 800;
 }
 
+.teaching-course-type {
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+}
+
 .teaching-term {
   display: inline-flex;
   align-items: center;
@@ -671,6 +676,10 @@ html[data-theme="dark"] {
 
   .teaching-course-code {
     color: #f0d889;
+  }
+
+  .teaching-course-type {
+    color: rgba(255, 255, 255, 0.62);
   }
 
   .teaching-term {
