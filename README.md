@@ -2,7 +2,7 @@
 
 This repository contains the source for [yunduanlin.github.io](https://yunduanlin.github.io), the academic website of Yunduan Lin.
 
-The site uses the [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme as its foundation, with local content for biography, combined research and publications, teaching, and service.
+The site uses the [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme as its foundation, with local content for biography, combined research and publications, teaching, service, and miscellaneous honors.
 
 ## Local Development
 

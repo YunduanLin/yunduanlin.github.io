@@ -41,7 +41,8 @@ $requiredPages = @(
   "_pages/about.md",
   "_pages/research.md",
   "_pages/teaching.md",
-  "_pages/service.md"
+  "_pages/service.md",
+  "_pages/miscellaneous.md"
 )
 
 foreach ($page in $requiredPages) {
@@ -127,6 +128,24 @@ Assert-Contains "_pages/about.md" "University of California, Berkeley" "Homepage
 Assert-Contains "_pages/about.md" "Tsinghua University" "Homepage education should include Tsinghua."
 Assert-NotContains "_pages/about.md" "home-timeline-detail"">Advisor:" "Homepage education timeline should not carry the advisor line."
 
+Assert-Contains "_pages/miscellaneous.md" "title:\s*Miscellaneous" "Miscellaneous page should have the requested page title."
+Assert-Contains "_pages/miscellaneous.md" "nav:\s*true" "Miscellaneous page should appear in the top navigation."
+Assert-Contains "_pages/miscellaneous.md" "nav_order:\s*5" "Miscellaneous page should appear after Service in the top navigation."
+Assert-Contains "_pages/miscellaneous.md" "####\s*Selected Honors & Awards" "Miscellaneous page should include the Selected Honors & Awards section."
+Assert-Contains "_pages/miscellaneous.md" "misc-awards-list" "Miscellaneous page should use the custom awards list layout."
+Assert-Contains "_pages/miscellaneous.md" "misc-award-item" "Miscellaneous page should render each honor as a clean row."
+Assert-Contains "_pages/miscellaneous.md" "Finalist, INFORMS Minority Issues Forum Paper Competition" "Miscellaneous page should include the 2024 INFORMS Minority Issues Forum paper finalist honor."
+Assert-Contains "_pages/miscellaneous.md" "Outstanding Graduate Student Instructor Award, UC Berkeley" "Miscellaneous page should include the Berkeley GSI award."
+Assert-Contains "_pages/miscellaneous.md" "Winner, INFORMS Social Media Analytics Best Student Paper Award" "Miscellaneous page should include the INFORMS SMA award."
+Assert-Contains "_pages/miscellaneous.md" "China National Scholarship \(top 1%\)" "Miscellaneous page should include the China National Scholarship."
+Assert-Contains "_pages/miscellaneous.md" "Second Prize, National Olympiad in Informatics in Provinces" "Miscellaneous page should include the informatics olympiad award."
+Assert-NotContains "_pages/miscellaneous.md" "Departmental Award|Graduate Division Conference Travel Grant" "Miscellaneous page should omit commented-out CV awards."
+Assert-Contains "_sass/_base.scss" "\.misc-section-heading" "Styles should define the miscellaneous section heading."
+Assert-Contains "_sass/_base.scss" "\.misc-awards-list" "Styles should define the miscellaneous awards list."
+Assert-Contains "_sass/_base.scss" "\.misc-award-item" "Styles should define compact award rows."
+Assert-Contains "_sass/_base.scss" "\.misc-award-date" "Styles should define gold award date labels."
+Assert-Contains "README.md" "miscellaneous" "README should describe the current page structure including miscellaneous."
+
 Assert-Contains "_pages/service.md" "####\s*Industry Experience" "Service page should include the Industry Experience section."
 Assert-Contains "_pages/service.md" "(?s)Didi.*Academic Consultant.*DiDi Marketplace, Beijing.*06/2025\s*-\s*present" "Industry Experience should include the Didi academic consultant role."
 Assert-Contains "_pages/service.md" "(?s)Amazon.*Research Scientist Intern II.*Middle Mile Product Team, Seattle, WA.*06/2021\s*-\s*08/2021" "Industry Experience should include the Amazon internship."
@@ -174,7 +193,7 @@ Assert-Contains "_sass/_base.scss" "(?s)\.teaching-course\s*\{[^}]*grid-template
 Assert-Contains "_sass/_base.scss" "(?s)\.teaching-institution\s*\{[^}]*color:\s*#111" "Teaching institution labels should use strong black text on the light theme."
 Assert-Contains "_sass/_base.scss" "(?s)\.teaching-course-name\s*\{[^}]*color:\s*#111" "Teaching course titles should use strong black text on the light theme."
 Assert-Contains "_sass/_base.scss" "(?s)\.teaching-course-code\s*\{[^}]*color:\s*#111" "Teaching course codes should use strong black text on the light theme."
-Assert-Contains "_sass/_base.scss" "(?s)html\[data-theme=`"dark`"\]\s*\{[^}]*\.teaching-institution,\s*\.teaching-course-name\s*\{[^}]*color:\s*var\(--global-text-color\)" "Teaching institution and course titles should remain readable in dark mode."
+Assert-Contains "_sass/_base.scss" "(?s)html\[data-theme=`"dark`"\]\s*\{[^}]*\.teaching-institution,\s*\.teaching-course-name,\s*\.misc-award-name\s*\{[^}]*color:\s*var\(--global-text-color\)" "Teaching institution, course titles, and award names should remain readable in dark mode."
 Assert-Contains "_sass/_base.scss" "\.teaching-course-type" "Styles should define muted course-type notes after course titles."
 Assert-Contains "_sass/_base.scss" "\.mentoring-panel" "Styles should define a distinct mentoring panel."
 Assert-Contains "_sass/_base.scss" "(?s)\.mentoring-panel-head\s*\{[^}]*border-bottom:\s*1px" "Mentoring panel heading should use a title-style divider."
