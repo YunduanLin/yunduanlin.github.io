@@ -681,16 +681,17 @@ html[data-theme="dark"] .home-visitor-map {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  padding-bottom: 0.56rem;
+  border-bottom: 1px solid rgba(196, 154, 44, 0.28);
 }
 
 .mentoring-category {
   margin: 0;
   color: #4b1359;
-  font-size: 0.84rem;
-  font-weight: 850;
-  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0;
   line-height: 1.25;
-  text-transform: uppercase;
 }
 
 .mentoring-students {
@@ -847,6 +848,10 @@ html[data-theme="dark"] {
     background: linear-gradient(135deg, rgba(117, 15, 109, 0.22), rgba(196, 154, 44, 0.1));
     border-color: rgba(225, 200, 120, 0.24);
     border-top-color: #f0d889;
+  }
+
+  .mentoring-panel-head {
+    border-bottom-color: rgba(225, 200, 120, 0.22);
   }
 
   .mentoring-category,
