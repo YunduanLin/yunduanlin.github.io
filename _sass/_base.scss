@@ -598,37 +598,35 @@ html[data-theme="dark"] .home-visitor-map {
 }
 
 .misc-awards-list {
-  display: grid;
-  gap: 1.25rem;
-  margin: 0.9rem 0 1.75rem;
-}
-
-.misc-awards-group {
+  position: relative;
   display: grid;
   gap: 0;
-  padding: 0.8rem 0.95rem 0.65rem;
-  border: 1px solid rgba(117, 15, 109, 0.1);
-  border-top: 3px solid #c49a2c;
-  border-radius: 8px;
-  background: linear-gradient(135deg, rgba(117, 15, 109, 0.035), rgba(196, 154, 44, 0.06));
-}
-
-.misc-awards-group-title {
-  margin: 0 0 0.4rem;
-  color: #4b1359;
-  font-size: 1rem;
-  font-weight: 820;
-  line-height: 1.25;
+  margin: 0.95rem 0 2rem 0.35rem;
+  padding-left: 1.35rem;
+  border-left: 1px solid rgba(196, 154, 44, 0.5);
 }
 
 .misc-award-item {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.9rem;
+  grid-template-columns: minmax(5rem, 0.18fr) minmax(0, 1fr);
+  gap: 0.95rem;
   align-items: baseline;
   min-width: 0;
-  padding: 0.58rem 0;
-  border-top: 1px solid rgba(117, 15, 109, 0.12);
+  padding: 0.48rem 0 0.48rem 0.85rem;
+}
+
+.misc-award-item::before {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  left: -1.68rem;
+  width: 0.48rem;
+  height: 0.48rem;
+  border: 2px solid #c49a2c;
+  border-radius: 999px;
+  background-color: var(--global-bg-color);
+  box-shadow: 0 0 0 0.22rem rgba(196, 154, 44, 0.12);
 }
 
 .misc-award-name {
@@ -639,16 +637,16 @@ html[data-theme="dark"] .home-visitor-map {
 }
 
 .misc-award-date {
-  justify-self: end;
+  justify-self: start;
   color: #6f4a00;
-  background-color: rgba(196, 154, 44, 0.13);
-  border: 1px solid rgba(196, 154, 44, 0.34);
-  border-radius: 999px;
-  padding: 0.18rem 0.58rem;
-  font-size: 0.76rem;
-  font-weight: 750;
+  background-color: rgba(196, 154, 44, 0.08);
+  border-left: 2px solid #c49a2c;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 760;
   line-height: 1.2;
-  text-align: right;
+  text-align: left;
   white-space: nowrap;
 }
 
@@ -967,24 +965,20 @@ html[data-theme="dark"] {
     border-color: rgba(225, 200, 120, 0.28);
   }
 
-  .misc-awards-group {
-    background: linear-gradient(135deg, rgba(117, 15, 109, 0.2), rgba(196, 154, 44, 0.08));
-    border-color: rgba(225, 200, 120, 0.2);
-    border-top-color: #f0d889;
+  .misc-awards-list {
+    border-left-color: rgba(225, 200, 120, 0.4);
   }
 
-  .misc-awards-group-title {
-    color: #f0d889;
-  }
-
-  .misc-award-item {
-    border-top-color: rgba(225, 200, 120, 0.16);
+  .misc-award-item::before {
+    border-color: #f0d889;
+    background-color: var(--global-bg-color);
+    box-shadow: 0 0 0 0.22rem rgba(225, 200, 120, 0.14);
   }
 
   .misc-award-date {
     color: #f0d889;
     background-color: rgba(196, 154, 44, 0.14);
-    border-color: rgba(225, 200, 120, 0.28);
+    border-left-color: #f0d889;
   }
 
   .misc-media-item {
