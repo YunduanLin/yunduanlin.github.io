@@ -660,7 +660,7 @@ html[data-theme="dark"] .home-visitor-map {
 
 .teaching-institution {
   margin: 0;
-  color: var(--global-text-color);
+  color: #111;
   font-size: 1rem;
   font-weight: 750;
   line-height: 1.35;
@@ -779,13 +779,13 @@ html[data-theme="dark"] .home-visitor-map {
 
 .teaching-course-name {
   min-width: 0;
-  color: var(--global-text-color);
+  color: #111;
   font-size: 0.96rem;
   line-height: 1.4;
 }
 
 .teaching-course-code {
-  color: #4b1359;
+  color: #111;
   font-weight: 800;
 }
 
@@ -812,6 +812,11 @@ html[data-theme="dark"] .home-visitor-map {
 }
 
 html[data-theme="dark"] {
+  .teaching-institution,
+  .teaching-course-name {
+    color: var(--global-text-color);
+  }
+
   .service-section-heading,
   .teaching-role-heading {
     color: #f0d889;
