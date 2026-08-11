@@ -580,6 +580,119 @@ html[data-theme="dark"] .home-visitor-map {
   }
 }
 
+.teaching-role-heading {
+  margin-top: 1.8rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.42rem;
+  color: #4b1359;
+  border-bottom: 1px solid rgba(196, 154, 44, 0.34);
+  font-size: 1.35rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.teaching-list {
+  display: grid;
+  gap: 1.05rem;
+  margin: 0.8rem 0 1.65rem;
+}
+
+.teaching-institution-group {
+  display: grid;
+  gap: 0.48rem;
+}
+
+.teaching-institution {
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.teaching-courses {
+  display: grid;
+  gap: 0.48rem;
+}
+
+.teaching-course {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: center;
+  min-width: 0;
+  padding: 0.68rem 0.8rem;
+  border: 1px solid rgba(117, 15, 109, 0.1);
+  border-left: 3px solid rgba(196, 154, 44, 0.78);
+  border-radius: 7px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 249, 250, 0.72));
+}
+
+.teaching-course-name {
+  min-width: 0;
+  color: var(--global-text-color);
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+.teaching-course-code {
+  color: #4b1359;
+  font-weight: 800;
+}
+
+.teaching-term {
+  display: inline-flex;
+  align-items: center;
+  justify-self: end;
+  min-height: 1.6rem;
+  padding: 0.2rem 0.62rem;
+  color: #6f4a00;
+  background-color: rgba(196, 154, 44, 0.13);
+  border: 1px solid rgba(196, 154, 44, 0.34);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: right;
+  white-space: nowrap;
+}
+
+html[data-theme="dark"] {
+  .teaching-role-heading {
+    color: #f0d889;
+    border-bottom-color: rgba(225, 200, 120, 0.24);
+  }
+
+  .teaching-course {
+    background: rgba(255, 255, 255, 0.035);
+    border-color: rgba(225, 200, 120, 0.14);
+    border-left-color: rgba(225, 200, 120, 0.72);
+  }
+
+  .teaching-course-code {
+    color: #f0d889;
+  }
+
+  .teaching-term {
+    color: #f0d889;
+    background-color: rgba(196, 154, 44, 0.14);
+    border-color: rgba(225, 200, 120, 0.28);
+  }
+}
+
+@media (max-width: 768px) {
+  .teaching-course {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.42rem;
+  }
+
+  .teaching-term {
+    justify-self: start;
+    text-align: left;
+    white-space: normal;
+  }
+}
+
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
