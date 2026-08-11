@@ -63,18 +63,18 @@ nav_order: 3
       <h5 class="mentoring-category">PhD Students</h5>
     </div>
     <div class="mentoring-students">
-      <div class="mentoring-student" aria-label="Keyu Chen, current PhD student, co-advising, The Chinese University of Hong Kong, DOT Department">
+      <div class="mentoring-student" aria-label="Keyu Chen, current PhD student, co-advisor, The Chinese University of Hong Kong, DOT Department">
         <div class="mentoring-student-main">
           <span class="mentoring-name">Keyu Chen</span>
-          <span class="mentoring-guidance">Co-advising</span>
+          <span class="mentoring-guidance">Co-advisor</span>
           <span class="mentoring-affiliation">The Chinese University of Hong Kong, DOT Department</span>
         </div>
         <div class="mentoring-status">Current PhD</div>
       </div>
-      <div class="mentoring-student" aria-label="Chen Chen, current PhD student, advising, The Chinese University of Hong Kong, DOT Department">
+      <div class="mentoring-student" aria-label="Chen Chen, current PhD student, advisor, The Chinese University of Hong Kong, DOT Department">
         <div class="mentoring-student-main">
           <span class="mentoring-name">Chen Chen</span>
-          <span class="mentoring-guidance">Advising</span>
+          <span class="mentoring-guidance">Advisor</span>
           <span class="mentoring-affiliation">The Chinese University of Hong Kong, DOT Department</span>
         </div>
         <div class="mentoring-status">Current PhD</div>
