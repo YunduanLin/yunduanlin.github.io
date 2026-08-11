@@ -93,4 +93,26 @@ nav_order: 5
   </section>
 </div>
 
+#### Media Coverage
+{: .misc-section-heading }
+
+<div class="misc-media-list">
+  <a class="misc-media-item" href="https://cbk.bschool.cuhk.edu.hk/how-to-forecast-trends-amid-uncertainty/" target="_blank" rel="noopener noreferrer" aria-label="China Business Knowledge article, How to forecast trends amid uncertainty">
+    <div class="misc-media-main">
+      <span class="misc-media-type">Article</span>
+      <span class="misc-media-title">How to forecast trends amid uncertainty</span>
+      <span class="misc-media-source">China Business Knowledge, CUHK Business School</span>
+    </div>
+    <div class="misc-award-date">05/2026</div>
+  </a>
+  <a class="misc-media-item" href="https://www.youtube.com/watch?v=YIQK5_F_CBc" target="_blank" rel="noopener noreferrer" aria-label="Video, How to forecast trends amid uncertainty">
+    <div class="misc-media-main">
+      <span class="misc-media-type">Video</span>
+      <span class="misc-media-title">How to forecast trends amid uncertainty</span>
+      <span class="misc-media-source">China Business Knowledge Online Series</span>
+    </div>
+    <div class="misc-award-date">05/2026</div>
+  </a>
+</div>
+
 </div>
