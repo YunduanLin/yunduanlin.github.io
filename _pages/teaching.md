@@ -48,7 +48,7 @@ nav_order: 3
       </div>
       <div class="teaching-course" aria-label="IEOR 242: Applications in Data Analytics">
         <div class="teaching-course-name"><span class="teaching-course-code">IEOR 242:</span> Applications in Data Analytics</div>
-        <div class="teaching-term">Spring 2020 & Fall 2020</div>
+        <div class="teaching-term">Spring 2020, Fall 2020</div>
       </div>
     </div>
   </section>
