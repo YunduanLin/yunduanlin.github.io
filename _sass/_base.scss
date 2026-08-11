@@ -645,6 +645,14 @@ html[data-theme="dark"] .home-visitor-map {
   font-size: 0.88rem;
 }
 
+.teaching-affiliation {
+  display: block;
+  margin-top: 0.12rem;
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
 .teaching-term {
   display: inline-flex;
   align-items: center;
@@ -679,6 +687,10 @@ html[data-theme="dark"] {
   }
 
   .teaching-course-type {
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .teaching-affiliation {
     color: rgba(255, 255, 255, 0.62);
   }
 
