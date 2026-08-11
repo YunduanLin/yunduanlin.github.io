@@ -48,10 +48,22 @@ Conference Session Chair
 - Chair, "Experiment design". M&SOM 2023.
 - Co-Chair, "Information Design and Platform Operations". POMS 2023.
 
----
-#### University and Departmental Services
-- Co-founder & Secretary, [Representation of Asian and Pacific Islanders](https://sites.google.com/berkeley.edu/rapid-cee/home), CEE department 2023
-- Contributor, PhD Mentor/Mentee Relationship Workshop, CEE department 2023
-- One of 2 student representatives of Graduate Studies Committee, School of Engineering 2022
-- Mentor, SWENext Mentorship Program (for high school students), UC Berkeley 2023
-- Member of UC Berkeley Society of Women Engineers (SWE) 2022
+#### Berkeley Service
+{: .service-section-heading }
+
+<div class="service-experience-list">
+  <div class="service-experience-entry" aria-label="Co-founder and Secretary, Representation of Asian and Pacific Islanders, CEE department, 05/2023-05/2024">
+    <div class="service-experience-main">
+      <span class="service-experience-role">Co-founder &amp; Secretary</span>
+      <span class="service-experience-team">Representation of Asian and Pacific Islanders, CEE department</span>
+    </div>
+    <div class="service-experience-date">05/2023-05/2024</div>
+  </div>
+  <div class="service-experience-entry" aria-label="Student Representative, Graduate Studies Committee, College of Engineering, 10/2022-10/2023">
+    <div class="service-experience-main">
+      <span class="service-experience-role">Student Representative</span>
+      <span class="service-experience-team">Graduate Studies Committee, College of Engineering</span>
+    </div>
+    <div class="service-experience-date">10/2022-10/2023</div>
+  </div>
+</div>
