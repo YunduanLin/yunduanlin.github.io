@@ -56,6 +56,7 @@ Assert-NotContains "_pages/about.md" "subtitle:\s*Assistant Professor, CUHK Busi
 Assert-Contains "_pages/about.md" "profile_layout:\s*hero" "Homepage should use the profile hero layout."
 Assert-Contains "_pages/about.md" "home_intro:" "Homepage should keep the short bio in the profile hero."
 Assert-Contains "_pages/about.md" "I study how decisions travel through social networks, digital platforms, and AI-enabled operational systems" "Homepage bio should be more vivid and specific."
+Assert-Contains "_pages/about.md" "(?s)home_intro:.*advised by Zuo-Jun Max Shen" "Homepage bio should mention the Berkeley advisor in the first paragraph."
 Assert-Contains "_pages/about.md" "home_contact:" "Homepage should keep contact information in the left profile hero column."
 Assert-NotContains "_pages/about.md" "home_contact:\s*\r?\n\s*-\s*Department of Decisions, Operations and Technology" "Homepage contact card should not repeat the department as its first line."
 Assert-Contains "_pages/about.md" "\*\*Office:\*\* 9/F, Cheng Yu Tung Building" "Homepage contact card should include the office address without a room number."
@@ -124,6 +125,7 @@ Assert-Contains "_pages/about.md" "2024-current" "Homepage employment should inc
 Assert-Contains "_pages/about.md" "####\s*Education" "Homepage should include education."
 Assert-Contains "_pages/about.md" "University of California, Berkeley" "Homepage education should include Berkeley."
 Assert-Contains "_pages/about.md" "Tsinghua University" "Homepage education should include Tsinghua."
+Assert-NotContains "_pages/about.md" "home-timeline-detail"">Advisor:" "Homepage education timeline should not carry the advisor line."
 
 Assert-Contains "_pages/service.md" "####\s*Industry Experience" "Service page should include the Industry Experience section."
 Assert-Contains "_pages/service.md" "(?s)Didi.*Academic Consultant.*DiDi Marketplace, Beijing.*06/2025\s*-\s*present" "Industry Experience should include the Didi academic consultant role."
