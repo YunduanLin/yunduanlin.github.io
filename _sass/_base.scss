@@ -580,6 +580,7 @@ html[data-theme="dark"] .home-visitor-map {
   }
 }
 
+.service-section-heading,
 .teaching-role-heading {
   margin-top: 1.8rem;
   margin-bottom: 0.85rem;
@@ -589,6 +590,61 @@ html[data-theme="dark"] .home-visitor-map {
   font-size: 1.35rem;
   font-weight: 750;
   line-height: 1.25;
+}
+
+.service-experience-list {
+  display: grid;
+  gap: 0.62rem;
+  margin: 0.85rem 0 1.75rem;
+}
+
+.service-experience-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.95rem;
+  align-items: center;
+  min-width: 0;
+  padding: 0.72rem 0.86rem;
+  border: 1px solid rgba(117, 15, 109, 0.1);
+  border-left: 3px solid rgba(196, 154, 44, 0.78);
+  border-radius: 7px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 249, 250, 0.72));
+}
+
+.service-experience-main {
+  min-width: 0;
+  color: var(--global-text-color);
+  font-size: 0.96rem;
+  line-height: 1.42;
+}
+
+.service-experience-org {
+  margin-right: 0.45rem;
+  color: #4b1359;
+  font-weight: 800;
+}
+
+.service-experience-role {
+  font-weight: 750;
+}
+
+.service-experience-team {
+  margin-left: 0.25rem;
+  color: var(--global-text-color-light);
+}
+
+.service-experience-date {
+  justify-self: end;
+  color: #6f4a00;
+  background-color: rgba(196, 154, 44, 0.13);
+  border: 1px solid rgba(196, 154, 44, 0.34);
+  border-radius: 999px;
+  padding: 0.2rem 0.62rem;
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .teaching-list {
@@ -702,9 +758,30 @@ html[data-theme="dark"] .home-visitor-map {
 }
 
 html[data-theme="dark"] {
+  .service-section-heading,
   .teaching-role-heading {
     color: #f0d889;
     border-bottom-color: rgba(225, 200, 120, 0.24);
+  }
+
+  .service-experience-entry {
+    background: rgba(255, 255, 255, 0.035);
+    border-color: rgba(225, 200, 120, 0.14);
+    border-left-color: rgba(225, 200, 120, 0.72);
+  }
+
+  .service-experience-org {
+    color: #f0d889;
+  }
+
+  .service-experience-team {
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .service-experience-date {
+    color: #f0d889;
+    background-color: rgba(196, 154, 44, 0.14);
+    border-color: rgba(225, 200, 120, 0.28);
   }
 
   .teaching-course {
@@ -747,6 +824,17 @@ html[data-theme="dark"] {
 }
 
 @media (max-width: 768px) {
+  .service-experience-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.42rem;
+  }
+
+  .service-experience-date {
+    justify-self: start;
+    text-align: left;
+    white-space: normal;
+  }
+
   .teaching-course {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.42rem;
