@@ -125,6 +125,15 @@ Assert-Contains "_pages/about.md" "####\s*Education" "Homepage should include ed
 Assert-Contains "_pages/about.md" "University of California, Berkeley" "Homepage education should include Berkeley."
 Assert-Contains "_pages/about.md" "Tsinghua University" "Homepage education should include Tsinghua."
 
+Assert-Contains "_pages/service.md" "####\s*Industry Experience" "Service page should include the Industry Experience section."
+Assert-Contains "_pages/service.md" "(?s)Didi.*Academic Consultant.*DiDi Marketplace, Beijing.*06/2025\s*-\s*present" "Industry Experience should include the Didi academic consultant role."
+Assert-Contains "_pages/service.md" "(?s)Amazon.*Research Scientist Intern II.*Middle Mile Product Team, Seattle, WA.*06/2021\s*-\s*08/2021" "Industry Experience should include the Amazon internship."
+Assert-Contains "_pages/service.md" "(?s)Kuaishou.*Data Scientist Intern.*Data Science and Economist Team, Beijing.*06/2019\s*-\s*06/2020" "Industry Experience should include the Kuaishou internship."
+Assert-Contains "_pages/service.md" "service-experience-list" "Industry Experience should use compact custom service markup."
+Assert-Contains "_sass/_base.scss" "\.service-experience-list" "Styles should define the service experience list."
+Assert-Contains "_sass/_base.scss" "\.service-experience-date" "Styles should define service experience date labels."
+Assert-NotContains "_pages/service.md" "Manager: Ivan Oliveira|Mentor: Golbarg Tutunchi|Developed algorithms" "Industry Experience should omit commented CV details from the public service page."
+
 Assert-Contains "_pages/teaching.md" "####\s*Instructor" "Teaching page should retain a clear Instructor section."
 Assert-Contains "_pages/teaching.md" "####\s*Graduate Student Instructor" "Teaching page should retain a clear Graduate Student Instructor section."
 Assert-Contains "_pages/teaching.md" "####\s*Mentoring" "Teaching page should include a Mentoring section."
