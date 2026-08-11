@@ -58,22 +58,26 @@ nav_order: 3
 {: .teaching-role-heading }
 
 <div class="teaching-list">
-  <section class="teaching-institution-group">
-    <h5 class="teaching-institution mentoring-category">PhD</h5>
-    <div class="teaching-courses">
-      <div class="teaching-course" aria-label="Keyu Chen, PhD, Co-advisor, The Chinese University of Hong Kong, DOT Department, Current">
-        <div class="teaching-course-name">
-          <span class="teaching-course-code">Keyu Chen</span> <span class="teaching-mentoring-role">Co-advisor</span>
-          <span class="teaching-affiliation">The Chinese University of Hong Kong, DOT Department</span>
+  <section class="mentoring-panel" aria-label="Current PhD mentoring">
+    <div class="mentoring-panel-head">
+      <h5 class="mentoring-category">PhD Students</h5>
+    </div>
+    <div class="mentoring-students">
+      <div class="mentoring-student" aria-label="Keyu Chen, current PhD student, co-advising, The Chinese University of Hong Kong, DOT Department">
+        <div class="mentoring-student-main">
+          <span class="mentoring-name">Keyu Chen</span>
+          <span class="mentoring-guidance">Co-advising</span>
+          <span class="mentoring-affiliation">The Chinese University of Hong Kong, DOT Department</span>
         </div>
-        <div class="teaching-current-status">Current</div>
+        <div class="mentoring-status">Current PhD</div>
       </div>
-      <div class="teaching-course" aria-label="Chen Chen, PhD, Advisor, The Chinese University of Hong Kong, DOT Department, Current">
-        <div class="teaching-course-name">
-          <span class="teaching-course-code">Chen Chen</span> <span class="teaching-mentoring-role">Advisor</span>
-          <span class="teaching-affiliation">The Chinese University of Hong Kong, DOT Department</span>
+      <div class="mentoring-student" aria-label="Chen Chen, current PhD student, advising, The Chinese University of Hong Kong, DOT Department">
+        <div class="mentoring-student-main">
+          <span class="mentoring-name">Chen Chen</span>
+          <span class="mentoring-guidance">Advising</span>
+          <span class="mentoring-affiliation">The Chinese University of Hong Kong, DOT Department</span>
         </div>
-        <div class="teaching-current-status">Current</div>
+        <div class="mentoring-status">Current PhD</div>
       </div>
     </div>
   </section>
