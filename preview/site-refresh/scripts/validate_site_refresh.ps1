@@ -154,6 +154,10 @@ Assert-Contains "_pages/service.md" "service-experience-list" "Industry Experien
 Assert-Contains "_sass/_base.scss" "\.service-experience-list" "Styles should define the service experience list."
 Assert-Contains "_sass/_base.scss" "\.service-experience-date" "Styles should define service experience date labels."
 Assert-NotContains "_pages/service.md" "Manager: Ivan Oliveira|Mentor: Golbarg Tutunchi|Developed algorithms" "Industry Experience should omit commented CV details from the public service page."
+Assert-Contains "_pages/service.md" "####\s*Berkeley Service" "Service page should include a focused Berkeley Service section."
+Assert-Contains "_pages/service.md" "(?s)Co-founder &amp; Secretary.*Representation of Asian and Pacific Islanders.*CEE department.*05/2023-05/2024" "Berkeley Service should include the RAPI co-founder and secretary role with dates."
+Assert-Contains "_pages/service.md" "(?s)Student Representative.*Graduate Studies Committee.*College of Engineering.*10/2022-10/2023" "Berkeley Service should include the Graduate Studies Committee representative role with dates."
+Assert-NotContains "_pages/service.md" "PhD Mentor/Mentee Relationship Workshop|SWENext Mentorship Program|Society of Women Engineers|One of 2 student representatives" "Berkeley Service should remove older extra service bullets not requested for the refreshed page."
 
 Assert-Contains "_pages/teaching.md" "####\s*Instructor" "Teaching page should retain a clear Instructor section."
 Assert-Contains "_pages/teaching.md" "####\s*Graduate Student Instructor" "Teaching page should retain a clear Graduate Student Instructor section."
