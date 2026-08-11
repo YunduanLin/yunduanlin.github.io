@@ -53,3 +53,22 @@ nav_order: 3
     </div>
   </section>
 </div>
+
+#### Mentoring
+{: .teaching-role-heading }
+
+<div class="teaching-list">
+  <section class="teaching-institution-group">
+    <h5 class="teaching-institution">The Chinese University of Hong Kong, DOT Department</h5>
+    <div class="teaching-courses">
+      <div class="teaching-course" aria-label="Keyu Chen, Co-advisor, The Chinese University of Hong Kong, DOT Department, Current PhD">
+        <div class="teaching-course-name"><span class="teaching-course-code">Keyu Chen</span> <span class="teaching-course-type">(Co-advisor)</span></div>
+        <div class="teaching-term">Current PhD</div>
+      </div>
+      <div class="teaching-course" aria-label="Chen Chen, Advisor, The Chinese University of Hong Kong, DOT Department, Current PhD">
+        <div class="teaching-course-name"><span class="teaching-course-code">Chen Chen</span> <span class="teaching-course-type">(Advisor)</span></div>
+        <div class="teaching-term">Current PhD</div>
+      </div>
+    </div>
+  </section>
+</div>
