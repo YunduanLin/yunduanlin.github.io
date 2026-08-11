@@ -661,11 +661,17 @@ html[data-theme="dark"] .home-visitor-map {
 }
 
 .teaching-affiliation {
-  display: block;
-  margin-top: 0.12rem;
+  display: inline;
+  margin-left: 0.42rem;
   color: var(--global-text-color-light);
   font-size: 0.82rem;
   line-height: 1.35;
+}
+
+.teaching-affiliation::before {
+  content: "|";
+  margin-right: 0.42rem;
+  color: rgba(196, 154, 44, 0.78);
 }
 
 .teaching-term {
@@ -723,6 +729,10 @@ html[data-theme="dark"] {
 
   .teaching-affiliation {
     color: rgba(255, 255, 255, 0.62);
+  }
+
+  .teaching-affiliation::before {
+    color: rgba(225, 200, 120, 0.72);
   }
 
   .teaching-current-status {

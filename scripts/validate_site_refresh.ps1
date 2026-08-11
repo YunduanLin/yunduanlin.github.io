@@ -162,6 +162,8 @@ Assert-Contains "_sass/_base.scss" "(?s)\.teaching-course\s*\{[^}]*grid-template
 Assert-Contains "_sass/_base.scss" "\.teaching-course-type" "Styles should define muted course-type notes after course titles."
 Assert-Contains "_sass/_base.scss" "(?s)\.teaching-mentoring-role\s*\{[^}]*font-weight:\s*800" "Mentoring role labels should be visually stronger than quiet course-type notes."
 Assert-Contains "_sass/_base.scss" "\.teaching-affiliation" "Styles should define a quiet affiliation line for mentoring rows."
+Assert-Contains "_sass/_base.scss" "(?s)\.teaching-affiliation\s*\{[^}]*display:\s*inline" "Mentoring affiliations should stay inline so each student reads as one compact row."
+Assert-NotContains "_sass/_base.scss" "(?s)\.teaching-affiliation\s*\{[^}]*display:\s*block" "Mentoring affiliations should not force a second line."
 Assert-Contains "_sass/_base.scss" "\.teaching-current-status" "Styles should define a quiet current-status label for mentoring rows."
 Assert-Contains "_sass/_base.scss" "\.teaching-term" "Styles should define compact teaching term labels."
 Assert-Contains "_sass/_base.scss" "(?s)@media \(max-width:\s*768px\).*\.teaching-course\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)" "Teaching rows should stack safely on mobile."
