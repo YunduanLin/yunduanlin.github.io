@@ -1057,24 +1057,6 @@ html[data-theme="dark"] .home-visitor-map {
   line-height: 1.65;
 }
 
-.service-compact-rows {
-  display: grid;
-  gap: 0.42rem;
-  min-width: 0;
-}
-
-.service-compact-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.85rem;
-  align-items: baseline;
-  min-width: 0;
-  padding: 0.48rem 0.58rem 0.48rem 0.72rem;
-  border-left: 2px solid rgba(196, 154, 44, 0.58);
-  border-radius: 5px;
-  background-color: rgba(117, 15, 109, 0.025);
-}
-
 .service-internal-list {
   display: grid;
   gap: 0.4rem;

@@ -56,16 +56,9 @@ nav_order: 4
 
   <section class="service-academic-block" aria-label="Competition Judge">
     <h5 class="service-academic-heading">Competition Judge</h5>
-    <div class="service-compact-rows">
-      <div class="service-compact-row">
-        <span class="service-item-title">POMS-HK Best Student Paper Competition</span>
-        <span class="service-experience-date">2025/2026</span>
-      </div>
-      <div class="service-compact-row">
-        <span class="service-item-title">INFORMS Service Science Best Cluster Paper Award Competition</span>
-        <span class="service-experience-date">2025/2026</span>
-      </div>
-    </div>
+    <p class="service-text-list">
+      POMS-HK Best Student Paper Competition 2025/2026, INFORMS Service Science Best Cluster Paper Award Competition 2025/2026
+    </p>
   </section>
 </div>
 
