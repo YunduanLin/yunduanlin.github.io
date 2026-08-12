@@ -42,30 +42,36 @@ nav_order: 4
 <div class="service-academic-panel">
   <section class="service-academic-block" aria-label="Ad-Hoc Journal Reviewer">
     <h5 class="service-academic-heading">Ad-Hoc Journal Reviewer</h5>
-    <div class="service-inline-list">
-      <span><em>Management Science</em></span>
-      <span><em>Operations Research</em></span>
-      <span><em>Manufacturing &amp; Service Operations Management</em></span>
-      <span><em>Production and Operations Management</em></span>
-      <span><em>Naval Research Logistics</em></span>
-      <span><em>Accident Analysis and Prevention</em></span>
-      <span><em>Transportation Research Part E</em></span>
-    </div>
+    <p class="service-text-list">
+      <em>Management Science</em>, <em>Operations Research</em>, <em>Manufacturing &amp; Service Operations Management</em>, <em>Production and Operations Management</em>, <em>Naval Research Logistics</em>, <em>Accident Analysis and Prevention</em>, <em>Transportation Research Part E</em>
+    </p>
   </section>
 
   <section class="service-academic-block" aria-label="Workshop and Conference Reviewer">
     <h5 class="service-academic-heading">Workshop and Conference Reviewer</h5>
-    <div class="service-inline-list">
-      <span>INFORMS Data Science Workshop 2026</span>
-      <span>ICIS 2026</span>
+    <div class="service-compact-rows">
+      <div class="service-compact-row">
+        <span class="service-item-title">INFORMS Data Science Workshop</span>
+        <span class="service-experience-date">2026</span>
+      </div>
+      <div class="service-compact-row">
+        <span class="service-item-title">ICIS</span>
+        <span class="service-experience-date">2026</span>
+      </div>
     </div>
   </section>
 
   <section class="service-academic-block" aria-label="Competition Judge">
     <h5 class="service-academic-heading">Competition Judge</h5>
-    <div class="service-inline-list">
-      <span>POMS-HK Best Student Paper Competition, 2025/2026</span>
-      <span>INFORMS Service Science Best Cluster Paper Award Competition, 2025/2026</span>
+    <div class="service-compact-rows">
+      <div class="service-compact-row">
+        <span class="service-item-title">POMS-HK Best Student Paper Competition</span>
+        <span class="service-experience-date">2025/2026</span>
+      </div>
+      <div class="service-compact-row">
+        <span class="service-item-title">INFORMS Service Science Best Cluster Paper Award Competition</span>
+        <span class="service-experience-date">2025/2026</span>
+      </div>
     </div>
   </section>
 </div>
@@ -79,15 +85,15 @@ nav_order: 4
     <div class="service-internal-list">
       <div class="service-internal-item">
         <span class="service-internal-main">
-          <span class="service-experience-role">Seminar Coordinator</span>
-          <span class="service-experience-team">DOT Department</span>
+          <span class="service-item-title">Seminar Coordinator</span>
+          <span class="service-item-detail">DOT Department</span>
         </span>
         <span class="service-experience-date">2025-2027</span>
       </div>
       <div class="service-internal-item">
         <span class="service-internal-main">
-          <span class="service-experience-role">PhD Interview Committee</span>
-          <span class="service-experience-team">DOT Department</span>
+          <span class="service-item-title">PhD Interview Committee</span>
+          <span class="service-item-detail">DOT Department</span>
         </span>
         <span class="service-experience-date">2024-2026</span>
       </div>
@@ -99,17 +105,19 @@ nav_order: 4
     <div class="service-internal-list">
       <div class="service-internal-item">
         <span class="service-internal-main">
-          <span class="service-experience-role">Co-founder &amp; Secretary</span>
-          <span class="service-experience-team">Representation of Asian and Pacific Islanders, CEE department</span>
+          <span class="service-item-title">Representation of Asian and Pacific Islanders</span>
+          <span class="service-item-detail">CEE Department</span>
+          <span class="service-item-role">Co-founder &amp; Secretary</span>
         </span>
-        <span class="service-experience-date">05/2023-05/2024</span>
+        <span class="service-experience-date">05/2023 - 05/2024</span>
       </div>
       <div class="service-internal-item">
         <span class="service-internal-main">
-          <span class="service-experience-role">Student Representative</span>
-          <span class="service-experience-team">Graduate Studies Committee, College of Engineering</span>
+          <span class="service-item-title">Graduate Studies Committee</span>
+          <span class="service-item-detail">College of Engineering</span>
+          <span class="service-item-role">Student Representative</span>
         </span>
-        <span class="service-experience-date">10/2022-10/2023</span>
+        <span class="service-experience-date">10/2022 - 10/2023</span>
       </div>
     </div>
   </section>
