@@ -805,6 +805,57 @@ html[data-theme="dark"] .home-visitor-map {
   white-space: nowrap;
 }
 
+.misc-awards-more {
+  position: relative;
+  margin: 0.4rem 0 0;
+}
+
+.misc-awards-more > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin: 0.2rem 0 0 0.9rem;
+  padding: 0.34rem 0.76rem;
+  color: #4b1359;
+  background: linear-gradient(90deg, rgba(196, 154, 44, 0.14), rgba(117, 15, 109, 0.045));
+  border: 1px solid rgba(196, 154, 44, 0.34);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  list-style: none;
+}
+
+.misc-awards-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.misc-awards-more > summary::before {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  color: #fff;
+  background-color: #750f6d;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.misc-awards-more[open] > summary::before {
+  content: "-";
+}
+
+.misc-awards-more-list {
+  display: grid;
+  gap: 0;
+  margin-top: 0.4rem;
+}
+
 .misc-media-type {
   color: #7d5a00;
   font-size: 0.72rem;
@@ -1226,6 +1277,17 @@ html[data-theme="dark"] {
     color: #f0d889;
   }
 
+  .misc-awards-more > summary {
+    color: #f0d889;
+    background: linear-gradient(90deg, rgba(225, 200, 120, 0.12), rgba(117, 15, 109, 0.18));
+    border-color: rgba(225, 200, 120, 0.28);
+  }
+
+  .misc-awards-more > summary::before {
+    color: #260322;
+    background-color: #f0d889;
+  }
+
   .teaching-course {
     background: rgba(255, 255, 255, 0.035);
     border-color: rgba(225, 200, 120, 0.14);
@@ -1333,6 +1395,10 @@ html[data-theme="dark"] {
     justify-self: start;
     text-align: left;
     white-space: normal;
+  }
+
+  .misc-awards-more > summary {
+    margin-left: 0;
   }
 
   .teaching-course {

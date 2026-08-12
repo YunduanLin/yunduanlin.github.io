@@ -17,7 +17,6 @@ nav_order: 5
       <span class="misc-media-type">CUHK Business School Feature</span>
       <h5 class="misc-media-title">How to forecast trends amid uncertainty</h5>
       <div class="misc-media-meta">China Business Knowledge, CUHK Business School | May 2026</div>
-      <p class="misc-media-summary">A China Business Knowledge feature from CUHK Business School discussing how analytics can help anticipate trends when signals are noisy, fast-moving, and uncertain.</p>
       <div class="misc-media-actions">
         <a class="misc-link-button" href="https://cbk.bschool.cuhk.edu.hk/how-to-forecast-trends-amid-uncertainty/" target="_blank" rel="noopener noreferrer">Read article <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         <a class="misc-link-button misc-link-button-secondary" href="https://www.youtube.com/watch?v=YIQK5_F_CBc" target="_blank" rel="noopener noreferrer">Watch video <i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
@@ -84,54 +83,60 @@ nav_order: 5
         <div class="misc-award-context">INFORMS Social Media Analytics Best Student Paper Award</div>
       </div>
     </div>
-    <div class="misc-award-item" tabindex="0">
-      <time class="misc-award-date">Nov 2017</time>
-      <div class="misc-award-copy">
-        <div class="misc-award-level">Second Prize</div>
-        <div class="misc-award-context">7th Beijing College Transportation Technology Competition</div>
+
+    <details class="misc-awards-more">
+      <summary>Show more earlier honors</summary>
+      <div class="misc-awards-more-list">
+        <div class="misc-award-item" tabindex="0">
+          <time class="misc-award-date">Nov 2017</time>
+          <div class="misc-award-copy">
+            <div class="misc-award-level">Second Prize</div>
+            <div class="misc-award-context">7th Beijing College Transportation Technology Competition</div>
+          </div>
+        </div>
+        <div class="misc-award-item" tabindex="0">
+          <time class="misc-award-date">Dec 2016</time>
+          <div class="misc-award-copy">
+            <div class="misc-award-level">First Place</div>
+            <div class="misc-award-context">Structural Design Competition, Tsinghua University</div>
+          </div>
+        </div>
+        <div class="misc-award-item" tabindex="0">
+          <time class="misc-award-date">Oct 2016</time>
+          <div class="misc-award-copy">
+            <div class="misc-award-level">Third Prize</div>
+            <div class="misc-award-context">10th National College Structural Design Competition</div>
+          </div>
+        </div>
+        <div class="misc-award-item" tabindex="0">
+          <time class="misc-award-date">Oct 2015</time>
+          <div class="misc-award-copy">
+            <div class="misc-award-level">China National Scholarship</div>
+            <div class="misc-award-context">Top 1%</div>
+          </div>
+        </div>
+        <div class="misc-award-item" tabindex="0">
+          <time class="misc-award-date">Oct 2015</time>
+          <div class="misc-award-copy">
+            <div class="misc-award-level">Outstanding Student Leader</div>
+            <div class="misc-award-context">Tsinghua University</div>
+          </div>
+        </div>
+        <div class="misc-award-item" tabindex="0">
+          <time class="misc-award-date">Jun 2013</time>
+          <div class="misc-award-copy">
+            <div class="misc-award-level">First Prize</div>
+            <div class="misc-award-context">China High School Biology Olympiad (Provincial)</div>
+          </div>
+        </div>
+        <div class="misc-award-item" tabindex="0">
+          <time class="misc-award-date">Mar 2012</time>
+          <div class="misc-award-copy">
+            <div class="misc-award-level">Second Prize</div>
+            <div class="misc-award-context">National Olympiad in Informatics in Provinces</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="misc-award-item" tabindex="0">
-      <time class="misc-award-date">Dec 2016</time>
-      <div class="misc-award-copy">
-        <div class="misc-award-level">First Place</div>
-        <div class="misc-award-context">Structural Design Competition, Tsinghua University</div>
-      </div>
-    </div>
-    <div class="misc-award-item" tabindex="0">
-      <time class="misc-award-date">Oct 2016</time>
-      <div class="misc-award-copy">
-        <div class="misc-award-level">Third Prize</div>
-        <div class="misc-award-context">10th National College Structural Design Competition</div>
-      </div>
-    </div>
-    <div class="misc-award-item" tabindex="0">
-      <time class="misc-award-date">Oct 2015</time>
-      <div class="misc-award-copy">
-        <div class="misc-award-level">China National Scholarship</div>
-        <div class="misc-award-context">Top 1%</div>
-      </div>
-    </div>
-    <div class="misc-award-item" tabindex="0">
-      <time class="misc-award-date">Oct 2015</time>
-      <div class="misc-award-copy">
-        <div class="misc-award-level">Outstanding Student Leader</div>
-        <div class="misc-award-context">Tsinghua University</div>
-      </div>
-    </div>
-    <div class="misc-award-item" tabindex="0">
-      <time class="misc-award-date">Jun 2013</time>
-      <div class="misc-award-copy">
-        <div class="misc-award-level">First Prize</div>
-        <div class="misc-award-context">China High School Biology Olympiad (Provincial)</div>
-      </div>
-    </div>
-    <div class="misc-award-item" tabindex="0">
-      <time class="misc-award-date">Mar 2012</time>
-      <div class="misc-award-copy">
-        <div class="misc-award-level">Second Prize</div>
-        <div class="misc-award-context">National Olympiad in Informatics in Provinces</div>
-      </div>
-    </div>
+    </details>
   </section>
 </div>
