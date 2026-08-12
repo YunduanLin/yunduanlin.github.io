@@ -37,33 +37,65 @@ nav_order: 4
 </div>
 
 #### Academic Services
-
-Ad-Hoc Reviewer
-- *Management Science*
-- *Management Science Reproducibility Project*
-- *Accident Analysis and Prevention*
-
-Conference Session Chair
-- Co-Chair, "Social Network and Platform Operations". INFORMS 2023.
-- Chair, "Experiment design". M&SOM 2023.
-- Co-Chair, "Information Design and Platform Operations". POMS 2023.
-
-#### Berkeley Service
 {: .service-section-heading }
 
-<div class="service-experience-list">
-  <div class="service-experience-entry" aria-label="Co-founder and Secretary, Representation of Asian and Pacific Islanders, CEE department, 05/2023-05/2024">
-    <div class="service-experience-main">
-      <span class="service-experience-role">Co-founder &amp; Secretary</span>
-      <span class="service-experience-team">Representation of Asian and Pacific Islanders, CEE department</span>
+<div class="service-academic-panel">
+  <section class="service-academic-block" aria-label="Ad-Hoc Journal Reviewer">
+    <h5 class="service-academic-heading">Ad-Hoc Journal Reviewer</h5>
+    <div class="service-inline-list">
+      <span><em>Management Science</em></span>
+      <span><em>Operations Research</em></span>
+      <span><em>Manufacturing &amp; Service Operations Management</em></span>
+      <span><em>Production and Operations Management</em></span>
+      <span><em>Naval Research Logistics</em></span>
+      <span><em>Accident Analysis and Prevention</em></span>
+      <span><em>Transportation Research Part E</em></span>
     </div>
-    <div class="service-experience-date">05/2023-05/2024</div>
-  </div>
-  <div class="service-experience-entry" aria-label="Student Representative, Graduate Studies Committee, College of Engineering, 10/2022-10/2023">
-    <div class="service-experience-main">
-      <span class="service-experience-role">Student Representative</span>
-      <span class="service-experience-team">Graduate Studies Committee, College of Engineering</span>
+  </section>
+
+  <section class="service-academic-block" aria-label="Workshop and Conference Reviewer">
+    <h5 class="service-academic-heading">Workshop and Conference Reviewer</h5>
+    <div class="service-inline-list">
+      <span>INFORMS Data Science Workshop 2026</span>
+      <span>ICIS 2026</span>
     </div>
-    <div class="service-experience-date">10/2022-10/2023</div>
-  </div>
+  </section>
+
+  <section class="service-academic-block" aria-label="Competition Judge">
+    <h5 class="service-academic-heading">Competition Judge</h5>
+    <div class="service-inline-list">
+      <span>POMS-HK 2026 Best Student Paper Competition</span>
+      <span>2025 INFORMS Service Science Best Cluster Paper Award Competition</span>
+      <span>POMS-HK 2025 Best Student Paper Competition</span>
+    </div>
+  </section>
+
+  <section class="service-academic-block" aria-label="Internal Services">
+    <h5 class="service-academic-heading">Internal Services</h5>
+    <div class="service-internal-list">
+      <div class="service-internal-item">
+        <span class="service-experience-role">CUHK Business School DOT Department Seminar Coordinator</span>
+        <span class="service-experience-date">2025-2027</span>
+      </div>
+      <div class="service-internal-item">
+        <span class="service-experience-role">CUHK Business School DOT Department PhD Interview Committee</span>
+        <span class="service-experience-date">2024-2026</span>
+      </div>
+      <div class="service-internal-subheading">Berkeley</div>
+      <div class="service-internal-item">
+        <span>
+          <span class="service-experience-role">Co-founder &amp; Secretary</span>
+          <span class="service-experience-team">Representation of Asian and Pacific Islanders, CEE department</span>
+        </span>
+        <span class="service-experience-date">05/2023-05/2024</span>
+      </div>
+      <div class="service-internal-item">
+        <span>
+          <span class="service-experience-role">Student Representative</span>
+          <span class="service-experience-team">Graduate Studies Committee, College of Engineering</span>
+        </span>
+        <span class="service-experience-date">10/2022-10/2023</span>
+      </div>
+    </div>
+  </section>
 </div>
