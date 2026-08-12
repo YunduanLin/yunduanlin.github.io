@@ -64,33 +64,48 @@ nav_order: 4
   <section class="service-academic-block" aria-label="Competition Judge">
     <h5 class="service-academic-heading">Competition Judge</h5>
     <div class="service-inline-list">
-      <span>POMS-HK 2026 Best Student Paper Competition</span>
-      <span>2025 INFORMS Service Science Best Cluster Paper Award Competition</span>
-      <span>POMS-HK 2025 Best Student Paper Competition</span>
+      <span>POMS-HK Best Student Paper Competition, 2025/2026</span>
+      <span>INFORMS Service Science Best Cluster Paper Award Competition, 2025/2026</span>
     </div>
   </section>
+</div>
 
-  <section class="service-academic-block" aria-label="Internal Services">
-    <h5 class="service-academic-heading">Internal Services</h5>
+#### Internal Services
+{: .service-section-heading }
+
+<div class="service-internal-panel">
+  <section class="service-internal-group" aria-label="Internal service at The Chinese University of Hong Kong">
+    <h5 class="service-internal-heading">The Chinese University of Hong Kong</h5>
     <div class="service-internal-list">
       <div class="service-internal-item">
-        <span class="service-experience-role">CUHK Business School DOT Department Seminar Coordinator</span>
+        <span class="service-internal-main">
+          <span class="service-experience-role">Seminar Coordinator</span>
+          <span class="service-experience-team">DOT Department</span>
+        </span>
         <span class="service-experience-date">2025-2027</span>
       </div>
       <div class="service-internal-item">
-        <span class="service-experience-role">CUHK Business School DOT Department PhD Interview Committee</span>
+        <span class="service-internal-main">
+          <span class="service-experience-role">PhD Interview Committee</span>
+          <span class="service-experience-team">DOT Department</span>
+        </span>
         <span class="service-experience-date">2024-2026</span>
       </div>
-      <div class="service-internal-subheading">Berkeley</div>
+    </div>
+  </section>
+
+  <section class="service-internal-group" aria-label="Internal service at University of California, Berkeley">
+    <h5 class="service-internal-heading">University of California, Berkeley</h5>
+    <div class="service-internal-list">
       <div class="service-internal-item">
-        <span>
+        <span class="service-internal-main">
           <span class="service-experience-role">Co-founder &amp; Secretary</span>
           <span class="service-experience-team">Representation of Asian and Pacific Islanders, CEE department</span>
         </span>
         <span class="service-experience-date">05/2023-05/2024</span>
       </div>
       <div class="service-internal-item">
-        <span>
+        <span class="service-internal-main">
           <span class="service-experience-role">Student Representative</span>
           <span class="service-experience-team">Graduate Studies Committee, College of Engineering</span>
         </span>
