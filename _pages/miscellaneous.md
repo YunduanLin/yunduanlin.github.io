@@ -85,7 +85,13 @@ nav_order: 5
     </div>
 
     <details class="misc-awards-more">
-      <summary>Show more earlier honors</summary>
+      <summary class="misc-awards-more-summary">
+        <span class="misc-awards-more-date">Before 2020</span>
+        <span class="misc-awards-more-label">
+          <span class="misc-more-closed-label">Show more earlier honors</span>
+          <span class="misc-more-open-label">Show fewer earlier honors</span>
+        </span>
+      </summary>
       <div class="misc-awards-more-list">
         <div class="misc-award-item" tabindex="0">
           <time class="misc-award-date">Nov 2017</time>
