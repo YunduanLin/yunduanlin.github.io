@@ -396,6 +396,31 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.home-philosophy-note {
+  position: relative;
+  margin: 1rem 0 1.1rem;
+  padding: 0.95rem 1.1rem 0.95rem 1.35rem;
+  border: 1px solid rgba(196, 154, 44, 0.34);
+  border-radius: 7px;
+  background:
+    linear-gradient(90deg, rgba(117, 15, 109, 0.075), rgba(196, 154, 44, 0.075)),
+    var(--global-bg-color);
+  color: var(--global-text-color);
+  font-size: 0.98rem;
+  line-height: 1.58;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.85rem;
+    bottom: 0.85rem;
+    left: 0.75rem;
+    width: 3px;
+    border-radius: 99px;
+    background: linear-gradient(180deg, var(--global-theme-color), #c49a2c);
+  }
+}
+
 .home-research-tags {
   display: flex;
   flex-wrap: wrap;
@@ -433,6 +458,13 @@ html[data-theme="dark"] {
 
   .home-research-tag {
     background-color: rgba(196, 154, 44, 0.16);
+  }
+
+  .home-philosophy-note {
+    background:
+      linear-gradient(90deg, rgba(117, 15, 109, 0.14), rgba(196, 154, 44, 0.12)),
+      var(--global-bg-color);
+    border-color: rgba(196, 154, 44, 0.28);
   }
 
   .home-timeline-date {

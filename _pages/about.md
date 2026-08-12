@@ -9,7 +9,7 @@ profile:
   image_circular: false # crops the image to make it circular
 profile_layout: hero
 home_intro: >
-  I am an Assistant Professor in the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk). Before joining CUHK, I completed my Ph.D. at UC Berkeley, advised by Zuo-Jun Max Shen. I study how decisions travel through social networks, digital platforms, and AI-enabled operational systems: how people influence one another, how platforms shape behavior, and how analytics can turn complex systems into better decisions. My work combines optimization, network and graph models, stochastic simulation, and empirical analysis, with applications in platform operations, supply chains, healthcare, transportation, and public-service systems.
+  I am an Assistant Professor in the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk). During my Ph.D., I was very fortunate to be advised by [Zuo-Jun Max Shen](https://zj-maxshen.github.io/). My research sits at the intersection of social networks, digital platforms, and AI-enabled operations. I study how decisions travel: how people influence one another, how platforms shape behavior, and how AI can help complex systems learn and respond.
 home_contact:
   - CUHK Business School, The Chinese University of Hong Kong
   - "**Office:** 9/F, Cheng Yu Tung Building, 12 Chak Cheung Street, Shatin, N.T., Hong Kong"
@@ -22,12 +22,16 @@ social: true # includes social icons at the bottom of the page
 
 #### Research Interests
 
-My research is in societal operations management, where I study how connected decision makers, digital platforms, and AI-enabled systems shape operational performance and social outcomes. My work connects operations management, network science, and AI-enabled analytics to understand behavior in large-scale service systems and to design interventions that improve efficiency, resilience, and societal impact.
+I like problems where one small decision refuses to stay small. A recommendation, a route, a store visit, a referral, or an adoption choice can ripple through a system and quietly change what many others do next.
+
+<div class="home-philosophy-note">
+  A small working philosophy: decisions have social lives. The systems I study are messy in useful ways, and the fun is to make their hidden structure visible enough to support better platform, business, and public-service decisions.
+</div>
 
 <div class="home-research-themes">
   <section class="home-research-theme" data-index="01">
     <h5>Social network analytics and platform operations</h5>
-    <p>I study how social networks and platform design affect diffusion, adoption, engagement, and market outcomes. My projects use network and graph models, empirical analysis, and optimization to understand peer influence, content and product exposure, creator and consumer behavior, and interventions such as seeding, recommendation, pricing, and incentive design.</p>
+    <p>I study how social ties, spatial proximity, and platform design shape diffusion, adoption, engagement, and market outcomes. Current projects look at recommendations, adoption, referrals, and content exposure in online and offline platform systems.</p>
     <div class="home-research-tags">
       <span class="home-research-tag">peer influence</span>
       <span class="home-research-tag">platforms</span>
@@ -37,17 +41,15 @@ My research is in societal operations management, where I study how connected de
   </section>
   <section class="home-research-theme" data-index="02">
     <h5>AI for operational decision-making</h5>
-    <p>I study how AI, machine learning, and data-driven optimization can support better decisions in complex operational systems with uncertainty and strategic human behavior. This stream develops deployable decision tools for platforms, supply chains, healthcare, transportation, and public-sector service systems, with attention to incentives, robustness, fairness, and implementation.</p>
+    <p>I study how AI-enabled systems interact with human experts, AI agents, and public-service systems. This stream asks when AI should predict, simulate, recommend, or step back, especially in operational settings where decisions are sequential, social, and consequential.</p>
     <div class="home-research-tags">
       <span class="home-research-tag">AI</span>
-      <span class="home-research-tag">optimization</span>
+      <span class="home-research-tag">simulation</span>
       <span class="home-research-tag">policy design</span>
       <span class="home-research-tag">analytics</span>
     </div>
   </section>
 </div>
-
-Across these streams, I combine analytical modeling, data-driven methods, and domain knowledge to produce research that is methodologically rigorous and practically useful for platform, public-service, and societal operations settings.
 
 Please see my [research]({{ '/research/' | relative_url }}) for more information about my papers, projects, and current research directions.
 
