@@ -43,22 +43,15 @@ nav_order: 4
   <section class="service-academic-block" aria-label="Ad-Hoc Journal Reviewer">
     <h5 class="service-academic-heading">Ad-Hoc Journal Reviewer</h5>
     <p class="service-text-list">
-      <em>Management Science</em>, <em>Operations Research</em>, <em>Manufacturing &amp; Service Operations Management</em>, <em>Production and Operations Management</em>, <em>Naval Research Logistics</em>, <em>Accident Analysis and Prevention</em>, <em>Transportation Research Part E</em>
+      Management Science, Operations Research, Manufacturing &amp; Service Operations Management, Production and Operations Management, Naval Research Logistics, Accident Analysis and Prevention, Transportation Research Part E
     </p>
   </section>
 
   <section class="service-academic-block" aria-label="Workshop and Conference Reviewer">
     <h5 class="service-academic-heading">Workshop and Conference Reviewer</h5>
-    <div class="service-compact-rows">
-      <div class="service-compact-row">
-        <span class="service-item-title">INFORMS Data Science Workshop</span>
-        <span class="service-experience-date">2026</span>
-      </div>
-      <div class="service-compact-row">
-        <span class="service-item-title">ICIS</span>
-        <span class="service-experience-date">2026</span>
-      </div>
-    </div>
+    <p class="service-text-list">
+      INFORMS Data Science Workshop 2026, ICIS 2026
+    </p>
   </section>
 
   <section class="service-academic-block" aria-label="Competition Judge">
@@ -106,16 +99,16 @@ nav_order: 4
       <div class="service-internal-item">
         <span class="service-internal-main">
           <span class="service-item-title">Representation of Asian and Pacific Islanders</span>
-          <span class="service-item-detail">CEE Department</span>
           <span class="service-item-role">Co-founder &amp; Secretary</span>
+          <span class="service-item-detail">CEE Department</span>
         </span>
         <span class="service-experience-date">05/2023 - 05/2024</span>
       </div>
       <div class="service-internal-item">
         <span class="service-internal-main">
           <span class="service-item-title">Graduate Studies Committee</span>
-          <span class="service-item-detail">College of Engineering</span>
           <span class="service-item-role">Student Representative</span>
+          <span class="service-item-detail">College of Engineering</span>
         </span>
         <span class="service-experience-date">10/2022 - 10/2023</span>
       </div>
