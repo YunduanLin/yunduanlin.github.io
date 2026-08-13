@@ -1108,10 +1108,7 @@ html[data-theme="dark"] .home-visitor-map {
 }
 
 .service-item-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.22rem 0.75rem;
+  display: block;
   min-width: 0;
   line-height: 1.38;
 }
