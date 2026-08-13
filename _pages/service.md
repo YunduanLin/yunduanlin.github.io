@@ -72,14 +72,18 @@ nav_order: 4
       <div class="service-internal-item">
         <span class="service-internal-main">
           <span class="service-item-title">Seminar Coordinator</span>
-          <span class="service-item-detail">DOT Department</span>
+          <span class="service-item-meta">
+            <span class="service-item-detail">DOT Department</span>
+          </span>
         </span>
         <span class="service-experience-date">2025-2027</span>
       </div>
       <div class="service-internal-item">
         <span class="service-internal-main">
           <span class="service-item-title">PhD Interview Committee</span>
-          <span class="service-item-detail">DOT Department</span>
+          <span class="service-item-meta">
+            <span class="service-item-detail">DOT Department</span>
+          </span>
         </span>
         <span class="service-experience-date">2024-2026</span>
       </div>
@@ -92,16 +96,20 @@ nav_order: 4
       <div class="service-internal-item">
         <span class="service-internal-main">
           <span class="service-item-title">Representation of Asian and Pacific Islanders</span>
-          <span class="service-item-role">Co-founder &amp; Secretary</span>
-          <span class="service-item-detail">CEE Department</span>
+          <span class="service-item-meta">
+            <span class="service-item-role">Co-founder &amp; Secretary</span>
+            <span class="service-item-detail">CEE Department</span>
+          </span>
         </span>
         <span class="service-experience-date">05/2023 - 05/2024</span>
       </div>
       <div class="service-internal-item">
         <span class="service-internal-main">
           <span class="service-item-title">Graduate Studies Committee</span>
-          <span class="service-item-role">Student Representative</span>
-          <span class="service-item-detail">College of Engineering</span>
+          <span class="service-item-meta">
+            <span class="service-item-role">Student Representative</span>
+            <span class="service-item-detail">College of Engineering</span>
+          </span>
         </span>
         <span class="service-experience-date">10/2022 - 10/2023</span>
       </div>

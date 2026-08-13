@@ -1097,35 +1097,35 @@ html[data-theme="dark"] .home-visitor-map {
 }
 
 .service-internal-main {
+  display: grid;
+  gap: 0.18rem;
   min-width: 0;
 }
 
 .service-item-title {
+  display: block;
   color: #111;
   font-weight: 780;
+  line-height: 1.35;
+}
+
+.service-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  min-width: 0;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  line-height: 1.35;
 }
 
 .service-item-detail {
-  margin-left: 0.35rem;
   color: var(--global-text-color-light);
 }
 
 .service-item-role {
-  margin-left: 0.35rem;
   color: #4b1359;
   font-weight: 720;
-
-  &::before {
-    content: "(";
-    color: rgba(196, 154, 44, 0.78);
-    font-weight: 600;
-  }
-
-  &::after {
-    content: ")";
-    color: rgba(196, 154, 44, 0.78);
-    font-weight: 600;
-  }
 }
 
 .teaching-list {
