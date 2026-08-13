@@ -95,9 +95,9 @@ nav_order: 4
     <div class="service-internal-list">
       <div class="service-internal-item">
         <span class="service-internal-main">
-          <span class="service-item-title">Representation of Asian and Pacific Islanders</span>
           <span class="service-item-meta">
-            <span class="service-item-role">Co-founder &amp; Secretary</span>
+            <span class="service-item-title">Co-founder &amp; Secretary</span>
+            <span class="service-item-detail">Representation of Asian and Pacific Islanders</span>
             <span class="service-item-detail">CEE Department</span>
           </span>
         </span>
@@ -105,9 +105,9 @@ nav_order: 4
       </div>
       <div class="service-internal-item">
         <span class="service-internal-main">
-          <span class="service-item-title">Graduate Studies Committee</span>
           <span class="service-item-meta">
-            <span class="service-item-role">Student Representative</span>
+            <span class="service-item-title">Student Representative</span>
+            <span class="service-item-detail">Graduate Studies Committee</span>
             <span class="service-item-detail">College of Engineering</span>
           </span>
         </span>
