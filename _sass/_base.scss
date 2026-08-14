@@ -530,37 +530,6 @@ html[data-theme="dark"] {
   line-height: 1.45;
 }
 
-.home-visitor-map {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  max-width: 100%;
-  margin: 1.15rem auto 0;
-  padding: 0.55rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 8px;
-  background-color: rgba(196, 154, 44, 0.08);
-
-  iframe,
-  img,
-  script + a {
-    display: block;
-    height: auto;
-    max-width: 100%;
-    border-radius: 6px;
-  }
-
-  script + a {
-    line-height: 0;
-  }
-}
-
-html[data-theme="dark"] .home-visitor-map {
-  background-color: rgba(255, 255, 255, 0.04);
-  border-color: rgba(196, 154, 44, 0.2);
-}
-
 @media (min-width: 576px) {
   .profile {
     width: 30%;

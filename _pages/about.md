@@ -109,7 +109,3 @@ Please see my [research]({{ '/research/' | relative_url }}) for more information
     </div>
   </article>
 </div>
-
-<div class="home-visitor-map">
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=YCvn1gfc-4Zcm16_59Td8Q8TVKH7BBu_xwEpz1zuH8E&cl=ffffff&w=200&h=150"></script>
-</div>
