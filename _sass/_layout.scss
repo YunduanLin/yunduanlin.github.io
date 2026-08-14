@@ -19,12 +19,13 @@ body {
 
 .site-network-watermark {
   position: fixed;
-  top: 5.2rem;
-  right: max(-18rem, calc((100vw - #{$max-content-width}) / 2 - 20rem));
+  top: 5.6rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 0;
-  width: min(78vw, 58rem);
-  max-width: 62rem;
-  opacity: 0.24;
+  width: min(112vw, 82rem);
+  max-width: none;
+  opacity: 0.42;
   pointer-events: none;
   user-select: none;
 
@@ -38,7 +39,7 @@ body {
 }
 
 html[data-theme="dark"] .site-network-watermark {
-  opacity: 0.14;
+  opacity: 0.22;
 
   img {
     mix-blend-mode: screen;
@@ -64,10 +65,11 @@ body.sticky-bottom-footer {
 
 @media (max-width: 767px) {
   .site-network-watermark {
-    top: 7.8rem;
-    right: -22rem;
-    width: 42rem;
-    opacity: 0.16;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 54rem;
+    opacity: 0.24;
   }
 }
 
