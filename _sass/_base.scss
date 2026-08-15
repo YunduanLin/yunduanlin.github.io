@@ -342,15 +342,21 @@ ul.task-list input[type="checkbox"] {
 .home-research-intro {
   position: relative;
   max-width: none;
-  margin: 0.5rem 0 1.15rem;
-  padding: 0.82rem 1rem;
-  overflow: hidden;
-  border-top: 1px solid rgba(117, 15, 109, 0.18);
-  border-bottom: 1px solid rgba(196, 154, 44, 0.28);
-  background: linear-gradient(90deg, rgba(117, 15, 109, 0.065), rgba(196, 154, 44, 0.085), rgba(255, 255, 255, 0.44) 78%);
+  margin: 0.35rem 0 1.05rem;
+  padding: 0 0 0.72rem;
   color: var(--global-text-color);
-  font-size: 1.02rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.62;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(117, 15, 109, 0.32), rgba(196, 154, 44, 0.46), rgba(196, 154, 44, 0));
+  }
 
   span {
     color: #4b1359;
@@ -439,9 +445,11 @@ html[data-theme="dark"] {
   }
 
   .home-research-intro {
-    border-top-color: rgba(225, 200, 120, 0.24);
-    border-bottom-color: rgba(225, 200, 120, 0.22);
-    background: linear-gradient(90deg, rgba(117, 15, 109, 0.22), rgba(225, 200, 120, 0.08), rgba(255, 255, 255, 0.025) 78%);
+    color: rgba(255, 255, 255, 0.88);
+
+    &::after {
+      background: linear-gradient(90deg, rgba(225, 200, 120, 0.42), rgba(117, 15, 109, 0.42), rgba(117, 15, 109, 0));
+    }
 
     span {
       color: #f0d889;
@@ -571,8 +579,8 @@ html[data-theme="dark"] {
   }
 
   .home-research-intro {
-    padding: 0.75rem 0.82rem;
-    font-size: 0.96rem;
+    padding-bottom: 0.62rem;
+    font-size: 0.95rem;
   }
 
   .home-research-stream {

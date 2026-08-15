@@ -24,7 +24,7 @@ social: true # includes social icons at the bottom of the page
 #### Research Interests
 
 <div class="home-research-intro">
-  I study operational systems in which <span>decisions are not isolated events</span>, but part of a larger pattern of <span>interaction, adaptation, and feedback</span>.
+  My work begins with the <span>connections around decisions</span>: how choices made by people, platforms, and algorithms <span>shape one another over time</span>.
 </div>
 
 <div class="home-research-themes">
