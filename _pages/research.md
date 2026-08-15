@@ -18,7 +18,7 @@ nav_order: 1
 
 <section class="publication-section publication-section-stream publication-section-social" markdown="1">
 
-#### Social Network Analytics & Platform Operations
+#### Social Network Analytics and Platform Operations
 {: .publication-section-title }
 
 <p class="publication-section-lead">This stream studies how network connections, peer influence, learning, and platform interventions shape adoption, engagement, diffusion, and operational performance in connected markets.</p>
@@ -32,7 +32,7 @@ nav_order: 1
 
 <section class="publication-section publication-section-stream publication-section-aiops" markdown="1">
 
-#### AI & Operational Analytics
+#### AI and Machine Learning for Operations
 {: .publication-section-title }
 
 <p class="publication-section-lead">This stream develops AI, machine learning, simulation, and data-driven analytics for deployable decision support in service platforms, transportation, healthcare, and complex operational systems.</p>
