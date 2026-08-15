@@ -1,5 +1,5 @@
 nodes:
-  - id: W2
+  - id: W5
     title: "A Social-Spatial Network Choice Model with Applications to Pop-Up Store Operations"
     short_title: "Social-spatial choice"
     stream: social
@@ -32,13 +32,13 @@ nodes:
       data:
         - SNAP
         - Gowalla
-  - id: W1
+  - id: W2
     title: "Technology Adoption under Experience-Based Learning: A Dynamic Market and Policy Analysis"
     short_title: "Technology adoption"
     stream: social
     kind: "Working paper"
     year: 2026
-    status: "Major revision"
+    status: "Submitted to Management Science"
     authors: "Lingfei Zhong, Yunduan Lin, Zuo-Jun Max Shen"
     bibkey: zhong2026technology
     x: 125
@@ -141,7 +141,7 @@ nodes:
         - platform operations
         - social network operations
       data: []
-  - id: W4
+  - id: W1
     title: "LLM-Augmented Digital Twin for Policy Evaluation in Short-Video Platforms"
     short_title: "LLM digital twin"
     stream: aiops
@@ -171,7 +171,7 @@ nodes:
         - KuaiRand-Pure random-exposure data
         - Tsinghua ShortVideo sampled catalogue
         - VK-LSVD
-  - id: W5
+  - id: W4
     title: "LLM Agents in Transportation-enabled Service Platforms: From Behavioral Simulation to Platform Decision Support"
     short_title: "LLM agents"
     stream: aiops
