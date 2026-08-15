@@ -14,6 +14,7 @@ home_contact:
   - CUHK Business School, The Chinese University of Hong Kong
   - "**Office:** 9/F, Cheng Yu Tung Building, 12 Chak Cheung Street, Shatin, N.T., Hong Kong"
   - "**Email:** yunduanlin[at]cuhk[dot]edu[dot]hk"
+  - "**Welcome to reach out about:** research, collaborations, and student opportunities"
 
 news: false # includes a list of news items
 latest_posts: false # includes a list of the newest posts
