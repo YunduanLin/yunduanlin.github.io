@@ -49,7 +49,7 @@
 
     var svgNamespace = "http://www.w3.org/2000/svg";
     var viewBox = { width: 900, height: 520 };
-    var view = { x: 42, y: 18, scale: 0.9 };
+    var view = { x: 0, y: 0, scale: 1 };
     var activeId = null;
     var drag = null;
 
@@ -63,7 +63,6 @@
       anchor: root.querySelector(".paper-network-detail-anchor"),
     };
     var layerToggles = Array.prototype.slice.call(root.querySelectorAll("input[data-network-layer]"));
-    var linkCount = root.querySelector("[data-network-link-count]");
     var leaderboardList = root.querySelector(".paper-network-leaderboard-list");
     var leaderboardMetricControls = Array.prototype.slice.call(
       root.querySelectorAll("[data-network-leaderboard-metric]")
@@ -344,7 +343,6 @@
         edgeElement.classList.toggle("is-hidden", !selected.has(edgeType));
       });
 
-      if (linkCount) linkCount.textContent = visibleEdges().length;
       highlight(activeId);
     }
 
@@ -376,9 +374,9 @@
     }
 
     function resetView() {
-      view.x = 42;
-      view.y = 18;
-      view.scale = 0.9;
+      view.x = 0;
+      view.y = 0;
+      view.scale = 1;
       applyTransform();
     }
 

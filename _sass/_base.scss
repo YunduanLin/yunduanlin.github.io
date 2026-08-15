@@ -1995,35 +1995,20 @@ footer.sticky-bottom {
 
   .paper-network-toolbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 0.8rem;
     align-items: center;
-    padding: 0.56rem 0.72rem;
+    padding: 0.52rem 0.72rem;
     background-color: #fbfafc;
     border-bottom: 1px solid rgba(117, 15, 109, 0.1);
-  }
-
-  .paper-network-count {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.32rem;
-    align-items: center;
-    color: var(--global-text-color-light);
-    font-size: 0.72rem;
-
-    strong {
-      color: #750f6d;
-      font-size: 0.84rem;
-      font-weight: 800;
-    }
   }
 
   .paper-network-map-insights {
     display: grid;
     grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.82fr);
-    gap: 0.7rem;
+    gap: 0.9rem;
     align-items: start;
-    padding: 0.52rem 0.72rem;
+    padding: 0.72rem 0.85rem;
     background: linear-gradient(90deg, rgba(117, 15, 109, 0.055), rgba(196, 154, 44, 0.08));
     border-bottom: 1px solid rgba(196, 154, 44, 0.2);
   }
@@ -2031,7 +2016,7 @@ footer.sticky-bottom {
   .paper-network-map-label {
     margin-bottom: 0.42rem;
     color: #4b1359;
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     font-weight: 850;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -2044,7 +2029,7 @@ footer.sticky-bottom {
     align-items: center;
     margin: -0.16rem 0 0.48rem;
     color: var(--global-text-color-light);
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     line-height: 1.2;
   }
 
@@ -2056,12 +2041,12 @@ footer.sticky-bottom {
     display: inline-flex;
     align-items: center;
     min-height: 1.34rem;
-    padding: 0.1rem 0.42rem;
+    padding: 0.12rem 0.48rem;
     color: #4b1359;
     background-color: rgba(196, 154, 44, 0.12);
     border: 1px solid rgba(196, 154, 44, 0.42);
     border-radius: 999px;
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     font-weight: 800;
     line-height: 1.1;
     cursor: pointer;
@@ -2092,7 +2077,7 @@ footer.sticky-bottom {
     gap: 0.55rem;
     align-items: center;
     min-width: 0;
-    font-size: 0.68rem;
+    font-size: 0.78rem;
   }
 
   .paper-network-leaderboard-label {
@@ -2111,7 +2096,7 @@ footer.sticky-bottom {
     display: inline-flex;
     gap: 0.22rem;
     align-items: center;
-    padding: 0.08rem 0.34rem;
+    padding: 0.1rem 0.42rem;
     color: #4b1359;
     background-color: rgba(255, 255, 255, 0.72);
     border: 1px solid rgba(117, 15, 109, 0.12);
@@ -2129,12 +2114,12 @@ footer.sticky-bottom {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1rem;
-    height: 1rem;
+    width: 1.08rem;
+    height: 1.08rem;
     color: #6f4a00;
     background-color: rgba(196, 154, 44, 0.18);
     border-radius: 999px;
-    font-size: 0.58rem;
+    font-size: 0.64rem;
     font-weight: 850;
   }
 
@@ -2164,9 +2149,9 @@ footer.sticky-bottom {
 
   .paper-network-map-definitions {
     display: grid;
-    gap: 0.34rem;
+    gap: 0.42rem;
     color: var(--global-text-color-light);
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     line-height: 1.38;
   }
 
@@ -2189,7 +2174,7 @@ footer.sticky-bottom {
 
   .paper-network-map-definition-role {
     color: #6f4a00;
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     font-weight: 750;
     line-height: 1.2;
     text-transform: lowercase;
@@ -2898,10 +2883,6 @@ html[data-theme="dark"] .research-page {
   .paper-network-toolbar {
     background-color: rgba(255, 255, 255, 0.035);
     border-bottom-color: rgba(225, 200, 120, 0.16);
-  }
-
-  .paper-network-count strong {
-    color: #e1c878;
   }
 
   .paper-network-map-insights {
