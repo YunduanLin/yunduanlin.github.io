@@ -318,24 +318,28 @@ ul.task-list input[type="checkbox"] {
   }
 
   .home-contact-line-invite {
-    margin-top: 0.55rem;
-    padding: 0.68rem 0.85rem;
-    border-left: 3px solid #c49a2c;
-    border-radius: 6px;
-    background: linear-gradient(90deg, rgba(196, 154, 44, 0.16), rgba(196, 154, 44, 0.05));
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.65rem;
     color: var(--global-theme-color);
     font-weight: 650;
 
-    &::before {
+    &::before,
+    &::after {
       content: "";
-      display: inline-block;
-      width: 0.42rem;
-      height: 0.42rem;
-      margin-right: 0.55rem;
-      border-radius: 50%;
-      background-color: #c49a2c;
-      box-shadow: 0 0 0 4px rgba(196, 154, 44, 0.14);
-      vertical-align: 0.08em;
+      width: 2.35rem;
+      height: 1px;
+      background: rgba(196, 154, 44, 0.62);
+      flex: 0 0 auto;
+    }
+
+    &::before {
+      margin-right: 0.75rem;
+    }
+
+    &::after {
+      margin-left: 0.75rem;
+      opacity: 0.45;
     }
   }
 
