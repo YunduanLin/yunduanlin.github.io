@@ -41,7 +41,7 @@ layout: default
         {% if page.home_contact %}
           <div class="home-contact home-contact-card" aria-label="Contact information">
             {% for item in page.home_contact %}
-              <div class="home-contact-line{% if forloop.first %} home-contact-line-primary{% endif %}">
+              <div class="home-contact-line{% if forloop.first %} home-contact-line-primary{% endif %}{% if forloop.last %} home-contact-line-invite{% endif %}">
                 {{ item | markdownify | remove: '<p>' | remove: '</p>' }}
               </div>
             {% endfor %}
