@@ -47,6 +47,14 @@ html[data-theme="dark"] .site-network-watermark {
   }
 }
 
+body:has(.research-page) .site-network-watermark {
+  opacity: 0.18;
+}
+
+html[data-theme="dark"] body:has(.research-page) .site-network-watermark {
+  opacity: 0.12;
+}
+
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
   padding-top: 56px;

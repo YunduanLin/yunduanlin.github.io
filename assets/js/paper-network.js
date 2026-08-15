@@ -49,7 +49,7 @@
 
     var svgNamespace = "http://www.w3.org/2000/svg";
     var viewBox = { width: 900, height: 520 };
-    var view = { x: 0, y: 0, scale: 1 };
+    var view = { x: 42, y: 18, scale: 0.9 };
     var activeId = null;
     var drag = null;
 
@@ -376,9 +376,9 @@
     }
 
     function resetView() {
-      view.x = 0;
-      view.y = 0;
-      view.scale = 1;
+      view.x = 42;
+      view.y = 18;
+      view.scale = 0.9;
       applyTransform();
     }
 
@@ -691,19 +691,19 @@
           "data-paper-id": node.id,
         });
 
-        var halo = createSvgElement("circle", { class: "paper-network-node-halo", r: "31" });
-        var circle = createSvgElement("circle", { class: "paper-network-node-dot", r: "23" });
+        var halo = createSvgElement("circle", { class: "paper-network-node-halo", r: "25" });
+        var circle = createSvgElement("circle", { class: "paper-network-node-dot", r: "18" });
         var code = createSvgElement("text", {
           class: "paper-network-node-code",
           x: "0",
-          y: "5",
+          y: "4",
           "text-anchor": "middle",
         });
         var isRightEdgeNode = node.x >= 700;
         var title = createSvgElement("text", {
           class: "paper-network-title-label",
-          x: isRightEdgeNode ? "-34" : "34",
-          y: "5",
+          x: isRightEdgeNode ? "-28" : "28",
+          y: "4",
           "text-anchor": isRightEdgeNode ? "end" : "start",
         });
         var accessibleTitle = createSvgElement("title", {});
