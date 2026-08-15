@@ -5,7 +5,7 @@ nodes:
     stream: social
     kind: "Working paper"
     year: 2026
-    status: "Ready to submit"
+    status: "Submitted to Management Science"
     authors: "Chen Chen, Yunduan Lin, Kashish Arora"
     bibkey: chen2026socialspatial
     x: 250
@@ -38,7 +38,7 @@ nodes:
     stream: social
     kind: "Working paper"
     year: 2026
-    status: "Submitted to Management Science"
+    status: "Major revision at Production and Operations Management"
     authors: "Lingfei Zhong, Yunduan Lin, Zuo-Jun Max Shen"
     bibkey: zhong2026technology
     x: 125
