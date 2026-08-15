@@ -2,19 +2,18 @@
 layout: page
 permalink: /research/
 title: Research
-description: Research themes and publications in societal operations management, social networks, platform operations, AI, and analytics.
 nav: true
 nav_order: 1
 ---
 
 <div class="research-page" markdown="1">
 
-<p class="research-order-note">Papers are grouped by research stream and ordered from newest to oldest within each section. Labels indicate publication type/order (J=published journal, C=refereed conference, W=working paper/manuscript/work in progress).</p>
-
 {% include paper_network.liquid %}
 
 {% assign paper_network_js = '/assets/js/paper-network.js' | relative_url | bust_file_cache %}
 <script defer src="{{ paper_network_js }}&v=feature-similarity-20260809"></script>
+
+<p class="research-order-note">Papers are grouped by research stream and listed in reverse chronological order within each section. Labels indicate publication type/order (J=published journal, C=refereed conference, W=working paper/manuscript/work in progress).</p>
 
 <section class="publication-section publication-section-stream publication-section-social" markdown="1">
 
