@@ -9,7 +9,7 @@ profile:
   image_circular: false # crops the image to make it circular
 profile_layout: hero
 home_intro: >
-  I am an Assistant Professor in the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk/). During my Ph.D., I was very fortunate to be advised by [Zuo-Jun Max Shen](https://zj-maxshen.github.io/). Along the way, my thinking has been shaped by many people I have had the privilege to learn from, including friends, coauthors, colleagues, and students. Having been shaped by so many people has made me especially interested in how influence travels and how seemingly local actions can have effects far beyond where they begin. This perspective shapes the questions I study in operations management: how decisions are connected, how their effects spread across people and systems, and how we can design better decisions in an interconnected world.
+  I am an Assistant Professor in the [Department of Decisions, Operations and Technology](https://www.bschool.cuhk.edu.hk/departments/decisions-operations-and-technology/) at [CUHK Business School](https://www.bschool.cuhk.edu.hk/). During my Ph.D., I was very fortunate to be advised by [Zuo-Jun Max Shen](https://zj-maxshen.github.io/), and throughout my journey I have been shaped by many people I have had the privilege to learn from, including my friends, coauthors, colleagues, and students. Having been shaped by so many people has made me especially interested in how influence travels and how seemingly local actions can have effects far beyond where they begin. This perspective shapes the questions I study in operations management: how decisions are connected, how their effects spread across people and systems, and how we can design better decisions in an interconnected world.
 home_contact:
   - CUHK Business School, The Chinese University of Hong Kong
   - "**Office:** 9/F, Cheng Yu Tung Building, 12 Chak Cheung Street, Shatin, N.T., Hong Kong"
@@ -24,7 +24,7 @@ social: true # includes social icons at the bottom of the page
 #### Research Interests
 
 <div class="home-research-intro">
-  I study operational systems in which decisions are not isolated events, but part of a larger pattern of interaction, adaptation, and feedback.
+  I study operational systems in which <span>decisions are not isolated events</span>, but part of a larger pattern of <span>interaction, adaptation, and feedback</span>.
 </div>
 
 <div class="home-research-themes">
@@ -32,7 +32,7 @@ social: true # includes social icons at the bottom of the page
     <div class="home-research-number">01</div>
     <div class="home-research-body">
       <h5>Social Network Analytics and Platform Operations</h5>
-      <p class="home-research-question"><span>Core question:</span> How do individual choices become collective outcomes?</p>
+      <p class="home-research-question"><span>I keep asking</span> How do individual choices become collective outcomes?</p>
       <p>This stream studies markets and platforms where behavior is shaped by social influence, network structure, and the rules of the environment. I am interested in the hidden mechanics of connected markets: why some ideas spread, why some interventions take hold, and how platforms can act without treating users as isolated decision makers.</p>
     </div>
   </section>
@@ -40,7 +40,7 @@ social: true # includes social icons at the bottom of the page
     <div class="home-research-number">02</div>
     <div class="home-research-body">
       <h5>AI and Machine Learning for Operations</h5>
-      <p class="home-research-question"><span>Core question:</span> How can algorithms help us understand systems that are hard to observe directly?</p>
+      <p class="home-research-question"><span>I keep asking</span> How can algorithms help us understand systems that are hard to observe directly?</p>
       <p>This stream studies how AI and machine learning can help make sense of complex operational settings where data are imperfect, behavior is adaptive, and decisions unfold over time. I am interested in how algorithmic tools can reveal hidden structure, support learning, and improve the design of operational systems.</p>
     </div>
   </section>

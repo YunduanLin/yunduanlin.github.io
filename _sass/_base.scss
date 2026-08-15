@@ -340,11 +340,23 @@ ul.task-list input[type="checkbox"] {
 }
 
 .home-research-intro {
-  max-width: 920px;
-  margin: 0.45rem 0 0.95rem;
+  position: relative;
+  max-width: none;
+  margin: 0.5rem 0 1.15rem;
+  padding: 0.82rem 1rem;
+  overflow: hidden;
+  border-top: 1px solid rgba(117, 15, 109, 0.18);
+  border-bottom: 1px solid rgba(196, 154, 44, 0.28);
+  background: linear-gradient(90deg, rgba(117, 15, 109, 0.065), rgba(196, 154, 44, 0.085), rgba(255, 255, 255, 0.44) 78%);
   color: var(--global-text-color);
-  font-size: 0.98rem;
-  line-height: 1.58;
+  font-size: 1.02rem;
+  line-height: 1.6;
+
+  span {
+    color: #4b1359;
+    font-weight: 760;
+    background: linear-gradient(transparent 62%, rgba(196, 154, 44, 0.28) 0);
+  }
 }
 
 .home-research-themes {
@@ -357,11 +369,11 @@ ul.task-list input[type="checkbox"] {
 .home-research-stream {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(1.8rem, auto) minmax(0, 1fr);
-  column-gap: 0.95rem;
+  grid-template-columns: minmax(4.4rem, auto) minmax(0, 1fr);
+  column-gap: 1.05rem;
   min-width: 0;
-  padding: 0.9rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.52), transparent 70%);
+  padding: 1.05rem 0;
+  background: linear-gradient(90deg, rgba(117, 15, 109, 0.035), rgba(196, 154, 44, 0.035), transparent 78%);
 }
 
 .home-research-stream + .home-research-stream {
@@ -369,12 +381,13 @@ ul.task-list input[type="checkbox"] {
 }
 
 .home-research-number {
-  color: #8a6400;
-  font-size: 0.82rem;
-  font-weight: 800;
-  line-height: 1.35;
-  letter-spacing: 0.02em;
-  padding-top: 0.12rem;
+  color: rgba(117, 15, 109, 0.12);
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 850;
+  line-height: 0.84;
+  letter-spacing: 0;
+  padding-top: 0.05rem;
+  text-shadow: 1px 1px 0 rgba(196, 154, 44, 0.18);
 }
 
 .home-research-body {
@@ -383,8 +396,8 @@ ul.task-list input[type="checkbox"] {
   h5 {
     margin: 0 0 0.28rem;
     color: var(--global-text-color);
-    font-size: 1.02rem;
-    font-weight: 750;
+    font-size: 1.03rem;
+    font-weight: 760;
     line-height: 1.34;
   }
 
@@ -398,19 +411,22 @@ ul.task-list input[type="checkbox"] {
 }
 
 .home-research-question {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.58rem;
+  align-items: baseline;
   margin: 0 0 0.52rem !important;
-  color: var(--global-text-color) !important;
-  font-size: 0.93rem !important;
+  color: #4b1359 !important;
+  font-size: 0.94rem !important;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 680;
   line-height: 1.44 !important;
 
   span {
-    margin-right: 0.35rem;
-    color: var(--global-theme-color);
-    font-size: 0.68rem;
+    color: #8a6400;
+    font-size: 0.7rem;
     font-weight: 800;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
   }
 }
@@ -422,11 +438,30 @@ html[data-theme="dark"] {
     box-shadow: none;
   }
 
-  .home-research-stream {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(225, 200, 120, 0.035), transparent 70%);
+  .home-research-intro {
+    border-top-color: rgba(225, 200, 120, 0.24);
+    border-bottom-color: rgba(225, 200, 120, 0.22);
+    background: linear-gradient(90deg, rgba(117, 15, 109, 0.22), rgba(225, 200, 120, 0.08), rgba(255, 255, 255, 0.025) 78%);
+
+    span {
+      color: #f0d889;
+      background: linear-gradient(transparent 62%, rgba(225, 200, 120, 0.18) 0);
+    }
   }
 
-  .home-research-number,
+  .home-research-stream {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(225, 200, 120, 0.035), transparent 78%);
+  }
+
+  .home-research-number {
+    color: rgba(225, 200, 120, 0.18);
+    text-shadow: 1px 1px 0 rgba(117, 15, 109, 0.24);
+  }
+
+  .home-research-question {
+    color: #f5edf5 !important;
+  }
+
   .home-research-question span {
     color: #e1c878;
   }
@@ -533,6 +568,30 @@ html[data-theme="dark"] {
   .home-profile-hero .home-contact-card {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.25rem;
+  }
+
+  .home-research-intro {
+    padding: 0.75rem 0.82rem;
+    font-size: 0.96rem;
+  }
+
+  .home-research-stream {
+    grid-template-columns: minmax(3.1rem, auto) minmax(0, 1fr);
+    column-gap: 0.72rem;
+    padding: 0.92rem 0;
+  }
+
+  .home-research-number {
+    font-size: clamp(2rem, 13vw, 3.15rem);
+  }
+
+  .home-research-question {
+    display: block;
+  }
+
+  .home-research-question span {
+    display: block;
+    margin-bottom: 0.1rem;
   }
 
   .home-timeline-head {
