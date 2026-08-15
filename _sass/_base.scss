@@ -2064,8 +2064,8 @@ footer.sticky-bottom {
 
   .paper-network-map-insights {
     display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.82fr);
-    gap: 0.9rem;
+    grid-template-columns: minmax(20rem, 0.9fr) minmax(30rem, 1.05fr);
+    gap: 1.15rem;
     align-items: start;
     padding: 0.72rem 0.85rem;
     background: linear-gradient(90deg, rgba(117, 15, 109, 0.055), rgba(196, 154, 44, 0.08));
@@ -2216,8 +2216,8 @@ footer.sticky-bottom {
 
   .paper-network-map-definition {
     display: grid;
-    grid-template-columns: minmax(5.1rem, 0.26fr) minmax(0, 1fr);
-    gap: 0.42rem;
+    grid-template-columns: minmax(7.2rem, 0.28fr) minmax(18rem, 1fr);
+    gap: 0.62rem;
     align-items: start;
   }
 
@@ -2241,6 +2241,7 @@ footer.sticky-bottom {
 
   .paper-network-map-definition-description {
     min-width: 0;
+    max-width: 31rem;
   }
 
   .paper-network-legend {
@@ -3212,6 +3213,22 @@ html[data-theme="dark"] .research-page {
 
   .publications .publication-highlights {
     border-top-color: rgba(225, 200, 120, 0.22);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .research-page {
+    .paper-network-map-insights {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .paper-network-map-definition {
+      grid-template-columns: minmax(7.2rem, auto) minmax(0, 1fr);
+    }
+
+    .paper-network-map-definition-description {
+      max-width: none;
+    }
   }
 }
 
