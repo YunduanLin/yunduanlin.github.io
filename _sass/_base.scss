@@ -284,21 +284,13 @@ ul.task-list input[type="checkbox"] {
     align-items: start;
     overflow: hidden;
     padding: 1rem 1.1rem 0.95rem;
-    border: 1px solid rgba(117, 15, 109, 0.14);
+    border: 1px solid transparent;
     border-radius: 8px;
-    background-color: var(--global-card-bg-color);
+    background:
+      linear-gradient(115deg, rgba(117, 15, 109, 0.045), rgba(196, 154, 44, 0.055)) padding-box,
+      linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
+      linear-gradient(105deg, #750f6d 0%, #9d4b8f 37%, #c49a2c 100%) border-box;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--global-theme-color), #c49a2c);
-      opacity: 0.9;
-    }
   }
 
   .home-contact-line {
@@ -318,29 +310,12 @@ ul.task-list input[type="checkbox"] {
   }
 
   .home-contact-line-invite {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 0.65rem;
+    margin-top: 0.82rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba(117, 15, 109, 0.38), rgba(196, 154, 44, 0.52)) 1;
     color: var(--global-theme-color);
     font-weight: 650;
-
-    &::before,
-    &::after {
-      content: "";
-      width: 2.35rem;
-      height: 1px;
-      background: rgba(196, 154, 44, 0.62);
-      flex: 0 0 auto;
-    }
-
-    &::before {
-      margin-right: 0.75rem;
-    }
-
-    &::after {
-      margin-left: 0.75rem;
-      opacity: 0.45;
-    }
   }
 
   .profile.home-profile-photo {
@@ -470,7 +445,7 @@ ul.task-list input[type="checkbox"] {
 html[data-theme="dark"] {
   .home-profile-hero .home-contact-card {
     background-color: rgba(255, 255, 255, 0.06);
-    border-color: rgba(196, 154, 44, 0.22);
+    border-color: transparent;
     box-shadow: none;
   }
 
