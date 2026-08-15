@@ -2011,9 +2011,9 @@ footer.sticky-bottom {
 
   .paper-network-header {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(16rem, 1.35fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 1rem;
-    align-items: end;
+    align-items: center;
     padding: 0.82rem 1rem;
     color: #fff;
     background: linear-gradient(120deg, #4b1359, #750f6d 64%, #9a7819);
@@ -2060,21 +2060,11 @@ footer.sticky-bottom {
     overflow: hidden;
   }
 
-  .paper-network-toolbar {
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.8rem;
-    align-items: center;
-    padding: 0.52rem 0.72rem;
-    background-color: #fbfafc;
-    border-bottom: 1px solid rgba(117, 15, 109, 0.1);
-  }
-
   .paper-network-map-insights {
     display: grid;
     grid-template-columns: minmax(20rem, 0.9fr) minmax(30rem, 1.05fr);
     gap: 1.15rem;
-    align-items: start;
+    align-items: center;
     padding: 0.72rem 0.85rem;
     background: linear-gradient(90deg, rgba(117, 15, 109, 0.055), rgba(196, 154, 44, 0.08));
     border-bottom: 1px solid rgba(196, 154, 44, 0.2);
@@ -2217,6 +2207,7 @@ footer.sticky-bottom {
   .paper-network-map-definitions {
     display: grid;
     gap: 0.42rem;
+    align-self: center;
     color: var(--global-text-color-light);
     font-size: 0.78rem;
     line-height: 1.38;
@@ -2224,9 +2215,9 @@ footer.sticky-bottom {
 
   .paper-network-map-definition {
     display: grid;
-    grid-template-columns: minmax(7.2rem, 0.28fr) minmax(18rem, 1fr);
+    grid-template-columns: minmax(8.8rem, auto) minmax(0, 1fr);
     gap: 0.62rem;
-    align-items: start;
+    align-items: center;
   }
 
   .paper-network-map-definition-heading {
@@ -2245,6 +2236,7 @@ footer.sticky-bottom {
     font-weight: 750;
     line-height: 1.2;
     text-transform: lowercase;
+    white-space: nowrap;
   }
 
   .paper-network-map-definition-description {
@@ -2344,6 +2336,7 @@ footer.sticky-bottom {
     display: inline-flex;
     gap: 0.32rem;
     align-items: center;
+    justify-self: end;
   }
 
   .paper-network-control {
@@ -2368,6 +2361,19 @@ footer.sticky-bottom {
       background-color: #750f6d;
       border-color: #750f6d;
       outline: none;
+    }
+  }
+
+  .paper-network-header .paper-network-control {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(240, 216, 137, 0.62);
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.18);
+      border-color: #f0d889;
     }
   }
 
@@ -2978,11 +2984,6 @@ html[data-theme="dark"] .research-page {
     box-shadow: none;
   }
 
-  .paper-network-toolbar {
-    background-color: rgba(255, 255, 255, 0.035);
-    border-bottom-color: rgba(225, 200, 120, 0.16);
-  }
-
   .paper-network-map-insights {
     background: linear-gradient(90deg, rgba(117, 15, 109, 0.28), rgba(225, 200, 120, 0.08));
     border-bottom-color: rgba(225, 200, 120, 0.18);
@@ -3261,7 +3262,7 @@ html[data-theme="dark"] .research-page {
     }
 
     .paper-network-map-definition {
-      grid-template-columns: minmax(7.2rem, auto) minmax(0, 1fr);
+      grid-template-columns: minmax(8.8rem, auto) minmax(0, 1fr);
     }
 
     .paper-network-map-definition-description {
@@ -3285,14 +3286,10 @@ html[data-theme="dark"] .research-page {
       padding: 0.75rem;
     }
 
-    .paper-network-toolbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
     .paper-network-controls {
       width: 100%;
       justify-content: flex-start;
+      justify-self: start;
     }
 
     .paper-network-map-insights {

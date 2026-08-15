@@ -1,21 +1,19 @@
-<section class="paper-network-section" aria-labelledby="paper-network-heading">
+<section class="paper-network-section" aria-labelledby="paper-network-heading" data-paper-network>
   <div class="paper-network-header">
     <div>
       <h2 id="paper-network-heading">My Project Network</h2>
     </div>
+    <div class="paper-network-controls" aria-label="Paper network controls">
+      <button class="paper-network-control" type="button" data-network-zoom="out" title="Zoom out" aria-label="Zoom out">-</button>
+      <button class="paper-network-control paper-network-zoom-readout" type="button" data-network-zoom="reset" title="Reset zoom to 100%" aria-label="Reset zoom to 100%">100%</button>
+      <button class="paper-network-control" type="button" data-network-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>
+    </div>
   </div>
 
-  <div class="paper-network-shell" data-paper-network>
+  <div class="paper-network-shell">
     <script type="application/json" id="paper-network-data">{{ site.data.paper_network | jsonify }}</script>
 
     <div class="paper-network-graph-card">
-      <div class="paper-network-toolbar">
-        <div class="paper-network-controls" aria-label="Paper network controls">
-          <button class="paper-network-control" type="button" data-network-zoom="out" title="Zoom out" aria-label="Zoom out">-</button>
-          <button class="paper-network-control paper-network-zoom-readout" type="button" data-network-zoom="reset" title="Reset zoom to 100%" aria-label="Reset zoom to 100%">100%</button>
-          <button class="paper-network-control" type="button" data-network-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>
-        </div>
-      </div>
       <div class="paper-network-map-insights" aria-label="Network centrality summary">
         <div class="paper-network-leaderboard">
           <div class="paper-network-map-label">Leaderboard</div>
