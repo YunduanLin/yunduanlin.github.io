@@ -23,32 +23,22 @@ social: true # includes social icons at the bottom of the page
 
 #### Research Interests
 
-My work is about connected decision-making in operational systems. I focus on two streams that often talk to each other:
-
-<div class="home-philosophy-note">
-  A small working philosophy: decisions have social lives. The systems I study are messy in useful ways, and the fun is to make their hidden structure visible enough to support better decisions.
+<div class="home-research-intro">
+  I study operational systems in which decisions are not isolated events, but part of a larger pattern of interaction, adaptation, and feedback.
 </div>
 
 <div class="home-research-themes">
-  <section class="home-research-theme" data-index="01">
-    <h5>Social network analytics and platform operations</h5>
-    <p>What happens after one person clicks, shares, visits, adopts, or refers? I study how social ties, spatial proximity, and platform design turn local actions into market-level outcomes, with projects on recommendations, adoption, referrals, and content exposure.</p>
-    <div class="home-research-tags">
-      <span class="home-research-tag">peer influence</span>
-      <span class="home-research-tag">platforms</span>
-      <span class="home-research-tag">diffusion</span>
-      <span class="home-research-tag">incentives</span>
-    </div>
+  <section class="home-research-stream">
+    <div class="home-research-stream-label">01 / Research stream</div>
+    <h5>Social Network Analytics and Platform Operations</h5>
+    <p class="home-research-question">How do individual choices become collective outcomes?</p>
+    <p>This stream studies markets and platforms where behavior is shaped by social influence, network structure, and the rules of the environment. I am interested in the hidden mechanics of connected markets: why some ideas spread, why some interventions take hold, and how platforms can act without treating users as isolated decision makers.</p>
   </section>
-  <section class="home-research-theme" data-index="02">
-    <h5>AI for operational decision-making</h5>
-    <p>What should AI do inside a decision system: predict, simulate, advise, or step back? I study how AI changes the behavior of human experts, AI agents, and public-service systems when decisions are sequential, social, and consequential.</p>
-    <div class="home-research-tags">
-      <span class="home-research-tag">AI</span>
-      <span class="home-research-tag">simulation</span>
-      <span class="home-research-tag">policy design</span>
-      <span class="home-research-tag">analytics</span>
-    </div>
+  <section class="home-research-stream">
+    <div class="home-research-stream-label">02 / Research stream</div>
+    <h5>AI and Machine Learning for Operations</h5>
+    <p class="home-research-question">How can algorithms help us understand systems that are hard to observe directly?</p>
+    <p>This stream studies how AI and machine learning can help make sense of complex operational settings where data are imperfect, behavior is adaptive, and decisions unfold over time. I am interested in how algorithmic tools can reveal hidden structure, support learning, and improve the design of operational systems.</p>
   </section>
 </div>
 

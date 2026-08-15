@@ -339,107 +339,73 @@ ul.task-list input[type="checkbox"] {
   clear: both;
 }
 
+.home-research-intro {
+  max-width: 850px;
+  margin: 0.55rem 0 1.2rem;
+  color: var(--global-text-color);
+  font-size: 1.02rem;
+  line-height: 1.62;
+}
+
 .home-research-themes {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 0.9rem;
-  margin: 1rem 0 1.25rem;
-
-  .home-research-theme {
-    position: relative;
-    overflow: hidden;
-    min-width: 0;
-    min-height: 0;
-    padding: 1.15rem 1.2rem 1.05rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 7px;
-    background: linear-gradient(180deg, var(--global-card-bg-color), var(--global-bg-color));
-    box-shadow: 0 7px 18px rgba(28, 61, 94, 0.07);
-
-    &::before {
-      content: attr(data-index);
-      position: absolute;
-      top: -1rem;
-      right: 0.75rem;
-      color: rgba(196, 154, 44, 0.12);
-      font-size: 4.4rem;
-      font-weight: 700;
-      line-height: 1;
-      pointer-events: none;
-    }
-
-    h5 {
-      position: relative;
-      max-width: 88%;
-      margin-bottom: 0.8rem;
-      color: var(--global-theme-color);
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1.35;
-
-      &::after {
-        content: "";
-        display: block;
-        width: 2.25rem;
-        height: 3px;
-        margin-top: 0.55rem;
-        border-radius: 99px;
-        background-color: #c49a2c;
-      }
-    }
-
-    p {
-      margin-bottom: 0;
-      color: var(--global-text-color);
-      font-size: 0.96rem;
-      line-height: 1.6;
-    }
-  }
+  gap: 1rem;
+  margin: 1rem 0 1.35rem;
 }
 
-.home-philosophy-note {
+.home-research-stream {
   position: relative;
-  margin: 1rem 0 1.1rem;
-  padding: 0.95rem 1.1rem 0.95rem 1.35rem;
-  border: 1px solid rgba(196, 154, 44, 0.34);
-  border-radius: 7px;
-  background:
-    linear-gradient(90deg, rgba(117, 15, 109, 0.075), rgba(196, 154, 44, 0.075)),
-    var(--global-bg-color);
-  color: var(--global-text-color);
-  font-size: 0.98rem;
-  line-height: 1.58;
+  min-width: 0;
+  padding: 1.05rem 0 1.15rem 1.15rem;
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(180deg, var(--global-theme-color), #c49a2c) 1;
+  background: linear-gradient(90deg, rgba(117, 15, 109, 0.035), rgba(196, 154, 44, 0.025), transparent 62%);
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
-    top: 0.85rem;
-    bottom: 0.85rem;
-    left: 0.75rem;
-    width: 3px;
-    border-radius: 99px;
-    background: linear-gradient(180deg, var(--global-theme-color), #c49a2c);
+    right: 0;
+    bottom: 0;
+    left: 1.15rem;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(117, 15, 109, 0.2), rgba(196, 154, 44, 0.32), transparent);
+  }
+
+  h5 {
+    margin-bottom: 0.55rem;
+    color: var(--global-text-color);
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.32;
+  }
+
+  p {
+    max-width: 900px;
+    margin-bottom: 0;
+    color: var(--global-text-color);
+    font-size: 0.96rem;
+    line-height: 1.62;
   }
 }
 
-.home-research-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.85rem;
+.home-research-stream-label {
+  margin-bottom: 0.35rem;
+  color: #8a6400;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
-.home-research-tag {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.45rem;
-  padding: 0.25rem 0.55rem;
-  border-radius: 999px;
-  background-color: rgba(117, 15, 109, 0.09);
-  color: var(--global-theme-color);
-  font-size: 0.72rem;
-  line-height: 1;
-  white-space: nowrap;
+.home-research-question {
+  margin: 0.2rem 0 0.75rem !important;
+  color: var(--global-theme-color) !important;
+  font-size: 1.08rem !important;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.45 !important;
 }
 
 html[data-theme="dark"] {
@@ -449,23 +415,12 @@ html[data-theme="dark"] {
     box-shadow: none;
   }
 
-  .home-research-theme {
-    box-shadow: none;
-
-    &::before {
-      color: rgba(196, 154, 44, 0.16);
-    }
+  .home-research-stream {
+    background: linear-gradient(90deg, rgba(117, 15, 109, 0.12), rgba(196, 154, 44, 0.08), transparent 64%);
   }
 
-  .home-research-tag {
-    background-color: rgba(196, 154, 44, 0.16);
-  }
-
-  .home-philosophy-note {
-    background:
-      linear-gradient(90deg, rgba(117, 15, 109, 0.14), rgba(196, 154, 44, 0.12)),
-      var(--global-bg-color);
-    border-color: rgba(196, 154, 44, 0.28);
+  .home-research-stream-label {
+    color: #e1c878;
   }
 
   .home-timeline-date {
