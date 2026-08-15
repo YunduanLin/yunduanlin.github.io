@@ -2363,6 +2363,36 @@ footer.sticky-bottom {
     }
   }
 
+  .paper-network-zoom-readout {
+    gap: 0.34rem;
+    min-width: 3.85rem;
+    color: #fff;
+    background: linear-gradient(135deg, #750f6d 0%, #8e167f 54%, #c49a2c 100%);
+    border-color: rgba(196, 154, 44, 0.78);
+    border-radius: 999px;
+    font-weight: 850;
+    letter-spacing: 0;
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+      0 6px 14px rgba(117, 15, 109, 0.14);
+
+    &::before {
+      content: "";
+      width: 0.46rem;
+      height: 0.46rem;
+      border: 2px solid #f0d889;
+      border-right-color: rgba(240, 216, 137, 0.24);
+      border-radius: 999px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      background: linear-gradient(135deg, #4b1359 0%, #750f6d 58%, #c49a2c 100%);
+      border-color: #e1c878;
+    }
+  }
+
   .paper-network-graph-frame {
     position: relative;
     height: clamp(20rem, 42vw, 28rem);
