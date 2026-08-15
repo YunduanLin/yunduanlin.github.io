@@ -29,16 +29,20 @@ social: true # includes social icons at the bottom of the page
 
 <div class="home-research-themes">
   <section class="home-research-stream">
-    <div class="home-research-stream-label">01 / Research stream</div>
-    <h5>Social Network Analytics and Platform Operations</h5>
-    <p class="home-research-question">How do individual choices become collective outcomes?</p>
-    <p>This stream studies markets and platforms where behavior is shaped by social influence, network structure, and the rules of the environment. I am interested in the hidden mechanics of connected markets: why some ideas spread, why some interventions take hold, and how platforms can act without treating users as isolated decision makers.</p>
+    <div class="home-research-number">01</div>
+    <div class="home-research-body">
+      <h5>Social Network Analytics and Platform Operations</h5>
+      <p class="home-research-question"><span>Core question:</span> How do individual choices become collective outcomes?</p>
+      <p>This stream studies markets and platforms where behavior is shaped by social influence, network structure, and the rules of the environment. I am interested in the hidden mechanics of connected markets: why some ideas spread, why some interventions take hold, and how platforms can act without treating users as isolated decision makers.</p>
+    </div>
   </section>
   <section class="home-research-stream">
-    <div class="home-research-stream-label">02 / Research stream</div>
-    <h5>AI and Machine Learning for Operations</h5>
-    <p class="home-research-question">How can algorithms help us understand systems that are hard to observe directly?</p>
-    <p>This stream studies how AI and machine learning can help make sense of complex operational settings where data are imperfect, behavior is adaptive, and decisions unfold over time. I am interested in how algorithmic tools can reveal hidden structure, support learning, and improve the design of operational systems.</p>
+    <div class="home-research-number">02</div>
+    <div class="home-research-body">
+      <h5>AI and Machine Learning for Operations</h5>
+      <p class="home-research-question"><span>Core question:</span> How can algorithms help us understand systems that are hard to observe directly?</p>
+      <p>This stream studies how AI and machine learning can help make sense of complex operational settings where data are imperfect, behavior is adaptive, and decisions unfold over time. I am interested in how algorithmic tools can reveal hidden structure, support learning, and improve the design of operational systems.</p>
+    </div>
   </section>
 </div>
 
