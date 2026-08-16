@@ -145,7 +145,12 @@
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.status %}
       {% assign status_year = entry.status_year | default: 'true' %}
-      {% capture entry_status %}{{ entry.status }}{% if entry.target %} at <em>{{ entry.target }}</em>{% endif %}{% if status_year != 'false' and entry.year %}, {{ entry.year }}{% endif %}{% endcapture %}
+      {% assign status_last_word = entry.status | split: ' ' | last | downcase %}
+      {% assign status_target_connector = ' at ' %}
+      {% if status_last_word == 'to' %}
+        {% assign status_target_connector = ' ' %}
+      {% endif %}
+      {% capture entry_status %}{{ entry.status }}{% if entry.target %}{{ status_target_connector }}<em>{{ entry.target }}</em>{% endif %}{% if status_year != 'false' and entry.year %}, {{ entry.year }}{% endif %}{% endcapture %}
     {% elsif entry.type == 'article' %}
       {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
       {% if entry.volume %}

@@ -2972,6 +2972,10 @@ footer.sticky-bottom {
       color: var(--global-text-color-light);
     }
 
+    ol.bibliography li .periodical em {
+      color: var(--global-text-color);
+    }
+
     ol.bibliography li .links {
       display: flex;
       flex-wrap: wrap;
