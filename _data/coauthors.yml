@@ -16,15 +16,13 @@
 
 "He":
   - firstname: ["Jinghai"]
-    url: https://dblp.org/pid/314/9142.html
+    url: https://scholar.google.com/citations?user=B8c5ObIAAAAJ
 
 "Huh":
   - firstname: ["Yoonsuk"]
-    url: https://dblp.org/pid/275/7327.html
+    url: https://scholar.google.com/citations?user=LKW37KUAAAAJ&hl=en
 
 "Jiang":
-  - firstname: ["Denglin"]
-    url: https://dblp.org/pid/235/6990.html
   - firstname: ["Hansheng"]
     url: https://hanshengjiang.github.io/
 
@@ -32,7 +30,7 @@
   - firstname: ["Ruimin"]
     url: https://www.civil.tsinghua.edu.cn/ceen/info/1062/1205.htm
   - firstname: ["Xiangyu"]
-    url: https://scholar.google.com/scholar?q=%22Xiangyu+Li%22+%22LLM+Agents+in+Transportation-enabled+Service+Platforms%22
+    url: https://scholar.google.com/citations?user=D1a37pYAAAAJ&hl=en&oi=sra
 
 "Seo":
   - firstname: ["Youngho"]
@@ -44,11 +42,7 @@
 
 "Shi":
   - firstname: ["Linxuan"]
-    url: https://scholar.google.com/scholar?q=%22Linxuan+Shi%22+%22LLM+Agents+in+Transportation-enabled+Service+Platforms%22
-
-"Su":
-  - firstname: ["Qianqian"]
-    url: https://dblp.org/pid/176/6455.html
+    url: https://www.linkedin.com/in/linxuan-shi-773358141
 
 "Sun":
   - firstname: ["Shuo"]
@@ -59,8 +53,6 @@
     url: https://nuc.berkeley.edu/people/kai-vetter/
 
 "Wang":
-  - firstname: ["Jiaming"]
-    url: https://dblp.org/pid/125/6600.html
   - firstname: ["Mengxin"]
     url: https://www.mxwang.site/
   - firstname: ["Weiquan"]
@@ -68,17 +60,17 @@
 
 "Xu":
   - firstname: ["Jingxu"]
-    url: https://dblp.org/pid/225/2736.html
+    url: https://scholar.google.com/citations?user=LZAVXzwAAAAJ&hl=en
   - firstname: ["Te"]
-    url: https://scholar.google.com/scholar?q=%22Te+Xu%22+%22LLM+Agents+in+Transportation-enabled+Service+Platforms%22
+    url: https://scholar.google.com/citations?user=T0ioZfsAAAAJ&hl=en&oi=sra
 
 "Zhan":
   - firstname: ["Donglin"]
-    url: https://dblp.org/pid/235/6846.html
+    url: https://sites.google.com/view/ijsdz
 
 "Zhang":
   - firstname: ["Dongcheng"]
-    url: https://www.bschool.cuhk.edu.hk/staff/zhang-dongcheng/
+    url: https://sites.google.com/view/dongcheng-zhang
   - firstname: ["Haoting"]
     url: https://scholar.google.com/citations?user=lQ630oAAAAAJ&hl=en
   - firstname: ["Heng"]
@@ -88,7 +80,7 @@
 
 "Zheng":
   - firstname: ["Yifan"]
-    url: https://dblp.org/pid/275/7679.html
+    url: https://scholar.google.com/citations?user=ljFVIVsAAAAJ&hl=en
   - firstname: ["Zeyu"]
     url: https://zheng80.github.io/
 
