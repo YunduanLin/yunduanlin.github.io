@@ -37,6 +37,36 @@ function Assert-NoFiles {
   }
 }
 
+function Assert-PngCornersTransparent {
+  param(
+    [string]$Path,
+    [string]$Message
+  )
+
+  Add-Type -AssemblyName System.Drawing
+  $resolvedPath = (Resolve-Path $Path).Path
+  $bitmap = [System.Drawing.Bitmap]::new($resolvedPath)
+  try {
+    $width = $bitmap.Width
+    $height = $bitmap.Height
+    $corners = @(
+      @(0, 0),
+      @(($width - 1), 0),
+      @(0, ($height - 1)),
+      @(($width - 1), ($height - 1))
+    )
+
+    foreach ($corner in $corners) {
+      $alpha = $bitmap.GetPixel($corner[0], $corner[1]).A
+      if ($alpha -gt 8) {
+        throw $Message
+      }
+    }
+  } finally {
+    $bitmap.Dispose()
+  }
+}
+
 $requiredPages = @(
   "_pages/about.md",
   "_pages/research.md",
@@ -96,6 +126,7 @@ Assert-Contains "_layouts/default.liquid" "site_network_watermark\.liquid" "Defa
 if (!(Test-Path "assets/img/network-watermark-fluent-lin.png")) {
   throw "Missing selected fluent-LIN network watermark image."
 }
+Assert-PngCornersTransparent "assets/img/network-watermark-fluent-lin.png" "Watermark PNG corners should be transparent so dark mode does not reveal a rectangular image canvas."
 Assert-Contains "_includes/site_network_watermark.liquid" "site-network-watermark" "Watermark include should define the graph artwork wrapper."
 Assert-Contains "_includes/site_network_watermark.liquid" "<img" "Watermark should use the selected fluent-LIN network artwork."
 Assert-Contains "_includes/site_network_watermark.liquid" "assets/img/network-watermark-fluent-lin\.png" "Watermark should reference the selected fluent-LIN network artwork asset."
@@ -109,8 +140,9 @@ Assert-Contains "_sass/_layout.scss" "(?s)\.site-network-watermark\s*\{[^}]*tran
 Assert-Contains "_sass/_layout.scss" "(?s)\.site-network-watermark\s*\{[^}]*width:\s*min\(112vw,\s*82rem\)" "Watermark should span the middle of the page."
 Assert-Contains "_sass/_layout.scss" "(?s)\.site-network-watermark\s*\{[^}]*opacity:\s*0\.4" "Watermark should be more visible than the previous faded treatment."
 Assert-NotContains "_sass/_layout.scss" "right:\s*max\(" "Watermark should not use the older right-side placement."
-Assert-Contains "_sass/_layout.scss" "(?s)\.site-network-watermark.*img\s*\{[^}]*mix-blend-mode:\s*multiply" "Watermark image should blend softly into the page background."
+Assert-Contains "_sass/_layout.scss" "(?s)\.site-network-watermark.*img\s*\{[^}]*mix-blend-mode:\s*normal" "Watermark image should use normal blending now that the bitmap canvas is transparent."
 Assert-Contains "_sass/_layout.scss" "(?s)\.site-network-watermark.*img\s*\{[^}]*filter:" "Watermark image should have a subtle visual treatment."
+Assert-NotContains "_sass/_layout.scss" "(?s)html\[data-theme=`"dark`"\]\s+\.site-network-watermark.*mix-blend-mode:\s*screen" "Dark-mode watermark should not use screen blending, which reveals the old pale rectangular image canvas."
 Assert-Contains "_sass/_layout.scss" "@media \(max-width:\s*767px\)" "Watermark should have a mobile treatment."
 Assert-Contains "_sass/_base.scss" "\.home-profile-hero" "Styles should define the homepage profile hero."
 Assert-Contains "_sass/_base.scss" "\.home-contact-card" "Styles should define a dedicated homepage contact card."
