@@ -385,7 +385,7 @@ Assert-NotContains "_pages/research.md" "keyword chips" "Research page note shou
 Assert-Contains "_pages/research.md" "####\s*Grants" "Research page should include grants."
 Assert-Contains "_pages/research.md" "Harnessing the Power of Social Network Analytics for Enhanced Business Decision-Making" "Research page should include the CUHK hiring competitiveness grant."
 Assert-Contains "_pages/research.md" "HKD 1,307,270" "Research page should include the CUHK grant amount."
-Assert-Contains "_pages/research.md" "2024-2026" "Research page should show the hiring competitiveness grant duration as 2024-2026."
+Assert-Contains "_pages/research.md" "2024-2027" "Research page should show the hiring competitiveness grant duration as 2024-2027."
 Assert-Contains "_pages/research.md" "Optimal Design of the Referral Program for Two-Sided Platforms" "Research page should include the Early Career Scheme grant."
 Assert-Contains "_pages/research.md" "HKD 454,062" "Research page should include the Early Career Scheme grant amount."
 Assert-Contains "_pages/research.md" "grant-role" "Research grants should mark PI as a visible role rather than faded metadata."
