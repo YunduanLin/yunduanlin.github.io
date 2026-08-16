@@ -616,14 +616,11 @@ $requiredCoauthorFirstNames = @(
   "Zhaomiao",
   "Qixiu",
   "Jinghai",
-  "Denglin",
   "Wanxue",
   "Dongcheng",
   "Weiquan",
   "Yifan",
   "Yoonsuk",
-  "Qianqian",
-  "Jiaming",
   "Kai",
   "Youngho",
   "Ruimin",
@@ -637,7 +634,10 @@ foreach ($firstname in $requiredCoauthorFirstNames) {
 $intentionallyUnlinkedCoauthorFirstNames = @(
   "Chen",
   "Lingfei",
-  "Chenyi"
+  "Chenyi",
+  "Denglin",
+  "Qianqian",
+  "Jiaming"
 )
 
 foreach ($firstname in $intentionallyUnlinkedCoauthorFirstNames) {
@@ -646,6 +646,16 @@ foreach ($firstname in $intentionallyUnlinkedCoauthorFirstNames) {
 
 Assert-Contains "_data/coauthors.yml" "url:\s*https://shuo-ss\.github\.io/" "Shuo Sun should link to the verified personal website."
 Assert-Contains "_data/coauthors.yml" "url:\s*https://scholar\.google\.com/citations\?user=lQ630oAAAAAJ&hl=en" "Haoting Zhang should link to the verified Google Scholar profile."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://scholar\.google\.com/citations\?user=LZAVXzwAAAAJ&hl=en" "Jingxu Xu should link to the provided Google Scholar profile."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://scholar\.google\.com/citations\?user=T0ioZfsAAAAJ&hl=en&oi=sra" "Te Xu should link to the provided Google Scholar profile."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://www\.linkedin\.com/in/linxuan-shi-773358141" "Linxuan Shi should link to the provided LinkedIn profile."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://sites\.google\.com/view/ijsdz" "Donglin Zhan should link to the provided personal site."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://scholar\.google\.com/citations\?user=D1a37pYAAAAJ&hl=en&oi=sra" "Xiangyu Li should link to the provided Google Scholar profile."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://scholar\.google\.com/citations\?user=B8c5ObIAAAAJ" "Jinghai He should link to the provided Google Scholar profile."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://sites\.google\.com/view/dongcheng-zhang" "Dongcheng Zhang should link to the provided personal site."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://scholar\.google\.com/citations\?user=ljFVIVsAAAAJ&hl=en" "Yifan Zheng should link to the provided Google Scholar profile."
+Assert-Contains "_data/coauthors.yml" "url:\s*https://scholar\.google\.com/citations\?user=LKW37KUAAAAJ&hl=en" "Yoonsuk Huh should link to the provided Google Scholar profile."
+Assert-NotContains "_data/coauthors.yml" "dblp\.org/pid/235/6990|dblp\.org/pid/176/6455|dblp\.org/pid/125/6600" "Removed Denglin Jiang, Qianqian Su, and Jiaming Wang links should not remain as DBLP placeholders."
 
 Assert-Contains "_bibliography/papers.bib" "A Social-Spatial Network Choice Model with Applications to Pop-Up Store Operations" "Bibliography should include the pop-up store operations manuscript."
 Assert-Contains "_bibliography/papers.bib" "Beyond General Expertise: A Machine Learning Framework for Assessing Task-Level Decision Accuracy" "Bibliography should include the task-level decision accuracy manuscript."
