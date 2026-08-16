@@ -200,9 +200,6 @@
 
     <!-- Links/Buttons -->
     <div class="links">
-      {% if entry.abstract %}
-        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-      {% endif %}
       {% if entry.arxiv %}
         <a href="{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">Link</a>
       {% endif %}
@@ -321,15 +318,20 @@
       <details class="publication-profile">
         <summary class="publication-profile-summary">
           <span class="publication-profile-summary-main">
-            <span class="publication-profile-title">Project profile</span>
-            <span class="publication-profile-caption">Concepts, methods, domains, and data context</span>
+            <span class="publication-profile-title">Research details</span>
           </span>
           <span class="publication-profile-toggle" aria-hidden="true">
             <span class="publication-profile-toggle-closed">View</span>
             <span class="publication-profile-toggle-open">Hide</span>
           </span>
         </summary>
-        <div class="publication-profile-body" aria-label="Project profile">
+        <div class="publication-profile-body" aria-label="Research details">
+          {% if entry.abstract %}
+            <div class="publication-profile-abstract">
+              <div class="publication-profile-abstract-title">Abstract</div>
+              <p class="publication-profile-abstract-text">{{ entry.abstract }}</p>
+            </div>
+          {% endif %}
           {% if publication_project.features.concepts and publication_project.features.concepts != empty %}
             <div class="publication-profile-row publication-profile-row-concepts">
               <span class="publication-profile-label">Concepts</span>
@@ -416,14 +418,6 @@
           {%- endif -%}
         </div>
       </details>
-    {% endif %}
-
-
-    {% if entry.abstract %}
-      <!-- Hidden abstract block -->
-      <div class="abstract hidden">
-        <p style="font-family:verdana; color:grey">{{ entry.abstract }}</p>
-      </div>
     {% endif %}
 
     {% if entry.bibtex_show %}
