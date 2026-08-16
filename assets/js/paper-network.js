@@ -66,6 +66,9 @@
     var leaderboardMetricControls = Array.prototype.slice.call(
       root.querySelectorAll("[data-network-leaderboard-metric]")
     );
+    var metricDefinitionRows = Array.prototype.slice.call(
+      root.querySelectorAll("[data-network-definition-metric]")
+    );
     var leaderboardMetric = "degree";
 
     function createSvgElement(tagName, attributes) {
@@ -554,6 +557,10 @@
         var isSelected = control.getAttribute("data-network-leaderboard-metric") === metric;
         control.classList.toggle("is-active", isSelected);
         control.setAttribute("aria-pressed", isSelected ? "true" : "false");
+      });
+
+      metricDefinitionRows.forEach(function (row) {
+        row.classList.toggle("is-active", row.getAttribute("data-network-definition-metric") === metric);
       });
 
       renderNetworkLeaderboard();

@@ -26,26 +26,35 @@
           <div class="paper-network-leaderboard-list" aria-label="Network role leaderboard"></div>
         </div>
         <div class="paper-network-map-definitions" aria-label="Centrality definitions">
-          <div class="paper-network-map-definition">
+          <div class="paper-network-map-definition is-active" data-network-definition-metric="degree">
             <span class="paper-network-map-definition-heading">
               <strong class="paper-network-map-definition-term">Degree</strong>
-              <span class="paper-network-map-definition-role">direct links</span>
+              <span class="paper-network-map-definition-role">direct reach</span>
             </span>
-            <span class="paper-network-map-definition-description">Share of projects directly connected through selected similarity layers.</span>
+            <span class="paper-network-map-definition-description">
+              <span>Share of other projects with at least one shared feature in the selected layer.</span>
+              <span class="paper-network-map-definition-interpretation">Higher means the project touches more neighboring projects.</span>
+            </span>
           </div>
-          <div class="paper-network-map-definition">
+          <div class="paper-network-map-definition" data-network-definition-metric="connectivity">
             <span class="paper-network-map-definition-heading">
               <strong class="paper-network-map-definition-term">Connectivity</strong>
               <span class="paper-network-map-definition-role">average similarity</span>
             </span>
-            <span class="paper-network-map-definition-description">Average weighted similarity to other projects; higher means broader overlap.</span>
+            <span class="paper-network-map-definition-description">
+              <span>Average feature-overlap score with all other projects in the selected layer.</span>
+              <span class="paper-network-map-definition-interpretation">Higher means the project is more similar to the field as a whole.</span>
+            </span>
           </div>
-          <div class="paper-network-map-definition">
+          <div class="paper-network-map-definition" data-network-definition-metric="bridge">
             <span class="paper-network-map-definition-heading">
               <strong class="paper-network-map-definition-term">Bridge</strong>
-              <span class="paper-network-map-definition-role">shortest-path role</span>
+              <span class="paper-network-map-definition-role">between-cluster role</span>
             </span>
-            <span class="paper-network-map-definition-description">Betweenness centrality on weighted shortest paths; higher means stronger bridge.</span>
+            <span class="paper-network-map-definition-description">
+              <span>Normalized betweenness centrality using similarity as edge strength.</span>
+              <span class="paper-network-map-definition-interpretation">Higher means the project more often connects otherwise distant projects.</span>
+            </span>
           </div>
         </div>
       </div>

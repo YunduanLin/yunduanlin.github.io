@@ -2234,11 +2234,28 @@ footer.sticky-bottom {
     grid-template-columns: minmax(8.8rem, auto) minmax(0, 1fr);
     gap: 0.62rem;
     align-items: center;
+    padding: 0.34rem 0.48rem;
+    border-left: 2px solid transparent;
+    border-radius: 6px;
+    opacity: 0.54;
+    transition: background-color 160ms ease, border-color 160ms ease, opacity 160ms ease;
+  }
+
+  .paper-network-map-definition:hover,
+  .paper-network-map-definition.is-active {
+    opacity: 1;
+  }
+
+  .paper-network-map-definition.is-active {
+    background-color: rgba(196, 154, 44, 0.1);
+    border-left-color: #750f6d;
   }
 
   .paper-network-map-definition-heading {
-    display: grid;
-    gap: 0.04rem;
+    display: inline-flex;
+    gap: 0.34rem;
+    align-items: baseline;
+    white-space: nowrap;
   }
 
   .paper-network-map-definition-term {
@@ -2256,8 +2273,16 @@ footer.sticky-bottom {
   }
 
   .paper-network-map-definition-description {
+    display: grid;
+    gap: 0.08rem;
     min-width: 0;
     max-width: 31rem;
+  }
+
+  .paper-network-map-definition-interpretation {
+    color: rgba(33, 37, 41, 0.76);
+    font-size: 0.74rem;
+    line-height: 1.35;
   }
 
   .paper-network-legend {
@@ -3193,6 +3218,15 @@ html[data-theme="dark"] .research-page {
 
   .paper-network-map-definition-role {
     color: rgba(240, 216, 137, 0.78);
+  }
+
+  .paper-network-map-definition.is-active {
+    background-color: rgba(225, 200, 120, 0.11);
+    border-left-color: #f0d889;
+  }
+
+  .paper-network-map-definition-interpretation {
+    color: rgba(255, 255, 255, 0.62);
   }
 
   .paper-network-leaderboard-modes {
