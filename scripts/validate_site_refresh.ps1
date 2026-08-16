@@ -586,6 +586,8 @@ Assert-Contains "_sass/_base.scss" "\.publication-highlights\[open\]\s+\.publica
 Assert-Contains "_sass/_base.scss" "\.publication-highlights\[open\]\s+\.publication-highlight-toggle-open" "Expanded publication awards should reveal the Hide label."
 Assert-Contains "_sass/_base.scss" "\.publication-highlight-list" "Publication awards drawer should style the revealed award list separately from the summary."
 Assert-NotContains "_layouts/bib.liquid" "color:#0076df" "Publication awards should not use old inline blue styling."
+Assert-Contains "_layouts/bib.liquid" ">Link</a>" "External publication buttons should use the unified Link label."
+Assert-NotContains "_layouts/bib.liquid" ">arXiv</a>|>SSRN</a>|>DOI</a>|>HTML</a>" "External publication buttons should not show mixed DOI/HTML/SSRN/arXiv labels."
 Assert-Contains "_layouts/bib.liquid" "entry\.label" "Bibliography layout should render J/C/W labels as the publication badge."
 Assert-Contains "_sass/_base.scss" "(?s)ol\.bibliography li \.abbr abbr\s*\{[^}]*background-color:\s*#750f6d" "Publication J/C/W badges should use a visible CUHK purple fill."
 Assert-Contains "_sass/_base.scss" "(?s)ol\.bibliography li \.abbr abbr\s*\{[^}]*color:\s*#fff" "Publication J/C/W badges should use white text for contrast."
@@ -655,10 +657,16 @@ Assert-NotContains "_bibliography/papers.bib" "abbr=\{" "Publication badges shou
 Assert-Contains "_bibliography/papers.bib" "(?s)@article\{lin2020traffic,[^@]*label=\{J1\}" "Oldest published journal paper should be labeled as J1."
 Assert-Contains "_bibliography/papers.bib" "(?s)@article\{lin2024content,[^@]*label=\{J2\}" "Published MSOM paper should be labeled as J2."
 Assert-Contains "_bibliography/papers.bib" "(?s)@article\{lin2025nonprogressive,[^@]*label=\{J3\}" "Published Management Science paper should be labeled as J3."
+Assert-Contains "_bibliography/papers.bib" "(?s)@article\{lin2020traffic,[^@]*pdf=\{j1\.pdf\}" "J1 should link to the uploaded local PDF."
+Assert-Contains "_bibliography/papers.bib" "(?s)@article\{lin2024content,[^@]*pdf=\{j2\.pdf\}" "J2 should link to the uploaded local PDF."
+Assert-Contains "_bibliography/papers.bib" "(?s)@article\{lin2025nonprogressive,[^@]*pdf=\{j3\.pdf\}" "J3 should link to the uploaded local PDF."
 Assert-NotContains "_bibliography/papers.bib" "label=\{J[4-9]\}" "Unpublished manuscripts should not use journal-paper labels."
 Assert-Contains "_bibliography/papers.bib" "(?s)@inproceedings\{zheng2020collimatorless,[^@]*label=\{C1\}" "Oldest conference paper should be labeled as C1."
 Assert-Contains "_bibliography/papers.bib" "(?s)@inproceedings\{zhang2024activity,[^@]*label=\{C2\}" "CHIL conference paper should be labeled as C2."
 Assert-Contains "_bibliography/papers.bib" "(?s)@inproceedings\{huang2026bilevel,[^@]*label=\{C3\}" "WSC conference paper should be labeled as C3."
+Assert-Contains "_bibliography/papers.bib" "(?s)@inproceedings\{zheng2020collimatorless,[^@]*pdf=\{c1\.pdf\}" "C1 should link to the uploaded local PDF."
+Assert-Contains "_bibliography/papers.bib" "(?s)@inproceedings\{zhang2024activity,[^@]*pdf=\{c2\.pdf\}" "C2 should link to the uploaded local PDF."
+Assert-Contains "_bibliography/papers.bib" "(?s)@inproceedings\{huang2026bilevel,[^@]*pdf=\{c3\.pdf\}" "C3 should link to the uploaded local PDF."
 Assert-Contains "_bibliography/papers.bib" "(?s)@article\{zhang2026digitaltwin,[^@]*label=\{W1\}" "LLM digital twin manuscript should start the working-paper labels."
 Assert-Contains "_bibliography/papers.bib" "(?s)@article\{zhong2026technology,[^@]*label=\{W2\}[^@]*status=\{Major Revision\}[^@]*target=\{Production and Operations Management\}" "Technology adoption should be W2 and major revision at Production and Operations Management."
 Assert-NotContains "_bibliography/papers.bib" "(?s)@article\{zhong2026technology,[^@]*abstract_id=7287358" "Technology adoption should not carry the social-spatial SSRN link."
@@ -680,6 +688,13 @@ Assert-Contains "_bibliography/papers.bib" "Collimatorless Scintigraphy for Imag
 Assert-Contains "_bibliography/papers.bib" "Online Stochastic Allocation with Increasing Returns" "Bibliography should include the work-in-progress allocation project."
 Assert-Contains "_bibliography/papers.bib" "category=\{conference\}" "Conference bibliography entries should be tagged with the conference category."
 Assert-Contains "_bibliography/papers.bib" "category=\{progress\}" "Work-in-progress bibliography entries should be tagged with the progress category."
+foreach ($pdfName in @("j1.pdf", "j2.pdf", "j3.pdf", "c1.pdf", "c2.pdf", "c3.pdf")) {
+  if (!(Test-Path (Join-Path "assets/pdf" $pdfName))) {
+    throw "Missing uploaded publication PDF: assets/pdf/$pdfName"
+  }
+}
+Assert-Contains "assets/js/paper-network.js" "setWrappedTitle\(title,\s*node\.title" "Paper network graph labels should use full paper titles, not short topic labels."
+Assert-NotContains "assets/js/paper-network.js" "title\.textContent\s*=\s*node\.short_title" "Paper network graph labels should not use incomplete short titles."
 
 $removedPages = @(
   "_pages/publications.md",

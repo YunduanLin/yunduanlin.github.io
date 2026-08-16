@@ -77,6 +77,44 @@
       return element;
     }
 
+    function titleLines(text, maxChars) {
+      var words = String(text || "")
+        .replace(/\s+/g, " ")
+        .trim()
+        .split(" ")
+        .filter(Boolean);
+      var lines = [];
+      var current = "";
+
+      words.forEach(function (word) {
+        var candidate = current ? current + " " + word : word;
+        if (candidate.length > maxChars && current) {
+          lines.push(current);
+          current = word;
+        } else {
+          current = candidate;
+        }
+      });
+
+      if (current) lines.push(current);
+      return lines.length ? lines : [String(text || "")];
+    }
+
+    function setWrappedTitle(element, text) {
+      var lines = titleLines(text, 34);
+      var x = element.getAttribute("x") || "0";
+      var lineHeight = 1.12;
+      var firstDy = lines.length > 1 ? -((lines.length - 1) * lineHeight) / 2 : 0;
+      element.textContent = "";
+
+      lines.forEach(function (line, index) {
+        var tspan = createSvgElement("tspan", { x: x });
+        tspan.setAttribute("dy", (index === 0 ? firstDy : lineHeight) + "em");
+        tspan.textContent = line;
+        element.appendChild(tspan);
+      });
+    }
+
     function clamp(value, min, max) {
       return Math.max(min, Math.min(max, value));
     }
@@ -707,7 +745,7 @@
         var accessibleTitle = createSvgElement("title", {});
 
         code.textContent = node.id;
-        title.textContent = node.short_title;
+        setWrappedTitle(title, node.title);
         accessibleTitle.textContent = node.title;
 
         group.appendChild(accessibleTitle);

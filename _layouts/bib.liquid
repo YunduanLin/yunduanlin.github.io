@@ -198,19 +198,19 @@
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       {% endif %}
       {% if entry.arxiv %}
-        <a href="{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+        <a href="{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">Link</a>
       {% endif %}
       {%- if entry.ssrn %}
-        <a href="{{ entry.ssrn }}" class="btn btn-sm z-depth-0" role="button">SSRN</a>
+        <a href="{{ entry.ssrn }}" class="btn btn-sm z-depth-0" role="button">Link</a>
       {%- endif %}
       {% if entry.doilink %}
-        <a href="{{ entry.doilink }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+        <a href="{{ entry.doilink }}" class="btn btn-sm z-depth-0" role="button">Link</a>
       {% endif %}
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       {% endif %}
       {% if entry.html %}
-        <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+        <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">Link</a>
       {% endif %}
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
