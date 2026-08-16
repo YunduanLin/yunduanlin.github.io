@@ -2078,7 +2078,7 @@ footer.sticky-bottom {
 
   .paper-network-map-insights {
     display: grid;
-    grid-template-columns: minmax(17rem, 0.68fr) minmax(44rem, 1.6fr);
+    grid-template-columns: minmax(31rem, 0.95fr) minmax(38rem, 1.15fr);
     gap: 0.85rem;
     align-items: center;
     padding: 0.72rem 0.85rem;
@@ -2146,8 +2146,8 @@ footer.sticky-bottom {
 
   .paper-network-leaderboard-item {
     display: grid;
-    grid-template-columns: minmax(4.4rem, 0.22fr) minmax(0, 1fr);
-    gap: 0.55rem;
+    grid-template-columns: minmax(4.8rem, 0.18fr) minmax(0, 1fr);
+    gap: 0.44rem;
     align-items: center;
     min-width: 0;
     font-size: 0.78rem;
@@ -2159,9 +2159,10 @@ footer.sticky-bottom {
   }
 
   .paper-network-leaderboard-entries {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
     gap: 0.28rem;
+    align-items: center;
     min-width: 0;
   }
 
@@ -2175,6 +2176,7 @@ footer.sticky-bottom {
     border: 1px solid rgba(117, 15, 109, 0.12);
     border-radius: 999px;
     line-height: 1.2;
+    white-space: nowrap;
   }
 
   .paper-network-leaderboard-entry.is-active {
@@ -2231,8 +2233,8 @@ footer.sticky-bottom {
 
   .paper-network-map-definition {
     display: grid;
-    grid-template-columns: minmax(15rem, 0.34fr) minmax(0, 1fr);
-    gap: 0.85rem;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 0.72rem;
     align-items: start;
     padding: 0.34rem 0.58rem;
     border: 1px solid transparent;
@@ -3535,7 +3537,7 @@ html[data-theme="dark"] .research-page {
     }
 
     .paper-network-map-definition {
-      grid-template-columns: minmax(8.8rem, auto) minmax(0, 1fr);
+      grid-template-columns: max-content minmax(0, 1fr);
     }
 
     .paper-network-map-definition-description {
@@ -3571,6 +3573,11 @@ html[data-theme="dark"] .research-page {
 
     .paper-network-leaderboard-item {
       grid-template-columns: minmax(4.4rem, 0.26fr) minmax(0, 1fr);
+    }
+
+    .paper-network-leaderboard-entries {
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .paper-network-map-definition {
