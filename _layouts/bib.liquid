@@ -4,6 +4,12 @@
 {% if entry.prelim or entry.award1 or entry.award2 or entry.award3 or entry.award4 or entry.award5 or entry.conference %}
   {% assign has_publication_highlights = true %}
 {% endif %}
+{% assign publication_project = false %}
+{% for network_paper in site.data.paper_network.nodes %}
+  {% if network_paper.bibkey == entry.key %}
+    {% assign publication_project = network_paper %}
+  {% endif %}
+{% endfor %}
 <div class="row publication-card-row{% if has_publication_highlights %} publication-card-has-highlights{% endif %}">
   {% if site.enable_publication_thumbnails %}
     <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
@@ -309,6 +315,47 @@
           {% endif %}
         </div>
       {% endif %}
+    {% endif %}
+
+    {% if publication_project %}
+      <details class="publication-profile">
+        <summary class="publication-profile-summary">
+          <span class="publication-profile-summary-main">
+            <span class="publication-profile-title">Project profile</span>
+            <span class="publication-profile-caption">Concepts, methods, domains, and data context</span>
+          </span>
+          <span class="publication-profile-toggle" aria-hidden="true">
+            <span class="publication-profile-toggle-closed">View</span>
+            <span class="publication-profile-toggle-open">Hide</span>
+          </span>
+        </summary>
+        <div class="publication-profile-body" aria-label="Project profile">
+          {% if publication_project.features.concepts and publication_project.features.concepts != empty %}
+            <div class="publication-profile-row publication-profile-row-concepts">
+              <span class="publication-profile-label">Concepts</span>
+              <span class="publication-profile-values">{{ publication_project.features.concepts | join: ", " }}</span>
+            </div>
+          {% endif %}
+          {% if publication_project.features.methods and publication_project.features.methods != empty %}
+            <div class="publication-profile-row publication-profile-row-methods">
+              <span class="publication-profile-label">Methods</span>
+              <span class="publication-profile-values">{{ publication_project.features.methods | join: ", " }}</span>
+            </div>
+          {% endif %}
+          {% if publication_project.features.domains and publication_project.features.domains != empty %}
+            <div class="publication-profile-row publication-profile-row-domains">
+              <span class="publication-profile-label">Domains</span>
+              <span class="publication-profile-values">{{ publication_project.features.domains | join: ", " }}</span>
+            </div>
+          {% endif %}
+          {% if publication_project.features.data and publication_project.features.data != empty %}
+            <div class="publication-profile-row publication-profile-row-data">
+              <span class="publication-profile-label">Data</span>
+              <span class="publication-profile-values">{{ publication_project.features.data | join: ", " }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </details>
     {% endif %}
 
     {% if has_publication_highlights %}

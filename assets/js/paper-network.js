@@ -60,7 +60,6 @@
       authors: root.querySelector(".paper-network-detail-authors"),
       centrality: root.querySelector(".paper-network-centrality-matrix"),
       features: root.querySelector(".paper-network-detail-features"),
-      anchor: root.querySelector(".paper-network-detail-anchor"),
     };
     var layerToggles = Array.prototype.slice.call(root.querySelectorAll("input[data-network-layer]"));
     var leaderboardList = root.querySelector(".paper-network-leaderboard-list");
@@ -652,11 +651,6 @@
       renderCentralityMatrix(node);
       renderFeatures(node);
       renderNetworkLeaderboard();
-
-      if (detail.anchor) {
-        detail.anchor.href = "#" + node.bibkey;
-        detail.anchor.textContent = "View publication card";
-      }
 
       highlight(id);
     }
