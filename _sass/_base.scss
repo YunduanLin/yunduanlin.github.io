@@ -2967,11 +2967,11 @@ footer.sticky-bottom {
 
     .publication-highlights-summary {
       display: flex;
-      gap: 0.65rem;
+      gap: 0.72rem;
       align-items: center;
       justify-content: space-between;
-      min-height: 2.1rem;
-      padding: 0.12rem 0;
+      min-height: 1.65rem;
+      padding: 0.06rem 0;
       color: #4b1359;
       cursor: pointer;
       list-style: none;
@@ -2984,10 +2984,10 @@ footer.sticky-bottom {
     .publication-highlight-summary-label {
       display: inline-flex;
       flex-wrap: wrap;
-      gap: 0.38rem;
+      gap: 0.34rem;
       align-items: center;
       color: #4b1359;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 760;
       line-height: 1.25;
     }
@@ -2996,14 +2996,14 @@ footer.sticky-bottom {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 1.38rem;
-      height: 1.38rem;
-      padding: 0 0.36rem;
+      min-width: 1.12rem;
+      height: 1.12rem;
+      padding: 0 0.28rem;
       color: #6f4a00;
-      background-color: rgba(196, 154, 44, 0.16);
-      border: 1px solid rgba(196, 154, 44, 0.42);
+      background-color: rgba(196, 154, 44, 0.1);
+      border: 1px solid rgba(196, 154, 44, 0.28);
       border-radius: 999px;
-      font-size: 0.72rem;
+      font-size: 0.66rem;
       font-weight: 850;
       line-height: 1;
     }
@@ -3012,13 +3012,13 @@ footer.sticky-bottom {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 3.1rem;
-      padding: 0.16rem 0.58rem;
-      color: #750f6d;
-      background-color: rgba(117, 15, 109, 0.06);
-      border: 1px solid rgba(117, 15, 109, 0.18);
-      border-radius: 999px;
-      font-size: 0.72rem;
+      min-width: auto;
+      padding: 0;
+      color: rgba(75, 19, 89, 0.74);
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      font-size: 0.7rem;
       font-weight: 780;
       line-height: 1.2;
     }
@@ -3037,19 +3037,18 @@ footer.sticky-bottom {
 
     .publication-highlight-list {
       display: grid;
-      gap: 0.28rem;
-      margin-top: 0.44rem;
-      padding: 0.72rem 0.82rem;
-      background: linear-gradient(120deg, rgba(196, 154, 44, 0.095), rgba(117, 15, 109, 0.035));
-      border: 1px solid rgba(196, 154, 44, 0.28);
-      border-radius: 7px;
+      gap: 0.24rem;
+      margin-top: 0.32rem;
+      padding: 0.5rem 0 0.1rem;
+      background: transparent;
+      border-top: 1px solid rgba(196, 154, 44, 0.18);
     }
 
     .publication-highlight {
       position: relative;
-      padding-left: 0.72rem;
+      padding-left: 0.68rem;
       color: var(--global-text-color-light);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       line-height: 1.4;
 
       &::before {
@@ -3057,9 +3056,9 @@ footer.sticky-bottom {
         position: absolute;
         top: 0.55em;
         left: 0;
-        width: 0.28rem;
-        height: 0.28rem;
-        background-color: #c49a2c;
+        width: 0.22rem;
+        height: 0.22rem;
+        background-color: rgba(196, 154, 44, 0.76);
         border-radius: 50%;
       }
     }
