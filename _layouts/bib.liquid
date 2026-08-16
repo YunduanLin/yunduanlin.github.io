@@ -312,29 +312,63 @@
     {% endif %}
 
     {% if has_publication_highlights %}
-      <div class="publication-highlights" aria-label="Publication highlights">
-        {% if entry.prelim -%}
-          <div class="publication-highlight">{{ entry.prelim }}</div>
-        {%- endif -%}
-        {% if entry.award1 -%}
-          <div class="publication-highlight">{{ entry.award1 }}</div>
-        {%- endif -%}
-        {% if entry.award2 -%}
-          <div class="publication-highlight">{{ entry.award2 }}</div>
-        {%- endif -%}
-        {% if entry.award3 -%}
-          <div class="publication-highlight">{{ entry.award3 }}</div>
-        {%- endif -%}
-        {% if entry.award4 -%}
-          <div class="publication-highlight">{{ entry.award4 }}</div>
-        {%- endif -%}
-        {% if entry.award5 -%}
-          <div class="publication-highlight">{{ entry.award5 }}</div>
-        {%- endif -%}
-        {% if entry.conference -%}
-          <div class="publication-highlight">{{ entry.conference }}</div>
-        {%- endif -%}
-      </div>
+      {% assign publication_highlight_count = 0 %}
+      {% if entry.prelim -%}
+        {% assign publication_highlight_count = publication_highlight_count | plus: 1 %}
+      {%- endif -%}
+      {% if entry.award1 -%}
+        {% assign publication_highlight_count = publication_highlight_count | plus: 1 %}
+      {%- endif -%}
+      {% if entry.award2 -%}
+        {% assign publication_highlight_count = publication_highlight_count | plus: 1 %}
+      {%- endif -%}
+      {% if entry.award3 -%}
+        {% assign publication_highlight_count = publication_highlight_count | plus: 1 %}
+      {%- endif -%}
+      {% if entry.award4 -%}
+        {% assign publication_highlight_count = publication_highlight_count | plus: 1 %}
+      {%- endif -%}
+      {% if entry.award5 -%}
+        {% assign publication_highlight_count = publication_highlight_count | plus: 1 %}
+      {%- endif -%}
+      {% if entry.conference -%}
+        {% assign publication_highlight_count = publication_highlight_count | plus: 1 %}
+      {%- endif -%}
+      <details class="publication-highlights publication-highlights-drawer">
+        <summary class="publication-highlights-summary">
+          <span class="publication-highlight-summary-label">
+            Awards &amp; recognitions
+            <span class="publication-highlight-count">{{ publication_highlight_count }}</span>
+          </span>
+          <span class="publication-highlight-toggle" aria-hidden="true">
+            <span class="publication-highlight-toggle-closed">View</span>
+            <span class="publication-highlight-toggle-open">Hide</span>
+          </span>
+        </summary>
+        <div class="publication-highlight-list" aria-label="Publication highlights">
+          {% if entry.prelim -%}
+            <div class="publication-highlight">{{ entry.prelim }}</div>
+          {%- endif -%}
+          {% if entry.award1 -%}
+            <div class="publication-highlight">{{ entry.award1 }}</div>
+          {%- endif -%}
+          {% if entry.award2 -%}
+            <div class="publication-highlight">{{ entry.award2 }}</div>
+          {%- endif -%}
+          {% if entry.award3 -%}
+            <div class="publication-highlight">{{ entry.award3 }}</div>
+          {%- endif -%}
+          {% if entry.award4 -%}
+            <div class="publication-highlight">{{ entry.award4 }}</div>
+          {%- endif -%}
+          {% if entry.award5 -%}
+            <div class="publication-highlight">{{ entry.award5 }}</div>
+          {%- endif -%}
+          {% if entry.conference -%}
+            <div class="publication-highlight">{{ entry.conference }}</div>
+          {%- endif -%}
+        </div>
+      </details>
     {% endif %}
 
 

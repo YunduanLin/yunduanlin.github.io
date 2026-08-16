@@ -2948,11 +2948,89 @@ footer.sticky-bottom {
     }
 
     .publication-highlights {
-      display: grid;
-      gap: 0.28rem;
       margin-top: 0.65rem;
       padding-top: 0.55rem;
       border-top: 1px solid rgba(196, 154, 44, 0.28);
+    }
+
+    .publication-highlights-summary {
+      display: flex;
+      gap: 0.65rem;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 2.1rem;
+      padding: 0.12rem 0;
+      color: #4b1359;
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    .publication-highlight-summary-label {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.38rem;
+      align-items: center;
+      color: #4b1359;
+      font-size: 0.82rem;
+      font-weight: 760;
+      line-height: 1.25;
+    }
+
+    .publication-highlight-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.38rem;
+      height: 1.38rem;
+      padding: 0 0.36rem;
+      color: #6f4a00;
+      background-color: rgba(196, 154, 44, 0.16);
+      border: 1px solid rgba(196, 154, 44, 0.42);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .publication-highlight-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 3.1rem;
+      padding: 0.16rem 0.58rem;
+      color: #750f6d;
+      background-color: rgba(117, 15, 109, 0.06);
+      border: 1px solid rgba(117, 15, 109, 0.18);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 780;
+      line-height: 1.2;
+    }
+
+    .publication-highlight-toggle-open {
+      display: none;
+    }
+
+    .publication-highlights[open] .publication-highlight-toggle-closed {
+      display: none;
+    }
+
+    .publication-highlights[open] .publication-highlight-toggle-open {
+      display: inline;
+    }
+
+    .publication-highlight-list {
+      display: grid;
+      gap: 0.28rem;
+      margin-top: 0.44rem;
+      padding: 0.72rem 0.82rem;
+      background: linear-gradient(120deg, rgba(196, 154, 44, 0.095), rgba(117, 15, 109, 0.035));
+      border: 1px solid rgba(196, 154, 44, 0.28);
+      border-radius: 7px;
     }
 
     .publication-highlight {
