@@ -309,6 +309,10 @@ ul.task-list input[type="checkbox"] {
     font-weight: 600;
   }
 
+  .home-contact-line-direct {
+    color: var(--global-text-color);
+  }
+
   .home-contact-line-invite {
     margin-top: 0.82rem;
     padding-top: 0.75rem;
@@ -2813,6 +2817,11 @@ footer.sticky-bottom {
   .grant-amount {
     color: #4b1359;
     font-weight: 800;
+  }
+
+  .grant-role {
+    color: var(--global-text-color);
+    font-weight: 700;
   }
 
   .publication-section {

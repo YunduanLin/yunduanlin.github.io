@@ -20,8 +20,6 @@ nav_order: 1
 #### Social Network Analytics and Platform Operations
 {: .publication-section-title }
 
-<p class="publication-section-lead">This stream studies how network connections, peer influence, learning, and platform interventions shape adoption, engagement, diffusion, and operational performance in connected markets.</p>
-
 <div class="publications">
 
 {% bibliography --group_by none --query @*[stream=social]* %}
@@ -33,8 +31,6 @@ nav_order: 1
 
 #### AI and Machine Learning for Operations
 {: .publication-section-title }
-
-<p class="publication-section-lead">This stream develops AI, machine learning, simulation, and data-driven analytics for deployable decision support in service platforms, transportation, healthcare, and complex operational systems.</p>
 
 <div class="publications">
 
@@ -51,12 +47,12 @@ nav_order: 1
 <div class="grant-list">
   <div class="grant-item">
     <div class="grant-title">Harnessing the Power of Social Network Analytics for Enhanced Business Decision-Making</div>
-    <div class="grant-meta"><em>CUHK Improvement on Competitiveness in Hiring New Faculties Funding Scheme</em>, PI, <span class="grant-amount">HKD 1,307,270</span>, 2024.</div>
+    <div class="grant-meta"><em>CUHK Improvement on Competitiveness in Hiring New Faculties Funding Scheme</em>, <span class="grant-role">PI</span>, <span class="grant-amount">HKD 1,307,270</span>, 2024-2026.</div>
   </div>
 
   <div class="grant-item">
     <div class="grant-title">Optimal Design of the Referral Program for Two-Sided Platforms</div>
-    <div class="grant-meta"><em>Hong Kong Research Grants Council, Early Career Scheme</em>, PI, <span class="grant-amount">HKD 454,062</span>, 2026-2028.</div>
+    <div class="grant-meta"><em>Hong Kong Research Grants Council, Early Career Scheme</em>, <span class="grant-role">PI</span>, <span class="grant-amount">HKD 454,062</span>, 2026-2028.</div>
   </div>
 </div>
 </section>
