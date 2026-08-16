@@ -398,6 +398,7 @@ Assert-Contains "_pages/research.md" "\{\%\s*bibliography\s+--group_by\s+none\s+
 Assert-Contains "_pages/research.md" "\{\%\s*bibliography\s+--group_by\s+none\s+--query\s+@\*\[stream=aiops\]\*\s*\%\}" "Research page should render the AI/analytics stream from bibliography metadata."
 Assert-Contains "_pages/research.md" "\{\%\s*include\s+paper_network\.liquid\s*\%\}" "Research page should include the interactive paper network module."
 Assert-Contains "_pages/research.md" "assets/js/paper-network\.js" "Research page should load the local paper network script."
+Assert-Contains "_pages/research.md" "full-title-labels-20260816" "Research page should force-refresh the paper network script after switching graph labels to full titles."
 Assert-Contains "_includes/paper_network.liquid" "(?s)<section class=""paper-network-section""[^>]*data-paper-network" "Paper network controls and graph should live in one interactive module."
 Assert-Contains "_includes/paper_network.liquid" "paper-network-data" "Paper network include should expose graph data as JSON."
 Assert-Contains "_includes/paper_network.liquid" "paper-network-svg" "Paper network include should render an SVG graph container."
