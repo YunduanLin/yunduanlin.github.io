@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://yunduanlin.github.io/preview/site-refresh/sitemap.xml
