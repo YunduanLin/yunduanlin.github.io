@@ -47,7 +47,7 @@ nav_order: 1
 <div class="grant-list">
   <div class="grant-item">
     <div class="grant-title">Harnessing the Power of Social Network Analytics for Enhanced Business Decision-Making</div>
-    <div class="grant-meta"><em>CUHK Improvement on Competitiveness in Hiring New Faculties Funding Scheme</em>, <span class="grant-role">PI</span>, <span class="grant-amount">HKD 1,307,270</span>, 2024-2026.</div>
+    <div class="grant-meta"><em>CUHK Improvement on Competitiveness in Hiring New Faculties Funding Scheme</em>, <span class="grant-role">PI</span>, <span class="grant-amount">HKD 1,307,270</span>, 2024-2027.</div>
   </div>
 
   <div class="grant-item">
