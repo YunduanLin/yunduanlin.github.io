@@ -11,7 +11,7 @@ nav_order: 1
 {% include paper_network.liquid %}
 
 {% assign paper_network_js = '/assets/js/paper-network.js' | relative_url | bust_file_cache %}
-<script defer src="{{ paper_network_js }}&v=feature-similarity-20260809"></script>
+<script defer src="{{ paper_network_js }}&v=full-title-labels-20260816"></script>
 
 <p class="research-order-note">Papers are grouped by research stream and listed in reverse chronological order within each section. Labels indicate publication type/order (J=published journal, C=refereed conference, W=working paper/manuscript/work in progress).</p>
 
