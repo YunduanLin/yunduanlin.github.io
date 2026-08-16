@@ -359,6 +359,8 @@ Assert-Contains "_sass/_base.scss" "(?s)html\[data-theme=`"dark`"\]\s*\{[^}]*\.t
 Assert-Contains "_sass/_base.scss" "\.teaching-course-type" "Styles should define muted course-type notes after course titles."
 Assert-Contains "_sass/_base.scss" "\.mentoring-panel" "Styles should define a distinct mentoring panel."
 Assert-Contains "_sass/_base.scss" "(?s)\.mentoring-panel-head\s*\{[^}]*border-bottom:\s*1px" "Mentoring panel heading should use a title-style divider."
+Assert-Contains "_sass/_base.scss" "(?s)\.mentoring-panel\s*\{[^}]*background:\s*linear-gradient\(90deg,\s*rgba\(117,\s*15,\s*109,\s*0\.035\),\s*rgba\(196,\s*154,\s*44,\s*0\.04\),\s*transparent\s*78%\)" "Mentoring panel should use a soft horizontal research-interest-style background wash."
+Assert-NotContains "_sass/_base.scss" "(?s)\.mentoring-panel\s*\{[^}]*border-top:\s*3px\s+solid" "Mentoring panel should not use the abrupt thick gold top bar."
 Assert-Contains "_sass/_base.scss" "(?s)\.mentoring-category\s*\{[^}]*font-size:\s*1\.05rem" "Mentoring category should read as a panel title, not as a student-name-sized label."
 Assert-NotContains "_sass/_base.scss" "(?s)\.mentoring-category\s*\{[^}]*text-transform:\s*uppercase" "Mentoring category should stay title-case instead of looking like a small metadata label."
 Assert-Contains "_sass/_base.scss" "(?s)\.mentoring-student\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*auto" "Mentoring student rows should keep each student compact on desktop."
