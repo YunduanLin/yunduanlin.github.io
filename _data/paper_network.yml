@@ -5,7 +5,7 @@ nodes:
     stream: social
     kind: "Working paper"
     year: 2026
-    status: "Submitted to Management Science"
+    status: "Preprint; in preparation for submission to Manufacturing & Service Operations Management"
     authors: "Chen Chen, Yunduan Lin, Kashish Arora"
     bibkey: chen2026socialspatial
     x: 250
@@ -119,7 +119,7 @@ nodes:
     stream: social
     kind: "Working paper"
     year: 2026
-    status: "Work in progress"
+    status: "Submitted to Operations Research; accepted to WINE 2026"
     authors: "Shuo Sun, Yunduan Lin"
     bibkey: sun2026allocation
     x: 390
@@ -147,7 +147,7 @@ nodes:
     stream: aiops
     kind: "Working paper"
     year: 2026
-    status: "Major revision"
+    status: "Major revision at INFORMS Journal of Data Science"
     authors: "Haoting Zhang, Yunduan Lin, Jinghai He, Denglin Jiang, Zuo-Jun Max Shen, Zeyu Zheng"
     bibkey: zhang2026digitaltwin
     x: 585
@@ -225,7 +225,7 @@ nodes:
     stream: aiops
     kind: "Working paper"
     year: 2026
-    status: "Under review"
+    status: "Preprint; in preparation for submission to Information Systems Research"
     authors: "Wanxue Dong, Yunduan Lin, Dongcheng Zhang, Weiquan Wang"
     bibkey: dong2026expertise
     x: 565
